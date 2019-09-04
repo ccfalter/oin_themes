@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the oin_projekt theme.
+
+oin_projekt.settings:
+  type: theme_settings
+  label: 'oin_projekt settings'

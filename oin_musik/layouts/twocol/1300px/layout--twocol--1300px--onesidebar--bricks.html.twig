@@ -1,0 +1,90 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column layout with stacked columns.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'layout',
+    'layout--1300px--one',
+    'layout--twocol--1300px--one',
+    'layout--twocol--1300px--one--bricks'
+  ]
+%}
+
+{% if content %}
+  <div{{ attributes.addClass(classes, 'wisski_bundle_' ~ wisski_bundle) }}>
+    {% if content.title %}
+      {% spaceless %}
+        <div {{ region_attributes.title.addClass('layout__region', 'layout__region--title') }}>
+          {{ content.title }}
+        </div>
+      {% endspaceless %}
+    {% endif %}
+
+    {% if content.top %}
+      {% spaceless %}
+        <div {{ region_attributes.top.addClass('layout__region', 'layout__region--top') }}>
+          {{ content.top }}
+        </div>
+      {% endspaceless %}
+    {% endif %}
+  
+    <div{{ create_attribute({'class': ['layout__region', 'layout__region--combined']}) }}>
+        {% spaceless %}
+          <div {{ create_attribute({ 'class': ['layout__region', 'layout__region--combined','layout__region--first']}) }}>
+            {% if content.first_above %}
+              {% spaceless %}
+                <div {{ region_attributes.first_above.addClass('layout__region', 'layout__region--combined', 'layout__region--first','layout__region--firstabove') }}>
+                  {{ content.first_above }}
+                </div>
+              {% endspaceless %}
+            {% endif %}
+            {% if content.first_below %}
+              {% spaceless %}
+                <div {{ region_attributes.first_below.addClass('layout__region', 'layout__region--combined', 'layout__region--first','layout__region--firstbelow') }}>
+                  {{ content.first_below }}
+                </div>
+              {% endspaceless %}
+            {% endif %}
+         </div>
+        {% endspaceless %}
+      
+      
+        {% spaceless %}
+         <div {{ create_attribute({ 'class': ['layout__region','layout__region--combined','layout__region--second']}) }}>
+            {% if content.second_above %}
+              {% spaceless %}
+                <div {{ region_attributes.second_above.addClass('layout__region', 'layout__region--combined','layout__region--second','layout__region--secondabove') }}>
+                  {{ content.second_above }}
+                </div>
+              {% endspaceless %}
+            {% endif %}
+            {% if content.second_below %}
+              {% spaceless %}
+                <div {{ region_attributes.second_below.addClass('layout__region', 'layout__region--combined','layout__region--second',
+'layout__region--secondbelow') }}>
+                  {{ content.second_below }}
+                </div>
+              {% endspaceless %}
+            {% endif %}
+          </div>
+        {% endspaceless %}
+    </div>
+    
+    {% if content.bottom %}
+      {% spaceless %}
+        <div {{ region_attributes.bottom.addClass('layout__region', 'layout__region--bottom') }}>
+          {{ content.bottom }}
+        </div>
+      {% endspaceless %}
+    {% endif %}
+  </div>
+{% endif %}

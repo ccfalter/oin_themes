@@ -1,0 +1,74 @@
+/**
+ * If using a CSS pre-processor, tell it to overwrite this file. If not, place
+ * your custom CSS modifications here.
+ */ 
+h1.page-header{
+  font-size: 28px;
+}
+
+div.well.region.region-sidebar-second h2 {
+  margin-top: 10px;
+  padding-top: 0px;
+  font-size: 2rem;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+}
+
+div.well.region.region-sidebar-second{
+  background-color: #fff;
+  border: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none
+}
+
+div.region.region-navigation a.name.navbar-brand {
+  margin-top: 7px;
+}
+
+div.region.region-navigation-collapsible ul.menu.navbar-nav {
+  margin-top: 7px;
+}
+
+div.ui-accordion-header.ui-state-active{
+  background: radial-gradient(ellipse at center,  #e3e8e8  0%, #e3e8e8 100%);
+  border: 1px solid #e3e8e8;  
+}
+
+.ui-state-active a, .ui-icon-triangle-1-s, .ui-state-active a:link, .ui-state-active a:visited{
+  color: black;
+  background-image: url(images/ui-icons_444444_256x240.png);
+}
+
+a {
+  color: #348279;
+}
+
+div.item-list ul{
+  list-style: none;
+  padding-left: 0px;
+  
+}
+  
+div.view-id-content_recent.view-display-id-block_1 div.view-content div.item-list ul li{  
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+ 
+body {
+  font-size: 16px;
+}
+
+table  td{
+ min-width: 120px;
+ padding-right: 7px;
+ padding-bottom: 8px;
+ max-width: 100%;
+ height: auto;
+}
+
+img{
+ max-width: 100%;
+ height: auto;
+}

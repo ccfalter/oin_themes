@@ -1,0 +1,88 @@
+layout_twocol_bricks:
+  label: 'Two column bricks'
+  path: layouts/twocol_bricks
+  template: layout--twocol-bricks
+  library: layout_discovery/twocol_bricks
+  category: 'Columns: 2'
+  default_region: middle
+  icon_map:
+    - [top]
+    - [first_above, second_above]
+    - [middle]
+    - [first_below, second_below]
+    - [bottom]
+  regions:
+    top:
+      label: Top
+    first_above:
+      label: 'First above'
+    second_above:
+      label: 'Second above'
+    middle:
+      label: Middle
+    first_below:
+      label: 'First below'
+    second_below:
+      label: 'Second below'
+    bottom:
+      label: Bottom
+
+layout_twocol_1100px_nosidebar_bricks:
+  label: 'Two column, no sidebar, bricks (1100px)'
+  path: layouts/twocol/1100px
+  template: layout--twocol--1100px--nosidebar--bricks
+  library: layout_discovery/twocol
+  category: 'Columns: 2'
+  default_region: 'First Above'
+  icon_map:
+    - [title]
+    - [top]
+    - [first_above, second_above]
+    - [first_below, second_below]
+    - [bottom]
+  regions:
+    title:
+      label: Title
+    top:
+      label: Top
+    first_above:
+      label: 'First Above'
+    second_above:
+      label: 'Second Above'  
+    first_below: 
+      label: 'First Below'
+    second_below:
+      label: 'Second Below'
+    bottom:
+      label: Bottom
+
+
+
+layout_twocol_1300px_onesidebar_bricks:
+  label: 'Two column, one sidebar, bricks (1300px)'
+  path: layouts/twocol/1300px
+  template: layout--twocol--1300px--onesidebar--bricks
+  library: layout_discovery/twocol
+  category: 'Columns: 2'
+  default_region: 'First Above'
+  icon_map:
+    - [title]
+    - [top]
+    - [first_above, second_above]
+    - [first_below, second_below]
+    - [bottom]
+  regions:
+    title:
+      label: Title
+    top:
+      label: Top
+    first_above:
+      label: 'First Above'
+    second_above:
+      label: 'Second Above'
+    first_below:
+      label: 'First Below'
+    second_below:
+      label: 'Second Below'
+    bottom:
+      label: Bottom

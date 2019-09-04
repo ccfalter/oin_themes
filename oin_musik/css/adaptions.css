@@ -1,0 +1,1300 @@
+/***********generell oin adaptions************************/
+
+
+h1.page-header {
+  display: flex;
+  font-size: 28px;
+  margin-bottom: 90px;
+  margin-top: -122px;
+  color: whitesmoke;
+  border-bottom: none;
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+/*********sidebar styling**************/
+/***facets***/
+section.block-facets h3 {
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+  font-size: 1.8rem;
+}
+
+/**musik specific**/
+div#main > div#sidebar-second{
+  width: 270px;
+}
+
+div.layout div.layout__region--top{
+  width: 90%;
+}
+
+@media only screen and (min-width: 1850px) {
+div#sidebar-second {
+
+  left: 40px;
+  z-index: 0;
+}
+}
+@media only screen and (max-width: 1720px){
+div#sidebar-first {
+    margin-left: 10px;
+    border-top: solid;
+    border-bottom: transparent;
+    border-width: 2px;
+    border-color: transparent;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    order: 3;
+}
+}
+
+@media (max-width: 1099px){
+div#second-level div#main-menu div > nav > div > button {
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+}
+/***for img with height constrains ***/
+@media only screen and (max-width: 968px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche div.view-content span.views-field
+span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e
+div:first-child img {
+  max-height: 200px;
+}
+}
+
+@media only screen and (max-width: 768px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container >
+div.view-suche div.view-content div.views-view-grid div.views-row div.views-col{
+  width: 100% !important;
+}
+}
+@media only screen and (max-width: 1099px){
+div#first-level {
+  padding-right: 5px;
+}
+}
+
+@media only screen and (max-width: 768px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container >
+div.view-suche div.view-content span.views-field span.field-content div.layout__region--first{
+  display: none !important;
+}
+}
+
+@media (max-width: 1099px){
+div#second-level div#main-menu ul.dropdown-menu {
+  background-color: whitesmoke;
+}
+}
+@media (max-width: 1099px){
+h1.page-header {
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-left: 40px;
+  border-bottom:  1px solid #eee;
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #036;
+
+}
+}
+
+@media (max-width: 1099px){
+div#main-wrapper main#content{
+  z-index: 0 !important;
+}
+}
+
+@media (max-width: 1099px){
+div#header-items section.site-branding div.site-branding__text{
+  top: -1.4em;
+}
+}
+
+
+/***sidebar second view blocks***/
+div#sidebar-second aside.section div.region section.block-views {
+  padding-bottom: 10px;
+}
+
+/***readmore***/
+div#sidebar-second aside.section div.region section.block-views div.field div.field--items{
+  list-style-type: none;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  
+}
+
+@media only screen and (max-width: 826px){
+div#sidebar-first{
+  -webkit-box-ordinal-group: 3;
+  -moz-box-ordinal-group: 3;
+  -ms-flex-order: 3;
+  -webkit-order: 3;
+  order: 3;
+}
+}
+
+/***no text indent, if title needs line break***/
+div#sidebar-second ul{
+  text-indent: 0px;
+}
+
+/***sidebar first blocks***/
+div#sidebar-first aside.section div.region section.block {
+  padding-bottom: 10px;
+  
+}
+
+div#sidebar-first h2.block-title {
+  font-size: 1.8rem;
+  font-weight: bold !important;
+}
+
+@media only screen and (min-width: 1850px) {
+div#sidebar-second {
+  left: 80px;
+  z-index: 0;
+}
+}
+
+div#sidebar-second aside.section div.well.region.region-sidebar-second {
+  background-color: white;
+  border: white;
+  -webkit-box-shadow: unset;
+  box-shadow: unset;
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+/*align grid columns, if you have different regions. Why I`m doing this? It´s friday and i want to go home.*/
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference.field--label-above > div.field--items{
+    display: block;
+    grid-column-start: 2;
+    grid-column-end: 98;
+}
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference.field--label-above >
+div.field--item{
+    padding-bottom: 5px;
+}
+div.layout div.layout__region--bottom div.field.field--label-above div.field--item{
+    padding-bottom: 5px;
+}
+
+div.layout div.layout__region--bottom div.field.field--label-above div.field--items{
+    display: block;
+    grid-column-start: 2;
+    grid-column-end: 98;
+}
+
+div.layout div.layout__region--bottom div.field.field--label-above div.field--label{
+    padding-right: 0px;
+}
+
+div.layout div.layout__region--bottom div.field--type-entity-reference.field--label-above > div.field--label {
+    display: grid;
+    grid-column-start: 1;
+   # max-width: min-content;
+    grid-column-end: 2;
+    grid-template-columns: 100px 100px;
+}
+
+div.layout div.layout__region--combined div.layout__region--first > div.field--type-text-long.field--label-above > div.field--item {
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  margin-bottom: 10px;
+
+}
+
+div.layout div.layout__region--combined div.layout__region--first > div.field--type-text-long.field--label-above > div.field--items {
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 6;
+ # margin-bottom: 10px;
+
+}
+
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference.field--label-above > div.field--label {
+    display: grid;
+    grid-column-start: 1;
+   # max-width: min-content;
+    grid-column-end: 2;
+    grid-template-columns: 100px 100px;
+}
+
+div.field--type-text-long.field--label-above {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+div.field--type-text-long.field--label-above div.field--item {
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  margin-bottom: 10px;
+  
+}
+
+div.layout div.layout__region--firstabove div.field--type-string
+div.field--items div.field--item{
+  display: block;
+  padding-bottom: 5px;
+}
+
+div.layout__region--secondbelow div.field--type-text-long.field--label-above div.field--item {
+  display: inline-grid;
+  grid-column-start: unset;
+  grid-column-end: unset;
+  margin-bottom: 10px;
+}
+
+div.field--type-text-long.field--label-above div.field--items {
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  margin-bottom: 10px;
+}
+
+div.layout div.layout__region--combined div.layout__region--first div.field--type-text-long.field--label-above > div.field--label{
+    padding-right: 10px;
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    max-width: min-content; 
+}
+
+nav.tabs{
+  margin-top: 100px;
+}
+/**
+h1.page-header {
+  display: flex;
+  font-size: 28px;
+  margin-bottom: 90px;
+  margin-top: -122px;
+  color: whitesmoke;
+  border-bottom: none;
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+**/
+
+/*for too many img: first img ->Manage display: first=large, others=thumb */
+div.layout__region--secondabove div.field--name-f9f6ec483af5d17f193e5b999dc0843e
+div.field--item{
+ display: inline-block;
+}
+
+div.layout__region--secondabove div.field--name-f9f6ec483af5d17f193e5b999dc0843e
+div.field--item:first-child{
+ padding-bottom: 10px;
+ margin-left: -10px;
+}
+
+/*generell changes for brick layout*/
+
+/*ufg: objekt eintrag display: contents -> display: block*/
+div.layout div.layout__region--center div.field{
+  display: block;
+}
+
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference div.layout--onecol
+div.layout__region{
+  display:block;
+}
+
+div.layout div.layout__region--bottom{
+  clear: both;
+  padding-top: 40px;
+  border-top: 2px solid #e5e5e5;
+}
+
+div.layout div.layout__region--firstbelow {
+  clear: both;
+  border-top: 2px solid #e5e5e5;
+  padding-top: 20px;
+  margin-right: 30px;
+} 
+
+div.layout div.layout__region--firstabove{
+  clear: both;
+  padding-bottom: 20px;
+}
+
+div.layout div.layout__region--firstbelow div.field--type-string.field--label-above div.field--label{
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-right: 10px;
+}
+
+div.layout div.layout__region--firstbelow div.field--type-entity-reference.field--label-above div.field--label{
+    padding-right: 0px;
+}
+
+div.layout div.layout__region--firstbelow div.field--type-entity-reference div.field--item {
+    display: block;
+}
+
+div.layout div.layout__region--combined div.layout__region--first > div.field--type-string.field--label-above > div.field--label{
+    padding-right: 10px;
+    min-width: 170px;
+}
+
+div.layout div.layout__region--second div.layout__region--secondbelow div.field--type-entity-reference div.field--item {
+    display: block;
+}
+
+div.layout div.layout__region--combined div.layout__region--second div.layout__region--secondbelow  div.field--label{
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-right: 15px;
+}
+
+/*end brick layout changes*/
+
+
+/**changes for branding and slogan**/
+section.site-branding div.site-branding__slogan {
+  padding-left: 2px;
+}
+
+div.field--type-text-long div.field--items {
+  padding-bottom: 10px;
+}
+
+div.field--label {
+  font-weight: bold !important;
+  
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div[class*="wisski_bundle_b"] > div.la {
+  margin-top: -80px;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region div.field--name-f4d4ee61ecbf8252adbf0424f636daae > div.field--items{
+    display: grid;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche > div.view-filters { 
+  top: -90px;
+  max-width: fit-content;
+}
+
+/** Old Version before popup**/
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche div.view-content span.views-field
+span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e
+div:first-child {
+ display: block !important;
+}
+
+/**musik: height: 300px -> 100%, width: 100%-> max-width: 100% img format
+/are too different**/
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche div.view-content span.views-field
+span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e
+div:first-child img {
+  width:100%;
+  padding-left: 0px;
+  padding-right: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: auto;
+  object-fit: cover;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche div.view-content span.views-field
+span.field-content div.layout  {
+   display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche div.view-content span.views-field
+span.field-content div.layout div.layout__region--second {
+  padding: 0px !important;
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche div.view-content span.views-field
+span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e
+div {
+ display: none;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche div.view-content span.views-field
+span.field-content div.layout__region--bottom {
+ # -webkit-box-ordinal-group: 2;
+ # -moz-box-ordinal-group: 2;
+ # -ms-flex-order: 2;
+ # -webkit-order: 2;
+ # order: 2;
+  margin-top: 0px;
+  border-top: unset;
+  padding-bottom: 20px;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche div.view-content span.views-field
+span.field-content div.layout__region--first {  
+  display: none;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche div.view-content span.views-field
+span.field-content div.layout__region--combined div.layout__region--second div.field--item {
+  margin-bottom: 0px;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche div.view-content span.views-field
+span.field-content div.layout__region--second {
+  display: flex !important;
+  flex-basis: 100% !important;
+  justify-content: center !important;
+  float: none !important;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--title >
+div.field--name-name > a {
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche div.view-content span.views-field
+span.field-content div.layout__region--title {
+  position: relative;
+  display: flex !important;
+  #flex-basis: 100% !important;
+  #justify-content: center !important;
+  width: 90%;
+ #-webkit-box-ordinal-group: 1;
+ #-moz-box-ordinal-group: 1;
+ #-ms-flex-order: 1;
+ #-webkit-order: 1;
+ #order: 1; 
+  padding-bottom: 0px;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche div.view-content span.views-field
+span.field-content div.layout__region--title > div.field {
+  font-size: 1.2em !important;
+  padding-bottom: 0px;
+}
+
+div#main-wrapper main#content {
+  position: relative;
+  z-index: 2;
+  width: 1100px;
+  padding-top: 20px;
+}
+
+div#second-level-wrapper div#header-items {
+  position: absolute;
+}
+
+@media (min-width: 1100px) {
+div#second-level div#main-menu div > nav > div.dropdown > ul > li {
+  padding-bottom: 5px;
+}
+}
+
+div#third-level-wrapper {
+  background: url(../images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
+  min-height: 170px;
+}
+
+div#main-wrapper div[class*="wisski_bundle_b"] div.layout__region--title {
+  color: white;
+}
+
+div.layout__region--title div.field {
+  color: white;
+  font-size: 2.7733333333rem !important;
+  line-height: 2.7733333333rem;
+  padding-bottom: 20px;
+
+}
+
+div#third-level-wrapper a {
+  color: white;
+}
+
+
+div#third-level-wrapper > div#third-level > div ol li {
+  color: white;
+  font-size: 12px;
+}
+
+div#third-level-wrapper > div#third-level {
+  padding-top: 10px;
+}
+
+div#second-level div#main-menu {
+  width: 960px;
+  margin-right: 140px;
+}
+
+div#first-level-wrapper {
+    background-color: #e9edf2;
+}
+
+div#footer-left-bottom{
+  margin-top: 60px;
+}
+
+div#gnm-logo img {
+  padding: 0px !important;
+  margin: 0px !important;
+  right: 140px;
+}
+
+div#footer-right-studiensammlung img {
+  padding:0px ;
+  margin: 0px ;
+  max-width: 150px;
+}
+
+div#footer-right-studiensammlung  {
+  display: block;
+  max-width: 250px;
+  text-align: center;
+}
+
+div#footer-right-wuerzburg img {
+  padding: 0px ;
+  margin: 0px ;
+  max-width: 250px;
+}
+
+div#footer-right-wuerzburg {
+  display: block;
+  max-width: 250px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+div#footer-right-gnm{
+  max-width: 350px;
+}
+
+div#footer-right-wisski{
+  padding-bottom: 20px;
+}
+
+div#gnm-logo {
+  margin: 0px !important;
+}
+/*****footer adaptions musik************/
+@media only screen and (max-width: 480px){
+div#footer-right{
+ display: block;
+ width: unset;
+ max-width: 100%;
+ margin-left: 5px;
+ min-width: unset;
+}
+}
+@media only screen and (max-width: 768px){
+div#footer-right-wuerzburg img {
+  max-width: 200px;
+  height: auto;
+  width: unset;
+}
+}
+@media only screen and (max-width: 768px){
+div#footer-right-studiensammlung img {
+  max-width: 200px;
+  height: auto;
+  width: unset;
+  margin-bottom: 10px;
+}
+}
+@media only screen and (max-width: 920px){
+div#first-level-wrapper {
+   height: 50px;   
+}
+}
+/**med changes for site branding and slogan**/
+section.site-branding div.site-branding__text {
+  position: absolute !important;
+  font-size: 16px !important;
+  color: #036 !important;
+  font-weight: bold;
+  display: flex;
+  overflow: hidden;
+  width: auto;
+  top: -1.4em;
+  padding-bottom: 0px;
+  background-color: transparent;
+  z-index: -1000;
+  white-space: nowrap;
+}
+
+div#second-level div#main-menu > div.region {
+  padding-top: 10px;
+}
+
+a {
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+
+div#second-level div#main-menu div > nav > div.dropdown > ul > li > a {
+  color: #036 !important;
+  font-size: 1.1333333333rem !important;
+  line-height: 1.1333333333rem !important;
+  text-transform: initial !important;
+  font-weight: bold !important;
+  font-size: 17px !important;
+  line-height: 17px !important;
+}
+
+html {
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  font-kerning: none !important;
+}
+
+html body {
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  font-kerning: none !important;
+}
+
+div#gnm-logo img {
+  padding-top: 30px;
+  padding-bottom: 8px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+div#second-level div#main-menu {
+  background-color: inherit;
+#  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
+}
+
+div#second-level div#main-menu div > nav > div.dropdown > ul > li > a {
+  border-left: 1px solid white;
+  color: white;
+}
+
+
+div#second-level-wrapper {
+#  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
+  background: white;
+}
+
+footer {
+#  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
+  background-color: #e9edf2;
+}
+
+.visually-hidden {
+  height: 0px;
+}
+
+div#first-level .dropdown-menu > li > a {
+  color: #003366;
+}
+
+body a {
+  color: #003366;
+}
+
+@keyframes kenburns {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    95% {
+        transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -120px, 0px);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+    100% {
+        transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
+        opacity: 0;
+    }
+}
+
+div.select-wrapper:after {
+  color: #003366;
+}
+
+.views-view-grid div.views-row {
+  height: auto;
+  width: 100%;
+  clear: initial;
+}
+
+body.path-wisski div.region-content div#block-halfpastthreegrain-page-title {
+  display: none;
+  position: absolute;
+#  top: 30px;
+  left: 17px;
+#  left: 98px;
+#  max-width: 55%;
+  height: 45px;
+  overflow: hidden;
+#  top: 234px;
+#  left: 234px;
+}
+
+h1.page-title {
+  font-size: 1.357em;
+}
+
+div.region-content {
+  position: relative;
+}
+
+div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field__item {
+  display:inline-block;
+  padding-left: 0px;
+}
+
+div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field__item:first-child {
+#  padding-left: 0.5em;
+}
+
+div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field__item:after {
+  content: ',';
+  display:inline-block;
+
+}
+
+div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field__item:last-child:after {
+  content: '';
+  display:inline-block;
+
+}
+
+div.bef-link-active a {
+  color: black !important;
+}
+
+.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_person > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_person > div > div {
+  display: inline-block;
+}
+
+.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_person {
+  float: none;
+}
+
+.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_organisation > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bef-exposed-form .form--inline  div.form-item-wisski_path_gemeinsame_masken__name_organisation > div > div {
+  display: inline-block;
+}
+
+div#block-halfpastthreegrain-breadcrumbs {
+  z-index: 10;
+}
+
+.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_organisation {
+  float: none;
+}
+
+.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_geogr_ort > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_geogr_ort > div > div {
+  display: inline-block;
+}
+
+.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_geogr_ort{
+  float: none;
+}
+
+/******************* Startseite *************/
+
+div.fade {
+  opacity: initial;
+  -webkit-transition: initial;
+  -o-transition: initial;
+  transition: initial;
+}
+
+.block-views-blockstartseite-block-1 {
+  margin-bottom: 40px;
+}
+
+.block-views-blockstartseite-block-1 h2 {
+  display: none;
+}
+
+.block-views-blockstartseite-block-1 div.mySlides h2 {
+  display: block;
+  padding: 20px;
+  color: #e3001b !important;
+}
+
+.block-views-blockstartseite-block-1 div.more-link {
+  padding-right: 20px;
+}
+
+
+.block-views-blockstartseite-block-1 > div > div.slideshow-container > div.view-content {
+  display: none;
+}
+
+.block-views-blockstartseite-block-1 > div > div.slideshow-container > div.more-link {
+  display: none;
+}
+
+div.mySlides div.views-row {
+#  padding-left: 50px;
+#  padding-right: 50px;
+  margin-bottom: 0px;
+#  padding-top: 50px;
+#  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.block-views-blockstartseite-block-1 div.view-footer {
+#  display: none;
+  height: 0px;
+}
+
+.block-views-blockstartseite-block-1 div.more-link {
+  position: absolute;
+  font-size: 1.5em;
+  right: 0px;
+}
+
+.block-views-blockstartseite-block-1 .form-group {
+  margin-bottom: 0px;
+}
+
+div.mySlides div.views-row div.views-col {
+  margin: 0px;
+  padding: 0px;
+#  padding-left: 50px;
+#  padding-right: 50px;
+#  margin-bottom: 10px;
+#  margin-right: 10px;
+  display: inline-block;
+  width: 16.6%;
+#  height: 400px;
+  float: left;
+#  border-width: 2px;
+#  border-radius: 5px;
+#  border-style: solid;
+#  border-color: rgb(200,200,200);
+}
+
+div.mySlides div.views-row div.views-col div.views-field-preview-image {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 300px;
+  overflow: hidden;
+}
+
+div.mySlides div.views-row div.views-col div.views-field-preview-image img {
+# height: 150%;
+  height: 200%;
+  position: absolute;
+  top: -30%;
+  left: 0%;
+#  width: 600px;
+  max-width: none;
+#  width: auto;
+# animation: kenburns 40s infinite;
+}
+
+div.mySlides div.views-row div.views-col div.views-field-title:hover {
+  display: block;
+}
+
+div.mySlides div.views-row div.views-col:hover div.views-field-title {
+  display: block;
+}
+
+div.mySlides div.views-row div.views-col {
+  position: relative;
+}
+
+div.mySlides div.views-row div.views-col div.views-field-title {
+  display: none;
+  bottom: 0px;
+  position: absolute;
+#  height: 90px;
+#  padding-top: 110px;
+#  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 20;
+  width: 100%;
+  text-align: center;
+  padding: 10px 30px 10px 30px;
+  background-color: #464646;
+  background-color: rgba(242, 242, 242, 0.6);
+}
+
+div.mySlides div.views-row div.views-col div.views-field-title a:hover, div.mySlides div.views-row div.views-col div.views-field-title a:focus {
+    color: #464646;
+    text-decoration: underline;
+}
+
+div.mySlides div.view-header h2 {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+#    border: 2px  red;
+    width: 800px;
+    display: flex;
+    transform: rotate(25deg);
+    font-size: xx-large;
+    justify-content: center;
+    top: 45%;
+    left: 28%;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+
+div.slideshow-container {
+  background:#e5e5e5;
+
+}
+
+div.field--name-fcd9c8af4f943070510633f1e1dedace > div.field__item {
+  padding-bottom: 10px;
+}
+
+
+div.field--label-hidden > div.field__item {
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+.dotties {
+    display: block;
+    width: 100px;
+    padding-top: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 10;
+    position: relative;
+    top: 0px;
+
+}
+
+/**Oin Suche **/
+
+div#main main#content div.view-suche div.view-content div.views-col {
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+
+/** Institutionen **/
+
+div#main main#content div.view-b1ce4bdc2e5683f5fdabab02e6627121 div.view-content div.views-col {
+  text-align: center;
+  padding: 20px;
+}
+
+div#main main#content div.view-b1ce4bdc2e5683f5fdabab02e6627121 div.view-filters div.form-item {
+  width: 100%;
+}
+
+div#main main#content div.view-b1ce4bdc2e5683f5fdabab02e6627121 button {
+  display: none;
+}
+
+div#main main#content div.view-b1ce4bdc2e5683f5fdabab02e6627121 div.view-header {
+  float: right;
+  position: absolute;
+  top: -20px;
+  margin-top: 0px;
+  margin-right: 10px;
+}
+
+
+/** Personen **/
+div#main main#content div.view-bd9c096f185635434163360c45fc645d div.view-content div.views-col {
+  text-align: center;
+  padding: 20px;
+}
+
+div#main main#content div.view-bd9c096f185635434163360c45fc645d div.view-filters div.form-item {
+  width: 100%;
+}
+
+div#main main#content div.view-bd9c096f185635434163360c45fc645d button {
+  display: none;
+}
+
+div#main main#content div.view-bd9c096f185635434163360c45fc645d div.view-header {
+  float: right;
+  position: absolute;
+  top: -20px;
+  margin-top: 0px;
+  margin-right: 10px;
+}
+
+/** Orte **/
+div#main main#content div.view-b6bbebe296631e440003692eac4390dc div.view-content div.views-col {
+  text-align: center;
+  padding: 20px;
+}
+
+div#main main#content div.view-b6bbebe296631e440003692eac4390dc div.view-filters div.form-item {
+  width: 100%;
+}
+
+div#main main#content div.view-b6bbebe296631e440003692eac4390dc button {
+  display: none;
+}
+
+div#main main#content div.view-b6bbebe296631e440003692eac4390dc div.view-header {
+  float: right;
+  position: absolute;
+  top: -20px;
+  margin-top: 0px;
+  margin-right: 10px;
+}
+
+
+/** Musik-Klassifikation **/
+div#main main#content div.view-bd3007dde92ee2d88530f8c9bef3f5f5 div.view-content div.views-row {
+  padding: 15px;
+}
+
+div#main main#content div.view-bd3007dde92ee2d88530f8c9bef3f5f5 div.view-filters div.form-item {
+  width: 100%;
+}
+
+div#main main#content div.view-bd3007dde92ee2d88530f8c9bef3f5f5 button {
+  display: none;
+}
+
+div#main main#content div.view-bd3007dde92ee2d88530f8c9bef3f5f5 div.view-header {
+  float: right;
+  position: absolute;
+  top: -20px;
+  margin-top: 0px;
+  margin-right: 10px;
+}
+
+
+/* adaptions away from gnm2018 */
+/**med suche padding-right: 0px -> 10px**/
+div.layout__region--combined div.layout__region--first {
+  padding-right: 10px;
+  flex-basis: 47%;
+  justify-content: unset;
+}
+/**med suche display: grid -> inline-block; padding-top: 0px -> 10px**/
+div.layout div.layout__region--combined div.layout__region--second {
+  display: block;
+  flex-basis: 30%;
+  justify-content: end;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+/**RESET Button **/
+button.btn-danger {
+  background-color: #036;
+  border-color: #036; 
+}
+
+@media (max-width: 1099px) {
+  div.layout__region--combined div.layout__region--second {
+    justify-content: center;
+    padding-right: 0px;
+  }
+}
+
+
+div.layout__region--combined div.layout__region--second div.field--item {
+  #margin-bottom: 5px;
+  display: inline-grid;
+  margin-right: 15px;
+}
+
+div.layout__region--combined div.layout__region--second div.field--item img {
+  width: 100%;
+}
+
+div.region-content div.layout__region div.field--item table {
+  width: 100%;
+  border: 2px solid #f2f2f2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div.region-content div.layout__region div.field--item table tr {
+  border-top: 2px solid #f2f2f2;
+}
+
+div.region-content div.layout__region div.field--item table tr th {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+div.region-content div.layout__region div.field--item table tr td {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field--items div.field--item:after {
+  content: ", ";
+}
+
+div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field--items div.field--item:last-child:after {
+  content: "";
+}
+
+/* personen und institutionen */
+/* sachstandsbericht: padding top */
+div.field--name-f8509d98a943379b0ca61e18d1636394 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* personen bio */
+div.field--name-f76763a7adb8f4964ac0e00558359510 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/**musik: margin-right: 0px -> 15px**/
+div.layout div.layout__region--bottom {
+  clear: both;
+  margin-right: 15px;
+}
+
+div.wisski_bundle_bd9732aeea5784666b76e1e59038cade div.layout__region--bottom:before {
+  content: 'Diese Person hatte Kontakt mit den folgenden Objekten:';
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+div.wisski_bundle_b4b1bc319db8afbd54bdba451e6a71bf div.layout__region--bottom:before {
+  content: 'Diese Institution hatte Kontakt mit den folgenden Objekten:';
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+.search-row.views-row {
+  clear: both;
+  float: left;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+
+.search-row.views-row div.layout {
+  max-width: 100%;
+  width: 100%;
+  word-break: break-word;
+}
+
+
+main#content > section.section > div.region > div.views-element-container > div.view-id-suche nav.pager-nav {
+  clear: both;
+}
+
+@media (min-width: 1100px) {
+  main#content > section.section > div.region > div.views-element-container div.view-id-suche {
+    width: 1100px;
+    margin-top: -10px; 
+  }
+
+  main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-header {
+    width: 1100px;
+  }
+
+  main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-content {
+    min-width: 800px;
+  }
+}
+
+header#header div.region-secondary-menu nav div.dropdown ul li a[href="/suche"]:before {
+    content: "\e003";
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+header#header div.region-secondary-menu nav div.dropdown ul li a[href="/suche"] {
+
+}
+
+div.layout div.layout__region--combined div.layout__region--first div.field--name-b6af67dc5c6376b98a2772dbfdbbc476 > div.field--items > div.field--item {
+  display: block;
+  clear: both;
+}
+
+div.field--name-f1621dd2af001f2f8b9e61b67040bbad {
+  padding-bottom: 10px;
+}
+
+span.solr-high {
+  background-color: yellow;
+}
+div.layout__region.layout__region--center
+div.field.field--name-body.field--type-text-with-summary.field--label-hidden.field--item
+p {
+margin: 0 0 5px;
+}
+
+div.field-content p {
+margin: 0 0 8px;
+}
+
