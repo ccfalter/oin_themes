@@ -44,10 +44,14 @@
 }
 /***from twocol bricks layout drupal ***/
 @media screen and (min-width: 40em) {
-  .layout--twocol--1300px--onesidebar--bricks > .layout__region--combined > .layout__region--first > .layout__region--first
-  .layout--twocol--1300px--onesidebar--bricks > .layout__region--combined > .layout__region--second > .layout__region--seco
-  .layout--twocol--1300px--onesidebar--bricks > .layout__region--combined > .layout__region--first > .layout__region--first
-  .layout--twocol--1300px--onesidebar--bricks > .layout__region--combined > .layout__region--second  > .layout__region--sec
+  .layout--twocol--1300px--onesidebar--bricks > .layout__region--combined > .layout__region--first >
+  .layout__region--firstabove,
+  .layout--twocol--1300px--onesidebar--bricks > .layout__region--combined > .layout__region--second >
+  .layout__region--secondabove,
+  .layout--twocol--1300px--onesidebar--bricks > .layout__region--combined > .layout__region--first >
+  .layout__region--firstbelow,
+  .layout--twocol--1300px--onesidebar--bricks > .layout__region--combined > .layout__region--second >
+  .layout__region--secondbelow{
     flex: 0 1 50%;
   }
 }

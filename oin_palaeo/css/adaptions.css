@@ -1,25 +1,33 @@
 /************generel OiN adaptions *********************/
 
-/***layout 1300px one sidebar********/
+/***adaptions layout 1300px one sidebar********/
 main#content > section.section > div.region > div.views-element-container {
   max-width: 1000px;
 }
 
 @media (min-width: 1100px){
 main#content div.view-content {
-    min-width: 1000px;
+  min-width: 1000px;
 }
 }
-
-/********page title and header region ******************/
+/**change order of main and sidebar****/
+/**@media (max-width: 1329px){
+main#content {
+  order: 2;
+}
+}
+**/
+/********************page title and header region **************************************/
 
 /****white title in third-level********/
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div[class*="wisski_bundle_b"] > div.la {
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > 
+section.section > div.region > div[class*="wisski_bundle_b"] > div.la {
   margin-top: -80px;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
-> div.views-element-container > div.view-suche > div.view-filters {
+/*****suchschlitz**************/
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > 
+section.section > div.region > div.views-element-container > div.view-suche > div.view-filters {
   top: -90px;
   max-width: fit-content;
 }
@@ -27,9 +35,11 @@ body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#co
 h1.page-header {
   display: flex;
   font-size: 28px;
+ #margin-bottom: 80px;
+ #font-size: 2.7777777rem;
   margin-bottom: 90px;
   margin-top: -120px;
-  color: whitesmoke;
+  color: white;
   border-bottom: none;
   font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -54,20 +64,22 @@ section.site-branding div.site-branding__text {
   white-space: nowrap;
 }
 
-nav.tabs{
+nav.tabs {
   margin-top: 100px;
 }
 
-/***header-level*****/
+/****************header-level****************/
 
 div#first-level {
-    padding-right: 240px;
+  padding-right: 240px;
 }
 
-@media (min-width: 1100px){
-div.header-level {
-    width: 1300px;
-    }
+div#first-level .dropdown-menu > li > a {
+  color: #003366;
+}
+
+div#first-level-wrapper {
+  background-color: #e9edf2;
 }
 
 div#second-level div#main-menu {
@@ -84,6 +96,7 @@ div#second-level-wrapper {
 #  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
   background: white;
 }
+
 div#second-level-wrapper div#header-items {
   position: absolute;
 }
@@ -91,17 +104,6 @@ div#second-level-wrapper div#header-items {
 div#second-level div#main-menu {
   width: 960px;
   margin-right: 140px;
-}
-
-div#gnm-logo {
-  margin: 0px !important;
-}
-
-div#gnm-logo img {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 0px;
-  right: 240px;
 }
 
 div#second-level div#main-menu > div.region {
@@ -116,14 +118,6 @@ div#second-level div#main-menu div > nav > div.dropdown > ul > li > a {
   font-weight: bold !important;
   font-size: 17px !important;
   line-height: 17px !important;
-}
-
-div#first-level .dropdown-menu > li > a {
-  color: #003366;
-}
-
-div#first-level-wrapper {
-  background-color: #e9edf2;
 }
 
 div#third-level-wrapper a {
@@ -144,15 +138,39 @@ div#third-level-wrapper {
   min-height: 170px;
 }
 
-/*********************** mobile adaptions*********************************/
-@media only screen and (max-width: 1318px){
-div#main-wrapper div#main{
- justify-content: flex-start;
- padding-left: 10px;
+/*********fau-logo**********/
+div#gnm-logo {
+  margin: 0px !important;
+}
+
+div#gnm-logo img {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0px;
+  right: 240px;
+}
+
+/*********************** responsive adaptions*********************************/
+@media (min-width: 1100px){
+div.header-level {
+  width: 1300px;
 }
 }
 
-/***login***/
+@media only screen and (max-width: 1599px){
+div#main-wrapper div#main{
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+}
+
+@media only screen and (max-width: 1599px){
+section#block-oin-palaeo-branding{
+  padding-left: 10px;
+}
+}
+
+/****************login*********************************/
 @media (max-width: 1099px){
 div#first-level {
   padding-right: 5px;
@@ -165,22 +183,29 @@ div#first-level {
 }
 }
 
-/***fau logo ***/
+/*****************fau logo ******************/
 @media (max-width: 768px){
 div#second-level div#gnm-logo img {
   right: 0px;
 }
 }
 
+/**align menu and page title***/
+@media (max-width: 1599px){
+div#second-level div#main-menu div > nav > div {
+  padding-left: 10px;
+}
+}
+
 @media (max-width: 1099px){
-div#second-level div#main-menu div > nav > div .btn {
-  padding-left: 0px;
+div#second-level div#main-menu div > nav > div .btn{
+  padding-left: 5px;
 }
 }
 
 @media (max-width: 1099px){
 div#second-level div#main-menu ul.dropdown-menu {
-  background-color: whitesmoke;
+  background-color: white;
 }
 }
 
@@ -220,29 +245,31 @@ div#header-items section.site-branding div.site-branding__text{
   top: -1.4em;
 }
 }
+
 /*******************sammlungsobjektansicht********************************/
 
 /* gallery for too many img (region:secondabove):
  * first img ->under Manage display in Sammlungsobjekt:
  * Configuration for img: first child = large, others = thumb or other
- * small image style
+ * small image styles
  */
 
 div.layout__region--secondabove div.field--name-f9f6ec483af5d17f193e5b999dc0843e div.field--item{
- display: inline-block;
+  display: inline-block;
 }
 
 div.layout__region--secondabove div.field--name-f9f6ec483af5d17f193e5b999dc0843e div.field--item:first-child{
- padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 div.layout div.layout__region--combined div.layout__region--second{
- justify-content: left;
+  justify-content: left;
 }
 
-/*** generel layout changes for bricks***/
+/*********** generel layout changes for bricks****************/
 
-/***borderlines***/
+/****************borderlines**********************/
+
 div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstabove{
   padding-bottom: 15px;
 }
@@ -250,34 +277,28 @@ div.layout div.layout__region--combined div.layout__region--first div.layout__re
 div.layout div.layout__region--bottom{
   clear: both;
   padding-top: 20px;
-  border-top: 2px solid #e5e5e5;
+ #border-top: 2px solid #e5e5e5;
 }
 
+/*******no borderline for layout--twocol**************/
 div.layout--twocol div.layout__region--bottom{
   clear: both;
   padding-top: 20px;
   border-top: unset;
 }
 
-div.layout div.layout__region--firstbelow {
+div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstbelow{
   clear: both;
   border-top: 2px solid #e5e5e5;
   padding-top: 20px;
 }
 
-div.layout div.layout__region--combined div.layout__region--second
-div.layout__region--secondbelow{
+div.layout div.layout__region--combined div.layout__region--second div.layout__region--secondbelow{
   border-top: 2px solid #e5e5e5;
   padding-top: 10px;
 }
 
-@media screen and (min-width: 40em){
-div.layout--twocol  div.layout__region--bottom {
-  padding-top: 20px;
-  border-top: unset;
-}
-}
-
+/******no border line with entity reference (Schachtelung in Objektansicht)************/
 div.layout--twocol--1300px--one--bricks div.layout__region--combined div.layout__region--first
 div.layout__region--firstbelow div.layout--twocol div.layout__region--bottom{
   border-top: transparent;
@@ -290,20 +311,33 @@ div.layout__region--firstbelow div.layout--twocol div.layout__region--bottom{
   padding-top: 0px;
 }
 
-/***palaeo specific changes ***/
+@media screen and (min-width: 40em){
+div.layout--twocol  div.layout__region--bottom {
+  padding-top: 20px;
+  border-top: unset;
+}
+}
+
+/**************palaeo specific changes **********************************/
 
 /***geofield map (region firstbelow) for palaeo and ufg layout***/
 div.field--type-geofield {
- display: contents;
- min-width: 250px;
+  display: contents;
+  max-width: 480px !important;
+  min-width: 250px !important;
+}
+
+div.field--type-geofield div.geofield-google-map{
+  max-width: 480px !important;
+  min-width: 250px !important;
 }
 
 @media only screen and (max-width: 480px){
 div.field--type-geofield{
- display: contents;
- min-width: unset;
- max-width: 100%;
- height: auto;
+  display: contents;
+  min-width: unset;
+  max-width: 100%;
+  height: auto;
 }
 }
 
@@ -313,10 +347,11 @@ div.layout--twocol > div.layout__region--first{
 }
 }
 
+/*****text long*********/
 div.field--type-text-long.field--label-above div.field--label {
-    display: block;
-    grid-column-start: 1;
-    grid-column-end: 2;
+  display: block;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 div.field--type-text-long div.field--items {
@@ -324,14 +359,9 @@ div.field--type-text-long div.field--items {
 }
 
 div.field--type-text-long.field--label-above div.field--item {
-    display: block;
-    grid-column-start: 2;
-    grid-column-end: 6;
-    padding-bottom: 5px;
-}
-
-div.layout div.layout__region--combined div.layout__region--first > div.field--type-string.field--label-above >
-div.field--item{
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 6;
   padding-bottom: 5px;
 }
 
@@ -341,16 +371,23 @@ div.field--type-text-long {
   grid-column-end: 6;
 }
 
-div.layout div.layout__region--center div.field{
-  display: block;
+div.field--label {
+  font-weight: bold !important;
 }
 
-div.layout div.layout__region--firstbelow div.field--type-entity-reference div.field--item {
+div.layout__region--combined div.layout__region--second div.layout__region--secondbelow div.field--item {
+  margin-right: 15px;
+}
+
+div.layout div.layout__region--combined div.layout__region--first > div.field--type-string.field--label-above > div.field--item{
+  padding-bottom: 5px;
+}
+
+div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstbelow div.field--type-entity-reference div.field--item {
   display: block !important;
 }
 
-div.layout__region div.layout__region--combined div.layout__region--second div.layout__region--secondbelow div.field--type-entity-reference
-div.field--items  div.field--item{
+div.layout__region div.layout__region--combined div.layout__region--second div.layout__region--secondbelow div.field--type-entity-reference div.field--items  div.field--item{
   display: block;
 }
 
@@ -362,79 +399,82 @@ div.layout div.layout__region--bottom div.field.field--label-above div.field--la
   padding-right: 10px;
 }
 
-/***schachtelung***/
-
-div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference div.layout--onecol
-div.layout__region{
+div.layout div.layout__region--center div.field{
   display: block;
 }
 
-div.layout div.layout__region--combined div.layout__region--first div.layout__reagion--firstbelow div.field--type-entity-reference div.layout--onecol
-div.layout__region{
+/***schachtelung***/
+
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference div.layout--onecol div.layout__region{
+  display: block;
+}
+
+div.layout div.layout__region--combined div.layout__region--first div.layout__reagion--firstbelow div.field--type-entity-reference div.layout--onecol div.layout__region{
   display: grid;
 }
 
-div.layout div.layout__region--combined div.layout__region--second div.layout__region--secondbelow
-div.field--type-entity-reference div.layout--onecol div.layout__region div.field--type-entity-reference div.layout__region--first{
+div.layout div.layout__region--combined div.layout__region--second div.layout__region--secondbelow div.field--type-entity-reference div.layout--onecol div.layout__region div.field--type-entity-reference div.layout__region--first{
   display: block;
   justify-content: left;
 }
 
-div.layout--twocol--1100px--nosidebar--bricks div.layout__region--combined 
-div.layout__region--second div.field--type-entity-reference div.field--items  div.field--item{
+div.layout--twocol--1100px--nosidebar--bricks div.layout__region--combined div.layout__region--second div.field--type-entity-reference div.field--items  div.field--item{
   display: block;
 }
 
-div.layout--twocol--1100px--none--bricks div.layout__region--combined div.layout__region--first div.layout__region--firstbelow 
-div.layout--twocol div.layout__region--second{
-  padding-left: 0px;
-}
-div.layout--twocol--1300px--onesidebar--bricks div.layout__region--combined
-div.layout__region--second div.field--type-entity-reference div.field--items  div.field--item{
-  display: block;
-}
-
-div.layout--twocol--1300px--one--bricks div.layout__region--combined div.layout__region--first div.layout__region--firstbelow
-div.layout--twocol div.layout__region--second{
+div.layout--twocol--1100px--none--bricks div.layout__region--combined div.layout__region--first div.layout__region--firstbelow div.layout--twocol div.layout__region--second{
   padding-left: 0px;
 }
 
-div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference div.layout--onecol
-div.layout__region{
+div.layout--twocol--1300px--onesidebar--bricks div.layout__region--combined div.layout__region--second div.field--type-entity-reference div.field--items  div.field--item{
   display: block;
 }
 
-div.layout div.layout__region--combined div.layout__region--second
-div.layout__region--secondbelow div.field--type-entity-reference div.layout--onecol div.layout__region div.field--type-entity-reference
-div.layout__region--first{
-  display: block;
-  justify-content: left;
+div.layout--twocol--1300px--one--bricks div.layout__region--combined div.layout__region--first div.layout__region--firstbelow div.layout--twocol div.layout__region--second{
+  padding-left: 0px;
 }
 
-div.field--label {
-  font-weight: bold !important;
+/***********************view-suche without overlay/popup**************************/
+/****filter Volltextsuche*****/
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > 
+div.region > div.views-element-container > div.view-suche > div.view-filters
+form.views-exposed-form > div.form--inline > div.form-item {
+  padding-right: 15px;
 }
 
-div.layout__region--combined div.layout__region--second div.layout__region--secondbelow div.field--item {
-  #margin-bottom: 20px;
-  #display: inline-grid;
-  margin-right: 15px;
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+div.region > div.views-element-container > div.view-suche > div.view-filters
+form.views-exposed-form  div.form--inline  div.form-item
+label.control-label{
+ display: block;
 }
 
+@media (min-width: 768px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+div.region > div.views-element-container > div.view-suche > div.view-filters
+form.views-exposed-form > div.form--inline > div.form-item
+div.select-wrapper select{
+    min-width: 140px;
+}
+}
 
-/**************view-suche without overlay/popup**************************/
+@media (min-width: 768px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+div.region > div.views-element-container > div.view-suche > div.view-filters
+form.views-exposed-form > div.form--inline > div.form-group{
+vertical-align: unset;
+}
+}
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
-> div.views-element-container > div.view-suche div.view-content span.views-field
-span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e
-div:first-child {
+/****image*********/
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container > div.view-suche div.view-content span.views-field 
+span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e div:first-child {
   display: block !important;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
-> div.views-element-container > div.view-suche div.view-content span.views-field
-span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e
-div:first-child img {
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container > div.view-suche div.view-content span.views-field 
+span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e div:first-child img {
   //width: 200px;
   padding-left: 0px;
   padding-right: 20px;
@@ -455,29 +495,28 @@ div.views-element-container div.view-suche div.view-header{
   font-size: 0.9em;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
-> div.views-element-container > div.view-suche div.view-content span.views-field
-span.field-content div.layout  {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -moz-box-align: start;
-    -ms-flex-align: start;
-    -webkit-align-items: flex-start;
-    align-items: flex-start;
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > 
+div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
-> div.views-element-container > div.view-suche div.view-content span.views-field
-span.field-content div.layout div.layout__region--second {
+/******change order: show img first*********/
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > 
+div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout div.layout__region--second {
   padding: 0px !important;
   -webkit-box-ordinal-group: 1;
   -moz-box-ordinal-group: 1;
@@ -486,40 +525,39 @@ span.field-content div.layout div.layout__region--second {
   order: 1;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
-> div.views-element-container > div.view-suche div.view-content span.views-field
-span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e div {
+/*******hide other img and region first************/
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > 
+div.views-element-container > div.view-suche div.view-content span.views-field span.field-content 
+div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e div {
   display: none;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region 
 > div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--first {
   display: none !important;
 }
 
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
-> div.views-element-container > div.view-suche div.view-content span.views-field
-span.field-content div.layout__region--combined div.layout__region--second div.field--item {
+ > div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--combined
+  div.layout__region--second div.field--item {
   margin-bottom: 0px;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
-> div.views-element-container > div.view-suche div.view-content span.views-field
-span.field-content div.layout__region--second {
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region >
+ div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--second {
   display: flex !important;
   flex-basis: 100% !important;
   justify-content: center !important;
   float: none !important;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
-> div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--title >
-div.field--name-name > a {
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region >
+ div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--title > div.field--name-name > a {
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
-> div.views-element-container > div.view-suche div.view-content span.views-field
-span.field-content div.layout__region--title {
+/******change order: show title second**************/
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > 
+div.region > div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--title {
   position: relative;
   display: flex !important;
   flex-basis: 100% !important;
@@ -534,57 +572,62 @@ span.field-content div.layout__region--title {
   padding-top: 0px !important;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
-> div.views-element-container > div.view-suche div.view-content span.views-field
-span.field-content div.layout__region--title > div.field {
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--title > div.field {
   font-size: 1.8rem !important;
   font-weight: normal;
   padding-bottom: 15px;  
 }
 
-/***mobile view-suche ***/
+/*********************responsive view-suche************************/
 
 /****optional: img with height-constraints*******/
-@media only screen and (max-width: 968px){
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
-> div.views-element-container > div.view-suche div.view-content span.views-field
-span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e
-div:first-child img {
+@media only screen and (max-width: 768px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+ div.region > div.views-element-container > div.view-suche div.view-content span.views-field 
+ span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e div:first-child img {
   max-height: 200px;
 }
 }
-/*****reduce object per row*****/
+
+/********reduce object per row********/
 @media only screen and (max-width: 768px){
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container >
-div.view-suche div.view-content div.views-view-grid div.views-row div.views-col{
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+ div.region > div.views-element-container > div.view-suche div.view-content div.views-view-grid div.views-row div.views-col{
   width: 50% !important;
 }
 }
 
+@media only screen and (max-width: 480px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+ div.region > div.views-element-container > div.view-suche div.view-content div.views-view-grid div.views-row div.views-col{
+  width: 100% !important;
+}
+}
+
 @media only screen and (max-width: 768px){
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container >
-div.view-suche div.view-content span.views-field span.field-content div.layout__region--first{
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > 
+div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--first{
   display: none !important;
 }
 }
 
-@media (min-width: 1100px) {
-  main#content > section.section > div.region > div.views-element-container div.view-id-suche {
-    width: 1000px;
-    margin-top: -10px;
-  }
+@media (min-width: 1100px){
+main#content > section.section > div.region > div.views-element-container div.view-id-suche {
+  width: 1000px;
+  margin-top: -10px;
 }
-@media (min-width: 1100px) {
-
-  main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-header {
-    width: 1000px;
-  }
 }
-@media (min-width: 1100px) {
 
-  main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-content {
-    min-width: 800px;
-  }
+@media (min-width: 1100px){
+main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-header {
+  width: 1000px;
+}
+}
+
+@media (min-width: 1100px){
+main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-content {
+  min-width: 800px;
+}
 }
 
 /**RESET Button**/
@@ -611,36 +654,36 @@ main#content > section.section > div.region > div.views-element-container > div.
 }
 
 header#header div.region-secondary-menu nav div.dropdown ul li a[href="/suche"]:before {
-    content: "\e003";
-    position: absolute;
-    top: 0px;
-    left: -10px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-size: 18px;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
+  content: "\e003";
+  position: absolute;
+  top: 0px;
+  left: -10px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 
 header#header div.region-secondary-menu nav div.dropdown ul li a[href="/suche"] {
-
 }
 
-/*********sidebar styling**************/
+/*********************sidebar styling*********************/
 
-/***facets***/
+/********facets***************/
 section.block-facets h3 {
   padding-bottom: 5px;
   margin-bottom: 0px;
   font-size: 1.8rem;
 }
 
-/***sidebar second view blocks***/
+/*********sidebar second ***********/
+/**
 div#sidebar-second aside.section div.region section.block-views {
   padding-bottom: 10px;
-  float: right;
 }
+**/
 
 /***readmore***/
 div#sidebar-second aside.section div.region section.block-views div.field div.field--items{
@@ -649,7 +692,7 @@ div#sidebar-second aside.section div.region section.block-views div.field div.fi
   margin-bottom: 15px;
 }
 
-/***no text indent, if title needs line break***/
+/***no text indent at  line break***/
 div#sidebar-second ul{
   text-indent: 0px; 
 }
@@ -662,10 +705,9 @@ div#sidebar-second aside.section div.well.region.region-sidebar-second {
   font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-/***sidebar first blocks***/
+/**************sidebar first******/
 div#sidebar-first aside.section div.region section.block {
   padding-bottom: 10px;
-  
 }
 
 div#sidebar-first h2.block-title {
@@ -673,16 +715,38 @@ div#sidebar-first h2.block-title {
   font-weight: bold !important;
 }
 
-/*********mobile adaptions*****************/
+/*********responsive adaptions*****************/
+
+/**location of slidebar: right**/
+
 @media only screen and (min-width: 1100px) {
 div#sidebar-second {
   left: 0px;
   margin-left: 50px;
-  z-index: 0;
+  z-index: 2;
 }
 }
 
-@media only screen and (max-width: 1720px){
+/***location of sidebar: before main#content****/
+/**@media only screen and (max-width: 1329px) {
+div#sidebar-second {
+  order: 1;
+  margin-right: 50px;
+  margin-left: 5px;
+  z-index: 2;
+  left: 0px;
+}
+}
+@media only screen and (max-width: 1329px) {
+div#sidebar-second aside.section div.region-sidebar-second {
+  display: flex;
+  flex-basis: 30%;
+  
+}
+}**/
+/**end of changes: before main#content**/
+
+@media only screen and (max-width: 1399px){
 div#sidebar-first {
   margin-left: 10px;
   border-top: solid;
@@ -692,11 +756,15 @@ div#sidebar-first {
   margin-top: 15px;
   padding-bottom: 5px;
   padding-top: 5px;
+  -webkit-box-ordinal-group: 3;
+  -moz-box-ordinal-group: 3;
+  -ms-flex-order: 3;
+  -webkit-order: 3;
   order: 3;
 }
 }
 
-/*****main content *****/
+/****************main content ********************/
 div#main-wrapper main#content {
   position: relative;
   z-index: 2; 
@@ -729,21 +797,140 @@ html body {
   font-kerning: none !important;
 }
 
+/*******************************footer****************************/
 footer {
 #  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
   background-color: #e9edf2;
 }
+
 footer div.layout-container {
   max-width: 1300px;
   margin-right: 100px;
 }
 
-@media only screen and (max-width: 1349px){
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen{
+  display: flex;
+  justify-content: unset;
+  padding-top: 10px;
+  clear: both;
+}
+
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen div#bilddaten {
+  padding-right: 10px;
+  border-right: 0.5px solid #023d77;
+}
+
+
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen
+div#metadaten {
+  padding-left: 10px;
+}
+
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen div#bilddaten img{
+  height: auto;
+  max-width: 90px;
+  float: right;
+  padding-left: 10px;
+}
+
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen
+div#metadaten img{
+  height: auto;
+  padding-left: 10px;
+  float: right;
+  max-width: 90px;
+}
+
+/****responsive footer *****/
+
+@media only screen and (max-width: 999px){
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen{
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  clear: both;
+}
+}
+
+@media only screen and (max-width: 1099px){
 footer div.layout-container {
   margin-right: 0px;
 }
 }
 
+@media only screen and (max-width: 1499px){
+footer div.layout-container div#footer-left div#footer-left-top div#footer-gnm{
+  width: unset;
+  margin-right: 20px;
+  max-width: 250px;
+}
+}
+
+@media only screen and (max-width: 1499px){
+footer div.layout-container div#footer-left div#footer-left-top div#footer-contactdata{
+  width: unset;
+  margin-right: 10px;
+  max-width: 250px;
+  min-width: unset;
+}
+}
+
+@media only screen and (max-width: 1499px){
+div#footer-left {
+  min-width: unset;
+  margin-left: 0px;
+  
+}
+}
+
+@media only screen and (max-width: 1199px){
+div#footer-left {
+  min-width: unset;
+  max-width: 45%;
+}
+}
+
+@media only screen and (max-width: 950px){
+div#footer-left {
+  min-width: unset;
+  max-width: 100%;
+  margin-left: 0px;
+}
+}
+
+@media only screen and (max-width: 1199px){
+footer div.layout-container div#footer-right div#footer-right-gnm{
+  max-width: 200px;
+}
+}
+
+@media only screen and (max-width: 1199px){
+footer div.layout-container div#footer-right div#footer-right-wisski{
+  max-width: 200px;
+}
+}
+
+@media only screen and (max-width: 1099px){
+footer div.layout-container{
+  font-size: 14px;
+  justify-content: start;
+  -webkit-justify-content: start;
+}
+}
+
+@media only screen and (max-width: 1599px){
+footer div.layout-container div#footer-right img{
+  max-width: 150px;
+}
+}
+
+@media only screen and (max-width: 1499px){
+footer div.layout-container div#footer-left img{
+  max-width: 170px;
+}
+}
+
+/********sonstiges*******************/
 .visually-hidden {
   height: 0px;
 }
@@ -779,7 +966,7 @@ div.region-content {
   position: relative;
 }
 
-/*************views adaption************/
+/**************************views adaptions*************************/
 
 /****Global str Period*******/
 div.views-element-container div.view-b9f3fbb7ba8642cd7e24e91ecc11cffc div.view-header{
@@ -815,6 +1002,9 @@ div#block-halfpastthreegrain-breadcrumbs {
 
 div.bef-link-active a {
   color: black !important;
+}
+div.views-element-container div.view-filters.form-group .views-exposed-form.bef-exposed-form {
+  padding-top: 10px;  
 }
 
 /***********Personen**********************/
@@ -878,23 +1068,30 @@ div.bef-link-active a {
   float: none;
 }
 
-/******************* Startseite fachsysteme*************/
+/******************* Startseite Fachsysteme****************************************/
+
 /***intro-text sammlung***/
 section#block-sammlung{
- display: inline-grid;
- flex: 20%;
- max-width: 45%;
- flex-direction: row;
- top: -50px;
- }
-
-@media only screen and (max-width: 989px) {
- section#block-sammlung{
-   max-width: 100%;
-   order: 2;
-   margin: 20px;
-  }
+  display: inline-grid;
+  flex: 20%;
+  max-width: 45%;
+  flex-direction: row;
+  top: -10px;
+  margin-left: 5px;
 }
+
+section#block-sammlung div.layout div.layout__region--title{
+  display: none;
+}
+
+@media only screen and (max-width: 1099px) {
+section#block-sammlung{
+  max-width: 100%;
+  order: 2;
+  margin: 20px;
+}
+}
+
 /***slideshow adaptions for 10 img
 * html-code and script: structure > block layout > sliderblock 
 ***/
@@ -903,6 +1100,17 @@ div.fade {
   -webkit-transition: initial;
   -o-transition: initial;
   transition: initial;
+}
+
+.dotties {
+  display: block;
+  width: 200px;
+  padding-top: 8px;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 10;
+  position: relative;
+  top: 0px;
 }
 
 div.slideshow-container {
@@ -924,28 +1132,17 @@ section#block-sliderblock{
   top: -10px;
 }
 
-@media only screen and (max-width: 989px){
+@media only screen and (max-width: 1099px){
 div.slideshow-container{
-  max-width: 90%;
+  max-width: 80%;
 }
 }
 
-@media only screen and (max-width: 989px){
+@media only screen and (max-width: 1099px){
 section#block-sliderblock{
-  max-width: 90%;
+  max-width: 80%;
   margin: 20px;
 }
-}
-
-.dotties {
-    display: block;
-    width: 200px;
-    padding-top: 8px;
-    margin-right: auto;
-    margin-left: auto;
-    z-index: 10;
-    position: relative;
-    top: 0px;
 }
 
 div.field--label-hidden > div.field__item {
@@ -953,6 +1150,111 @@ div.field--label-hidden > div.field__item {
   grid-column-end: 6;
 }
 
+
+/* copyright: https://www.w3schools.com/howto/howto_js_slideshow.asp 05/2018 */
+/***startseite slideshow***/
+* {box-sizing:border-box}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: ;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.4);
+}
+.text h1 {font-weight: normal; font-size: 2em}
+.text h2 {}
+
+
+/* Number text (1/3 etc) - ausgeblendet */
+.numbertext {
+    display:none;
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+  background-color: #0059b3;
+  #background-color: #036;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+
+}
+
+
+
+
+
+/**********views***************************************/
 /** Institutionen **/
 
 div#main main#content div.view-b1ce4bdc2e5683f5fdabab02e6627121 div.view-content div.views-col {
@@ -975,7 +1277,6 @@ div#main main#content div.view-b1ce4bdc2e5683f5fdabab02e6627121 div.view-header 
   margin-top: 0px;
   margin-right: 10px;
 }
-
 
 /** Personen **/
 div#main main#content div.view-bd9c096f185635434163360c45fc645d div.view-content div.views-col {
@@ -1054,10 +1355,10 @@ div.layout div.layout__region--combined div.layout__region--second{
 }
 
 @media (max-width: 1099px) {
-  div.layout__region--combined div.layout__region--second {
-    justify-content: center;
-    padding-right: 0px;
-  }
+div.layout__region--combined div.layout__region--second {
+  justify-content: center;
+  padding-right: 0px;
+}
 }
 
 div.layout__region--combined div.layout__region--second div.field--item img {
