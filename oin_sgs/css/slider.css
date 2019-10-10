@@ -1,14 +1,69 @@
 /* copyright: https://www.w3schools.com/howto/howto_js_slideshow.asp 05/2018 */
-/***startseite slideshow***/
+
 * {box-sizing:border-box}
 
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: ;
   position: relative;
   margin: auto;
+  float: left;
+  min-width: 500px;
 }
+
+section#block-sliderblock{
+ display: inline-flex;
+ flex: 56%;
+ min-width: 50%;
+ flex-direction: row;
+ margin-right: 20px;
+ 
+ 
+}
+/**startseite**/
+section#block-sammlung{
+ display: inline-grid;
+ flex: 20%;
+ max-width: 100%;
+ flex-direction: row;
+
+}
+/**
+@media only screen and (max-width: 999px) {
+ section#block-medizinischesammlungerlangen{
+   max-width: 100%;
+   order: 2;
+  }
+}**/
+@media only screen and (max-width: 989px) {
+ section#block-sammlung{
+   
+   max-width: 100%;
+   order: 2;
+   margin: auto;
+  }
+}
+
+@media only screen and (max-width: 989px){
+div.slideshow-container{
+  
+  max-width: 90%;
+  margin: auto;
+}
+}
+
+
+@media only screen and (max-width: 989px){
+section#block-sliderblock{
+  
+  max-width: 90%;
+  margin: auto;
+}
+}
+
+
+
+
 
 /* Hide the images by default */
 .mySlides {

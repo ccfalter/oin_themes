@@ -3,4 +3,7 @@ sgs_adaptions:
   css:
     theme:
       css/adaptions.css: {}
+      css/slider.css: {}
+    layout:
+      css/twocol_bricks.css: {}
 
