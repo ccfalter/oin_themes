@@ -1,61 +1,14 @@
 /* copyright: https://www.w3schools.com/howto/howto_js_slideshow.asp 05/2018 */
-
+/***startseite slideshow***/
 * {box-sizing:border-box}
 
 
 /* Slideshow container */
 .slideshow-container {
+  max-width: ;
   position: relative;
   margin: auto;
-  float: left;
-  max-width: 90%;
 }
-
-section#block-sliderblock{
- display: inline-flex;
- flex: 56%;
- max-width: 50%;
- flex-direction: row;
- margin-right: 10px;
- 
- 
-}
-/**startseite**/
-section#block-graphischesammlung{
- display: inline-grid;
- flex: 20%;
- max-width: 45%;
- flex-direction: row;
-
-}
-
-@media only screen and (max-width: 989px) {
- section#block-graphischesammlung{
-   max-width: 100%;
-   order: 2;
-   margin: auto;
-  }
-}
-
-@media only screen and (max-width: 989px){
-div.slideshow-container{
-  max-width: 75%;
-  margin: 20px;
-}
-}
-
-
-@media only screen and (max-width: 989px){
-section#block-sliderblock{
-  max-width: 75%;
-  margin: 20px;
-}
-}
-
-
-
-
-
 
 /* Hide the images by default */
 .mySlides {
