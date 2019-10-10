@@ -18,7 +18,7 @@ section#block-sliderblock{
  max-width: 60%;
  flex-direction: row;
  margin-right: 10px;
- top: -10px; 
+ top: -20px; 
  
 }
 
@@ -26,9 +26,9 @@ section#block-sliderblock{
 section#block-studiensammlungmusikinstrumentemedienderjmuwurzburg{
  display: inline-grid;
  flex: 20%;
- max-width: 40%;
+ max-width: 45%;
  flex-direction: row;
- top: -10px;
+ top: -20px;
 
 }
 
