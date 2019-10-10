@@ -1,14 +1,257 @@
-/***general changes for OiN***/
+/************generel OiN adaptions *********************/
 
-/**Med Page title in FAU-Balken**/
+/***adaptions layout 1300px one sidebar********/
+main#content > section.section > div.region > div.views-element-container {
+  max-width: 1000px;
+}
+
+@media (min-width: 1100px){
+main#content div.view-content {
+  min-width: 1000px;
+}
+}
+/**change order of main and sidebar****/
+/**@media (max-width: 1329px){
+main#content {
+  order: 2;
+}
+}
+**/
+/********************page title and header region **************************************/
+
+/****white title in third-level********/
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content >
+section.section > div.region > div[class*="wisski_bundle_b"] > div.la {
+  margin-top: -80px;
+}
+
+/*****suchschlitz**************/
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content >
+section.section > div.region > div.views-element-container > div.view-suche > div.view-filters {
+  top: -90px;
+  max-width: fit-content;
+}
+
 h1.page-header {
   display: flex;
+  font-size: 28px;
+ #margin-bottom: 80px;
+ #font-size: 2.7777777rem;
   margin-bottom: 90px;
   margin-top: -120px;
-  color: whitesmoke;
+  color: white;
   border-bottom: none;
   font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+
+h1.page-title {
+  font-size: 1.357em;
+}
+
+/*****site branding fachsysteme*******/
+section.site-branding div.site-branding__text {
+  position: absolute !important;
+  font-size: 16px !important;
+  color: #036 !important;
+  font-weight: bold;
+  display: flex;
+  overflow: hidden;
+  width: auto;
+  top: -1.4em;
+  padding-bottom: 0px;
+  background-color: transparent;
+  z-index: -1000;
+  white-space: nowrap;
+}
+
+nav.tabs {
+  margin-top: 100px;
+}
+
+/****************header-level****************/
+
+div#first-level {
+  padding-right: 240px;
+}
+
+div#first-level .dropdown-menu > li > a {
+  color: #003366;
+}
+
+div#first-level-wrapper {
+  background-color: #e9edf2;
+}
+
+div#second-level div#main-menu {
+  background-color: inherit;
+#  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
+}
+
+div#second-level div#main-menu div > nav > div.dropdown > ul > li > a {
+  border-left: 1px solid white;
+  color: white;
+}
+
+div#second-level-wrapper {
+#  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
+  background: white;
+}
+
+div#second-level-wrapper div#header-items {
+  position: absolute;
+}
+
+div#second-level div#main-menu {
+  width: 960px;
+  margin-right: 140px;
+}
+
+div#second-level div#main-menu > div.region {
+  padding-top: 10px;
+}
+
+div#second-level div#main-menu div > nav > div.dropdown > ul > li > a {
+  color: #036 !important;
+  font-size: 1.1333333333rem !important;
+  line-height: 1.1333333333rem !important;
+  text-transform: initial !important;
+  font-weight: bold !important;
+  font-size: 17px !important;
+  line-height: 17px !important;
+}
+
+div#third-level-wrapper a {
+  color: white;
+}
+
+div#third-level-wrapper > div#third-level > div ol li {
+  color: white;
+  font-size: 12px;
+}
+
+div#third-level-wrapper > div#third-level {
+  padding-top: 10px;
+}
+
+div#third-level-wrapper {
+  background: url(../images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
+  min-height: 170px;
+}
+
+/*********fau-logo**********/
+div#gnm-logo {
+  margin: 0px !important;
+}
+
+div#gnm-logo img {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 0px;
+  right: 240px;
+}
+
+/*********************** responsive adaptions*********************************/
+@media (min-width: 1100px){
+div.header-level {
+  width: 1300px;
+}
+}
+
+@media only screen and (max-width: 1599px){
+div#main-wrapper div#main{
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+}
+
+@media only screen and (max-width: 1599px){
+section#block-oin-palaeo-branding{
+  padding-left: 10px;
+}
+}
+
+/****************login*********************************/
+@media (max-width: 1099px){
+div#first-level {
+  padding-right: 5px;
+}
+}
+
+@media only screen and (max-width: 768px){
+div#first-level {
+  padding-right: 0px;
+}
+}
+
+/*****************fau logo ******************/
+@media (max-width: 768px){
+div#second-level div#gnm-logo img {
+  right: 0px;
+}
+}
+
+
+/**align menu and page title***/
+@media (max-width: 1599px){
+div#second-level div#main-menu div > nav > div {
+  padding-left: 10px;
+}
+}
+
+@media (max-width: 1099px){
+div#second-level div#main-menu div > nav > div .btn{
+  padding-left: 5px;
+}
+}
+
+@media (max-width: 1099px){
+div#second-level div#main-menu ul.dropdown-menu {
+  background-color: white;
+}
+}
+
+@media (max-width: 1099px){
+div#second-level div#main-menu div > nav > div > button {
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+}
+
+@media (min-width: 1100px) {
+div#second-level div#main-menu div > nav > div.dropdown > ul > li {
+  padding-bottom: 5px;
+}
+}
+
+@media (max-width: 1099px){
+h1.page-header {
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-left: 0px;
+  border-bottom:  1px solid #eee;
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #036;
+}
+}
+
+/**overlay dropdown menu above main-content(page title or header)**/
+@media (max-width: 1099px){
+div#main-wrapper main#content{
+  z-index: 0 !important;
+}
+}
+
+@media (max-width: 1099px){
+div#header-items section.site-branding div.site-branding__text{
+  top: -1.4em;
+}
+}
+
+/*******************sammlungsobjektansicht********************************/
+div.field.field--type-string-long.field--label-above{
+  padding-bottom: 5px;
+}
+
 
 /* gallery for too many img (region:secondabove):
  * first img ->under Manage display in Sammlungsobjekt:
@@ -57,10 +300,10 @@ section.block-facets h3 {
 }
 
 /***sidebar second view blocks***/
-div#sidebar-second aside.section div.region section.block-views {
+/**div#sidebar-second aside.section div.region section.block-views {
   padding-bottom: 10px;
- # float: right;
 }
+**/
 
 /***readmore***/
 div#sidebar-second aside.section div.region section.block-views div.field div.field--items{
@@ -90,6 +333,19 @@ div#sidebar-second {
   z-index: 0;
 }
 }
+@media (max-width: 826px){
+div#sidebar-second {
+    margin-left: 10px;
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: transparent;
+    margin-top: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+}
+
 @media only screen and (max-width: 1720px){
 div#sidebar-first {
     margin-left: 10px;
@@ -109,6 +365,7 @@ div#second-level div#main-menu div > nav > div > button {
   font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 }
+
 /***for img with height constrains ***/
 /**
 @media only screen and (max-width: 968px){
@@ -127,43 +384,11 @@ div.view-suche div.view-content div.views-view-grid div.views-row div.views-col{
 }
 }
 @media only screen and (max-width: 768px){
-div#first-level {
-  padding-right: 0px;
-}
-}
-
-@media only screen and (max-width: 768px){
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container >
 div.view-suche div.view-content span.views-field span.field-content div.layout__region--first{
   display: none !important;
 }
 }
-
-@media (max-width: 1099px){
-h1.page-header {
-  font-size: 20px;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  margin-left: 40px;
-  border-bottom:  1px solid #eee;
-  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-  color: #036;
-
-}
-}
-
-@media (max-width: 1099px){
-div#main-wrapper main#content{
-  z-index: 0 !important;
-}
-}
-
-@media (max-width: 1099px){
-div#header-items section.site-branding div.site-branding__text{
-  top: -1.4em;
-}
-}
-
 
 
 
@@ -200,25 +425,6 @@ div.field--type-text-long.field--label-above div.field--item {
   grid-column-end: 6;
 }
 
-nav.tabs{
-  margin-top: 100px;
-}
-
-/**Med Page title in FAU-Balken**/
-/**h1.page-header {
-  display: flex;
-  margin-bottom: 90px;
-  margin-top: -120px;
-  color: whitesmoke;
-  border-bottom: none;
-  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-**/
-/**med changes for slogan and branding**/
-section.site-branding div.site-branding__slogan {
-  padding-left: 2px;
-}
-
 /**med: bottom display grid -> none**/
 div.view-suche div.view-content div.views-field div.layout div.layout__region--bottom{
   display: none;
@@ -228,16 +434,16 @@ div.view-suche div.view-content div.views-field div.layout div.layout__region--b
 div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference.field--label-above > div.field--items{
   display: block;
   grid-column-start: 2;
-  grid-column-end: 6;
-  # grid-column-end:9;
+  #grid-column-end: 6;
+  grid-column-end:69;
 
 }
 
 div.layout div.layout__region--bottom div.field.field--label-above div.field--items{
   display: block;
   grid-column-start: 2;
-  grid-column-end: 6;
- #grid-column-end:9;
+  #grid-column-end: 6;
+ grid-column-end:69;
   padding-right: 15px;
 
 }
@@ -251,8 +457,8 @@ div.layout div.layout__region--combined div.layout__region--first
 div.layout__region--firstbelow div.field--type-entity-reference.field--label-above > div.layout--onecol div.layout__region div.field--type-string.field--label-above div.field--items {
   display: block;
   grid-column-start: 2;
-  grid-column-end: 6;
-  #grid-column-end:9;
+ # grid-column-end: 6;
+  grid-column-end:69;
 }
 
 div.layout__region div.layout__region--combined div.layout__region--second div.layout__region--secondbelow div.field--type-entity-reference
@@ -264,10 +470,12 @@ div.layout--twocol div.layout__region--bottom{
   clear: both;
   padding-top: 20px;
 }
+
 div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstbelow div.field--type-entity-reference div.field--items  div.field--item
 div.field--type-string.field--label-above{
   padding-bottom: 5px;
 }
+
 div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference div.layout--onecol div.layout__region div.field--type-string.field--label-above
 div.field--label{
  padding-top: 5px;
@@ -289,8 +497,8 @@ div.layout div.layout__region--combined div.layout__region--first > div.field--t
 div.field--items{
   display: block;
   grid-column-start: 2;
-  grid-column-end: 6;
- #  grid-column-end: 9;
+ # grid-column-end: 6;
+  grid-column-end: 69;
 }
 
 div.layout div.layout__region--firstbelow {
@@ -412,6 +620,38 @@ div.layout div.layout__region--second div.field--type-entity-reference div.field
   display: block;
 }
 
+/***********************view-suche without overlay/popup**************************/
+/****filter Volltextsuche*****/
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+div.region > div.views-element-container > div.view-suche > div.view-filters
+form.views-exposed-form > div.form--inline > div.form-item {
+  padding-right: 15px;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+div.region > div.views-element-container > div.view-suche > div.view-filters
+form.views-exposed-form  div.form--inline  div.form-item
+label.control-label{
+ display: block;
+}
+
+@media (min-width: 768px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+div.region > div.views-element-container > div.view-suche > div.view-filters
+form.views-exposed-form > div.form--inline > div.form-item
+div.select-wrapper select{
+    min-width: 140px;
+}
+}
+
+@media (min-width: 768px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+div.region > div.views-element-container > div.view-suche > div.view-filters
+form.views-exposed-form > div.form--inline > div.form-group{
+vertical-align: unset;
+}
+}
+
 /* Old Version before popup*/
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
 > div.views-element-container > div.view-suche div.view-content span.views-field
@@ -452,6 +692,7 @@ span.field-content div.layout  {
     -webkit-align-items: flex-start;
     align-items: flex-start;
 }
+
 /**change order of layout__regions: order:**/
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
 > div.views-element-container > div.view-suche div.view-content span.views-field
@@ -529,7 +770,7 @@ span.field-content div.layout__region--title > div.field {
   font-size: 1.2em !important;
   padding-bottom: 0px;
 }
-
+/**
 @media only screen and (min-width: 1850px) {
 div#sidebar-second {
 
@@ -537,14 +778,366 @@ div#sidebar-second {
   z-index: 0;
 }
 }
+**/
+/*********************responsive view-suche************************/
 
+/****optional: img with height-constraints*******/
+@media only screen and (max-width: 768px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+ div.region > div.views-element-container > div.view-suche div.view-content span.views-field
+ span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e div:first-child img {
+  max-height: 200px;
+}
+}
+
+/********reduce object per row********/
+@media only screen and (max-width: 768px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+ div.region > div.views-element-container > div.view-suche div.view-content div.views-view-grid div.views-row div.views-col{
+  width: 50% !important;
+}
+}
+
+@media only screen and (max-width: 480px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+ div.region > div.views-element-container > div.view-suche div.view-content div.views-view-grid div.views-row div.views-col{
+  width: 100% !important;
+}
+}
+
+@media only screen and (max-width: 768px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region >
+div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--first{
+  display: none !important;
+}
+}
+
+@media (min-width: 1100px){
+main#content > section.section > div.region > div.views-element-container div.view-id-suche {
+  width: 1000px;
+  margin-top: -10px;
+}
+}
+
+@media (min-width: 1100px){
+main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-header {
+  width: 1000px;
+}
+}
+
+@media (min-width: 1100px){
+main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-content {
+  min-width: 800px;
+}
+}
+
+
+/**RESET Button**/
+button.btn-danger {
+  background-color: #036;
+  border-color: #036;
+}
+
+.search-row.views-row {
+  clear: both;
+  float: left;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.search-row.views-row div.layout {
+  max-width: 100%;
+  width: 100%;
+  word-break: break-word;
+}
+
+main#content > section.section > div.region > div.views-element-container > div.view-id-suche nav.pager-nav {
+  clear: both;
+}
+
+header#header div.region-secondary-menu nav div.dropdown ul li a[href="/suche"]:before {
+  content: "\e003";
+  position: absolute;
+  top: 0px;
+  left: -10px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+header#header div.region-secondary-menu nav div.dropdown ul li a[href="/suche"] {
+}
+
+
+/*********************sidebar styling*********************/
+
+/********facets***************/
+section.block-facets h3 {
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+  font-size: 1.8rem;
+}
+
+/*********sidebar second ***********/
+/**
+div#sidebar-second aside.section div.region section.block-views {
+  padding-bottom: 10px;
+}
+**/
+
+/***readmore***/
+div#sidebar-second aside.section div.region section.block-views div.field div.field--items{
+  list-style-type: none;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+/***no text indent at  line break***/
+div#sidebar-second ul{
+  text-indent: 0px;
+}
+
+
+div#sidebar-second aside.section div.well.region.region-sidebar-second {
+  background-color: white;
+  border: white;
+  -webkit-box-shadow: unset;
+  box-shadow: unset;
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/**************sidebar first******/
+div#sidebar-first aside.section div.region section.block {
+  padding-bottom: 10px;
+}
+
+div#sidebar-first h2.block-title {
+  font-size: 1.8rem;
+  font-weight: bold !important;
+}
+
+
+/*********responsive adaptions*****************/
+
+/**location of slidebar: right**/
+
+@media only screen and (min-width: 1100px) {
+div#sidebar-second {
+  left: 0px;
+  margin-left: 50px;
+  z-index: 2;
+}
+}
+
+/***location of sidebar: before main#content****/
+/**@media only screen and (max-width: 1329px) {
+div#sidebar-second {
+  order: 1;
+  margin-right: 50px;
+  margin-left: 5px;
+  z-index: 2;
+  left: 0px;
+}
+}
+@media only screen and (max-width: 1329px) {
+div#sidebar-second aside.section div.region-sidebar-second {
+  display: flex;
+  flex-basis: 30%;
+
+}
+}**/
+/**end of changes: before main#content**/
+
+@media only screen and (max-width: 1399px){
+div#sidebar-first {
+  margin-left: 10px;
+  border-top: solid;
+  border-bottom: transparent;
+  border-width: 2px;
+  border-color: transparent;
+  margin-top: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  -webkit-box-ordinal-group: 3;
+  -moz-box-ordinal-group: 3;
+  -ms-flex-order: 3;
+  -webkit-order: 3;
+  order: 3;
+}
+}
+
+
+
+/****************main content ********************/
 div#main-wrapper main#content {
   position: relative;
   z-index: 2;
-  width: 1100px;
+  width: 1000px;
   padding-top: 20px;
 }
 
+div#main-wrapper div[class*="wisski_bundle_b"] div.layout__region--title {
+  color: white;
+}
+
+div.layout__region--title div.field {
+  color: white;
+  font-size: 2.7733333333rem !important;
+  line-height: 2.7733333333rem;
+  padding-bottom: 20px;
+}
+
+a {
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+
+html {
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  font-kerning: none !important;
+}
+
+html body {
+  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  font-kerning: none !important;
+}
+
+
+/*******************************footer****************************/
+footer {
+#  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
+  background-color: #e9edf2;
+}
+
+footer div.layout-container {
+  max-width: 1300px;
+  margin-right: 100px;
+}
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen{
+  display: flex;
+  justify-content: unset;
+  padding-top: 10px;
+  clear: both;
+}
+
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen div#bilddaten {
+  padding-right: 10px;
+  border-right: 0.5px solid #023d77;
+}
+
+
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen
+div#metadaten {
+  padding-left: 10px;
+}
+
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen div#bilddaten img{
+  height: auto;
+  max-width: 90px;
+  float: right;
+  padding-left: 10px;
+}
+
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen
+div#metadaten img{
+  height: auto;
+  padding-left: 10px;
+  float: right;
+  max-width: 90px;
+}
+
+/******footer responsive***********/
+@media only screen and (max-width: 999px){
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen{
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  clear: both;
+}
+}
+
+
+@media only screen and (max-width: 1099px){
+footer div.layout-container {
+  margin-right: 0px;
+}
+}
+
+@media only screen and (max-width: 1499px){
+footer div.layout-container div#footer-left div#footer-left-top div#footer-gnm{
+  width: unset;
+  margin-right: 20px;
+  max-width: 250px;
+}
+}
+
+@media only screen and (max-width: 1499px){
+footer div.layout-container div#footer-left div#footer-left-top div#footer-contactdata{
+  width: unset;
+  margin-right: 10px;
+  max-width: 250px;
+  min-width: unset;
+}
+}
+
+@media only screen and (max-width: 1499px){
+div#footer-left {
+  min-width: unset;
+  margin-left: 0px;
+
+}
+}
+
+@media only screen and (max-width: 1199px){
+div#footer-left {
+  min-width: unset;
+  max-width: 45%;
+}
+}
+
+@media only screen and (max-width: 950px){
+div#footer-left {
+  min-width: unset;
+  max-width: 100%;
+  margin-left: 0px;
+}
+}
+
+@media only screen and (max-width: 1199px){
+footer div.layout-container div#footer-right div#footer-right-gnm{
+  max-width: 200px;
+}
+}
+
+@media only screen and (max-width: 1199px){
+footer div.layout-container div#footer-right div#footer-right-wisski{
+  max-width: 200px;
+}
+}
+
+@media only screen and (max-width: 1099px){
+footer div.layout-container{
+  font-size: 14px;
+  justify-content: start;
+  -webkit-justify-content: start;
+}
+}
+
+@media only screen and (max-width: 1599px){
+footer div.layout-container div#footer-right img{
+  max-width: 150px;
+}
+}
+
+@media only screen and (max-width: 1499px){
+footer div.layout-container div#footer-left img{
+  max-width: 170px;
+}
+}
+
+/**
 div#second-level-wrapper div#header-items {
   position: absolute;  
 }
@@ -559,7 +1152,7 @@ div#third-level-wrapper {
   background: url(../images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
   min-height: 170px;
 }
-
+**/
 div#main-wrapper div[class*="wisski_bundle_b"] div.layout__region--title {
   color: white;
 }
@@ -570,7 +1163,7 @@ div.layout__region--title div.field {
   line-height: 1.7733333333rem !important;
 }
 
-
+/**
 div#third-level-wrapper a {
   color: white;
 }
@@ -584,7 +1177,7 @@ div#third-level-wrapper > div#third-level > div ol li {
 div#third-level-wrapper > div#third-level {
   padding-top: 10px;
 }
-
+**/
 /**med changes
 div#second-level-wrapper div#header-items div.region {
   padding-top: 10px;
@@ -593,7 +1186,7 @@ div#second-level-wrapper div#header-items div.region {
 /**med changes for Site-branding and slogan:
        margin-right: 140px;
        width: 960px;
-**/
+
 div#second-level div#main-menu {
   width: 960px;
   margin-right: 140px;
@@ -612,8 +1205,9 @@ div#gnm-logo img {
 div#gnm-logo {
   margin: 0px !important;
 }
+**/
 /*med changes for site branding and slogan*/
-section.site-branding div.site-branding__text {
+/**section.site-branding div.site-branding__text {
   position: absolute !important;
   font-size: 16px !important;
   color: #036 !important;
@@ -627,16 +1221,16 @@ section.site-branding div.site-branding__text {
   z-index: -1000;
   white-space: nowrap;
 }
-
-
+**/
+/**
 div#second-level div#main-menu > div.region {
   padding-top: 10px;
 }
-
+**/
 a {
   font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }
-
+/**
 div#second-level div#main-menu div > nav > div.dropdown > ul > li > a {
   color: #036 !important;
   font-size: 1.1333333333rem !important;
@@ -647,7 +1241,7 @@ div#second-level div#main-menu div > nav > div.dropdown > ul > li > a {
   line-height: 17px !important;
 }
 
-
+**/
 
 
 
@@ -661,7 +1255,7 @@ html body {
   font-kerning: none !important;
 }
 
-
+/**
 div#gnm-logo img {
   padding-top: 30px;
   padding-bottom: 8px;
@@ -684,7 +1278,7 @@ div#second-level-wrapper {
 #  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
   background: white;
 }
-
+**/
 footer {
 #  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
   background-color: #e9edf2;
@@ -694,16 +1288,16 @@ footer {
   height: 0px;
 }
 
-
+/**
 
 div#first-level .dropdown-menu > li > a {
   color: #003366;
 }
-
+**/
 body a {
   color: #003366;
 }
-
+/**
 @keyframes kenburns {
     0% {
       opacity: 0;
@@ -721,8 +1315,8 @@ body a {
         opacity: 0;
     }
 }
-
-
+**/
+/**
 div.region-content div.views-element-container div.view-filterkriterien div.view-filters div.form-group {
   display: block;
 }
@@ -731,12 +1325,10 @@ div.region-content div.views-element-container div.view-filterkriterien div.view
   display: block;
 }
 
-
-
 div.region-content div.views-element-container div.view-filterkriterien div.view-filters div.form-item {
   padding-bottom: 15px;
 }
-
+**/
 div.select-wrapper:after {
   color: #003366;
 }
@@ -747,7 +1339,7 @@ div.select-wrapper:after {
   clear: initial;
 }
 
-
+/**
 div.region-content div.views-element-container div.view-filterkriterien div.views-view-grid {
   width: 850px;
 }
@@ -770,7 +1362,11 @@ div.region-content div.views-element-container div.view-filterkriterien div.view
   padding-left: 10px;
   padding-top: 40px;
 }
+
+**/
+
 /**table objekte med**/
+/**
 div.region-content div.views-element-container div.view-filterkriterien div.table-responsive {
   margin-top: -35px;
 }
@@ -782,7 +1378,7 @@ div.region-content div.views-element-container div.view-filterkriterien div.view
 div.region-content div.views-element-container div.view-filterkriterien div.view-filters .form--inline .form-item {
   float:none;
 }
-
+**/
 body.path-wisski div.region-content div#block-halfpastthreegrain-page-title {
   display: none;
   position: absolute;
@@ -796,33 +1392,8 @@ body.path-wisski div.region-content div#block-halfpastthreegrain-page-title {
 #  left: 234px;
 }
 
-h1.page-title {
-  font-size: 1.357em;
-}
-
 div.region-content {
   position: relative;
-}
-
-div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field__item {
-  display:inline-block;
-  padding-left: 0px;
-}
-
-div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field__item:first-child {
-#  padding-left: 0.5em;
-}
-
-div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field__item:after {
-  content: ',';
-  display:inline-block;
-
-}
-
-div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field__item:last-child:after {
-  content: '';
-  display:inline-block;
-
 }
 
 div.bef-link-active a {
@@ -861,23 +1432,6 @@ div#block-halfpastthreegrain-breadcrumbs {
   float: none;
 }
 
-
-div.view-filterkriterien div.views-field-preview-image {
-  max-width: 180px;
-  max-height: 200px;
-  overflow: hidden;
-}
-
-div.view-filterkriterien div.views-row {
-  margin-bottom: 10px;
-}
-
-div.view-filterkriterien div.views-row div.views-col div.views-field-title {
-  max-width: 200px;
-#  margin-right: 10px;
-}
-
-
 .bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_geogr_ort > div {
   width: 100%;
   display: flex;
@@ -893,39 +1447,6 @@ div.view-filterkriterien div.views-row div.views-col div.views-field-title {
 }
 
 
-.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_person > div {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_person > div > div {
-  display: inline-block;
-}
-
-.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_person{
-  float: none;
-}
-
-.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_organisation > div {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_organisation > div > div {
-  display: inline-block;
-}
-
-div#block-halfpastthreegrain-breadcrumbs {
-  z-index: 10;
-}
-
-.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_organisation {
-  float: none;
-}
-
-
 /******************* Startseite *************/
 
 div.fade {
@@ -933,33 +1454,6 @@ div.fade {
   -webkit-transition: initial;
   -o-transition: initial;
   transition: initial;
-}
-
-.block-views-blockstartseite-block-1 {
-  margin-bottom: 40px;
-}
-
-.block-views-blockstartseite-block-1 h2 {
-  display: none;
-}
-
-.block-views-blockstartseite-block-1 div.mySlides h2 {
-  display: block;
-  padding: 20px;
-  color: #e3001b !important;
-}
-
-.block-views-blockstartseite-block-1 div.more-link {
-  padding-right: 20px;
-}
-
-
-.block-views-blockstartseite-block-1 > div > div.slideshow-container > div.view-content {
-  display: none;
-}
-
-.block-views-blockstartseite-block-1 > div > div.slideshow-container > div.more-link {
-  display: none;
 }
 
 div.mySlides div.views-row {
@@ -970,20 +1464,6 @@ div.mySlides div.views-row {
 #  padding-bottom: 50px;
   display: flex;
   justify-content: center;
-}
-.block-views-blockstartseite-block-1 div.view-footer {
-#  display: none;
-  height: 0px;
-}
-
-.block-views-blockstartseite-block-1 div.more-link {
-  position: absolute;
-  font-size: 1.5em;
-  right: 0px;
-}
-
-.block-views-blockstartseite-block-1 .form-group {
-  margin-bottom: 0px;
 }
 
 div.mySlides div.views-row div.views-col {
@@ -1090,7 +1570,7 @@ div.field--label-hidden > div.field__item {
 
 .dotties {
     display: block;
-    width: 100px;
+    width: 200px;
     padding-top: 8px;
     margin-right: auto;
     margin-left: auto;
@@ -1109,10 +1589,6 @@ div#main main#content div.view-search div.view-content div.views-col {
   padding-top: 10px;
 }
 
-/*div#main main#content div.view-search div.view-content span.views-field.views-field-rendered-item span.field-content div.layout__region.layout__region--tit
- margin-top: 80px;
-}
-*/
 /** Institutionen **/
 
 div#main main#content div.view-b1ce4bdc2e5683f5fdabab02e6627121 div.view-content div.views-col {
@@ -1136,7 +1612,12 @@ div#main main#content div.view-b1ce4bdc2e5683f5fdabab02e6627121 div.view-header 
   margin-right: 10px;
 }
 
-
+@media (max-width: 768px){
+div#main main#content div.view-b1ce4bdc2e5683f5fdabab02e6627121 div.view-content
+div.views-col{
+  width: 50% !important;
+}
+}
 /** Personen **/
 div#main main#content div.view-bd9c096f185635434163360c45fc645d div.view-content div.views-col {
   text-align: center;
@@ -1157,6 +1638,12 @@ div#main main#content div.view-bd9c096f185635434163360c45fc645d div.view-header 
   top: -20px;
   margin-top: 0px;
   margin-right: 10px;
+}
+@media (max-width: 768px){
+div#main main#content div.view-bd9c096f185635434163360c45fc645d div.view-content
+div.views-col{
+  width: 50% !important;
+}
 }
 
 /** Orte **/
@@ -1179,6 +1666,13 @@ div#main main#content div.view-b6bbebe296631e440003692eac4390dc div.view-header 
   top: -20px;
   margin-top: 0px;
   margin-right: 10px;
+}
+
+@media (max-width: 768px){
+div#main main#content div.view-bd9c096f185635434163360c45fc645d div.view-content
+div.views-col{
+  width: 50% !important;
+}
 }
 
 
@@ -1227,39 +1721,6 @@ div.layout__region--combined div.layout__region--second div.field--item img {
   padding-bottom: 5px;
 }
 
-div.region-content div.layout__region div.field--item table {
-  width: 100%;
-  border: 2px solid #f2f2f2;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-div.region-content div.layout__region div.field--item table tr {
-  border-top: 2px solid #f2f2f2;
-}
-
-div.region-content div.layout__region div.field--item table tr th {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-div.region-content div.layout__region div.field--item table tr td {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field--items div.field--item:after {
-  content: ", ";
-}
-
-div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field--items div.field--item:last-child:after {
-  content: "";
-}
-
 /* personen und institutionen */
 /* sachstandsbericht: padding top */
 div.field--name-f8509d98a943379b0ca61e18d1636394 {
@@ -1277,18 +1738,6 @@ div.layout div.layout__region--bottom {
   clear: both;
 }
 
-div.wisski_bundle_bd9732aeea5784666b76e1e59038cade div.layout__region--bottom:before {
-  content: 'Diese Person hatte Kontakt mit den folgenden Objekten:';
-  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-
-}
-
-div.wisski_bundle_b4b1bc319db8afbd54bdba451e6a71bf div.layout__region--bottom:before {
-  content: 'Diese Institution hatte Kontakt mit den folgenden Objekten:';
-  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-
-}
-
 .search-row.views-row {
   clear: both;
   float: left;
@@ -1296,27 +1745,29 @@ div.wisski_bundle_b4b1bc319db8afbd54bdba451e6a71bf div.layout__region--bottom:be
   width: 100%;
 }
 
-
 .search-row.views-row div.layout {
   max-width: 100%;
   width: 100%;
   word-break: break-word;
 }
 
-
 main#content > section.section > div.region > div.views-element-container > div.view-id-suche nav.pager-nav {
   clear: both;
 }
+
 /**med: margin-top 0 -> -10px**/
 @media (min-width: 1100px) {
   main#content > section.section > div.region > div.views-element-container div.view-id-suche {
-    width: 1100px;
+    width: 1000px;
     margin-top: -10px;
   }
-
+}
+@media (min-width: 1100px) {
   main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-header {
-    width: 1100px;
+    width: 1000px;
   }
+}
+@media (min-width: 1100px) {
 
   main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-content {
     min-width: 800px;
@@ -1352,6 +1803,7 @@ div.field--name-f1621dd2af001f2f8b9e61b67040bbad {
 span.solr-high {
   background-color: yellow;
 }
+
 div.layout__region.layout__region--center
 div.field.field--name-body.field--type-text-with-summary.field--label-hidden.field--item
 p {
