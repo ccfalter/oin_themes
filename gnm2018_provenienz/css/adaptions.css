@@ -28,7 +28,7 @@ div.views-element-container div.view div.view-header h5 {
   right: 0px;
   text-align: start;
   font-weight: bold;
-  
+  margin-bottom: 20px;
 }
   
 div.field--type-text-long {
@@ -49,6 +49,18 @@ body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#co
   margin-top: -90px;
 }
 
+@media (max-width: 768px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div[class*="wisski_bundle_b"] > div.layout__region--title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-left: 0px;
+    border-bottom: 1px solid #eee;
+    font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #036;
+    
+}
+}    
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
 > div.views-element-container > div.view-search > div.view-filters {
   position: absolute;
@@ -322,6 +334,9 @@ span.field-content div.spv-popup-link div.layout__region--title > div.field {
   padding-bottom: 0px;
 }
 
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference div.field--item{
+  display:block;
+}
 
 @media only screen and (min-width: 1850px) {
 div#sidebar-second {
@@ -358,11 +373,18 @@ div#main-wrapper div[class*="wisski_bundle_b"] div.layout__region--title {
 
 div.layout__region--title div.field {
   color: white;
-  font-size: 2.7733333333rem !important;
+  font-size: 2.5733333333rem !important;
   line-height: 2.7733333333rem;
   padding-bottom: 50px;
-  
-
+}
+@media (max-width:786px){
+div.layout__region--title div.field {
+  color: #036;
+  font-size: 2.5rem !important;
+  line-height: 2.7733333333rem;
+  padding-bottom: 10px;
+  font-weight: normal;
+}
 }
 
 div#third-level-wrapper a {
@@ -739,6 +761,75 @@ div.mySlides div.views-row {
   margin-bottom: 0px;
 }
 
+@media (max-width: 768px){
+div.highlighted div.region section.block-views-blockstartseite-block-1{
+ display: none;
+}
+}
+
+
+section#block-sliderblock{
+ display: none;
+}
+
+@media (max-width: 768px){
+section#block-sliderblock{
+  display: inline-flex;
+  flex: 50%;
+  max-width: 100%;
+  flex-direction: row;
+  margin: 10px;
+  #top: -10px;
+}
+}
+
+@media (max-width: 768px){
+section#block-sliderblock div.slideshow-container{
+  position: relative;
+  margin: auto;
+  max-width: 480px;
+  margin: 10px;
+}
+}
+
+@media (max-width: 768px){
+section#block-sliderblock div.slideshow-container div.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.4);
+}
+}
+
+@media (max-width: 768px){
+section#block-sliderblock div.slideshow-container div.dotties {
+    display: block;
+    width: 120px;
+    padding-top: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 10;
+    position: relative;
+    top: 0px;
+}
+}
+
+@media (max-width: 768px){
+section#block-sliderblock div.slideshow-container .dot.active {
+  background-color: #036; 
+}
+}
+
+@media (max-width: 768px){
+section#block-sliderblock div.slideshow-container .dot:hover {
+  background-color: #0059b3;
+}
+}
+
 div.mySlides div.views-row div.views-col {
   margin: 0px;
   padding: 0px;
@@ -940,7 +1031,14 @@ body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#co
 div.view-search div.view-content div.views-view-grid div.views-row div.views-col{
   width: 50% !important;
 }
+}/**show one  object on search***/
+@media only screen and (max-width: 480px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container >
+div.view-search div.view-content div.views-view-grid div.views-row div.views-col{
+  width: 100% !important;
 }
+}
+
 /**overlay for mobile**/
 @media only screen and (max-width: 1072px){
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container >
@@ -1037,6 +1135,63 @@ div#first-level {
     padding-right: 5px;
 }
 }
+
+/****filter Volltextsuche*****/
+main#content > section.section > div.region > div.views-element-container
+div.view-id-search div.view-filters form.views-exposed-form div.form--inline
+div.form-item label
+{
+ color: white;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+div.region > div.views-element-container > div.view-id-search > div.view-filters
+form.views-exposed-form > div.form--inline > div.form-item {
+  padding-right: 15px;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+div.region > div.views-element-container > div.view-id-search > div.view-filters
+form.views-exposed-form  div.form--inline  div.form-item
+label.control-label{
+ display: block;
+}
+
+@media (max-width: 999px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container > div.view-search >
+div.view-filters{
+top: 0px;
+position: relative;
+}
+}
+
+@media (max-width: 999px){
+main#content > section.section > div.region > div.views-element-container
+div.view-id-search div.view-filters form.views-exposed-form div.form--inline
+div.form-item label
+{
+ color: black;
+}
+}
+
+@media (min-width: 768px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+div.region > div.views-element-container > div.view-id-search > div.view-filters
+form.views-exposed-form > div.form--inline > div.form-item
+div.select-wrapper select{
+    min-width: 140px;
+}
+}
+
+@media (min-width: 768px){
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
+div.region > div.views-element-container > div.view-id-search > div.view-filters
+form.views-exposed-form > div.form--inline > div.form-group{
+vertical-align: unset;
+}
+}
+
+
 div.layout__region--combined div.layout__region--second div.field--item {
   margin-bottom: 20px;
 }
@@ -1069,7 +1224,7 @@ div.region-content div.layout__region div.field--item table tr td {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
+/**
 div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field--items div.field--item:after {
   content: ", ";
 }
@@ -1077,7 +1232,7 @@ div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field--items div.field--ite
 div.field--name-b1e79a5add37ba54b227018e5a41c5f8 div.field--items div.field--item:last-child:after {
   content: "";
 }
-
+**/
 /* personen und institutionen */
 /* sachstandsbericht: padding top */
 div.field--name-f8509d98a943379b0ca61e18d1636394 {
@@ -1128,9 +1283,14 @@ main#content > section.section > div.region > div.views-element-container > div.
     width: 800px;
   }
 
+@media (min-width: 1100px) {
+
   main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-header {
     width: 1100px;
   }
+}
+
+@media (min-width: 1100px) {
 
   main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-content {
     width: 800px;
@@ -1167,6 +1327,7 @@ div.field--name-f1621dd2af001f2f8b9e61b67040bbad {
 span.solr-high {
   background-color: yellow;
 }
+
 div.layout__region.layout__region--center
 div.field.field--name-body.field--type-text-with-summary.field--label-hidden.field--item
 p {
