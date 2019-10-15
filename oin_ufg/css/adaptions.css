@@ -11,14 +11,6 @@ main#content div.view-content {
 }
 }
 
-/**change order of main and sidebar****/
-/**@media (max-width: 1329px) {
-main#content {
-  order: 2;
-}
-}
-**/
-
 /********************page title and header region **************************************/
 
 /**ufg specific**/
@@ -157,39 +149,7 @@ div#gnm-logo img {
   padding-left: 0px;
   right: 240px;
 }
-
-
-
-/**fau logo*****/
-/**div#gnm-logo {
-  margin: 0px !important;
-}
-
-div#gnm-logo img {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 0px;
-  right: 240px;
-}
-
-div#second-level div#main-menu {
-  width: 960px;
-  margin-right: 140px;
-}
-
-div#first-level-wrapper {
-    background-color: #e9edf2;
-}
-
-div#first-level {
-    padding-right: 240px;
-}
-
-div#second-level-wrapper div#header-items {
-  position: absolute;
-}
-**/
-
+/**
 div#third-level-wrapper a {
   color: white;
 }
@@ -206,25 +166,8 @@ div#third-level-wrapper > div#third-level {
 div#third-level-wrapper {
   background: url(../images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
   min-height: 170px;
-}
-/**div#third-level-wrapper a {
-  color: white;
-}
+}**/
 
-div#third-level-wrapper > div#third-level > div ol li {
-  color: white;
-  font-size: 12px;
-}
-
-div#third-level-wrapper > div#third-level {
-  padding-top: 10px;
-}
-
-div#second-level div#main-menu {
-  width: 960px;
-  margin-right: 140px;
-}
-**/
 div#main-wrapper main#content {
   position: relative;
   z-index: 2;
@@ -238,86 +181,12 @@ div#main-wrapper div[class*="wisski_bundle_b"] div.layout__region--title {
   border-bottom: transparent;
 }
 
-/**
-div#first-level-wrapper {
-    background-color: #e9edf2;
-}
-
-
-div#second-level div#main-menu > div.region {
-  padding-top: 10px;
-}
-
-
-div#first-level .dropdown-menu > li > a {
-  color: #003366;
-}**/
-
 div#main-wrapper main#content {
   position: relative;
   z-index: 2;
   width: 1000px;
   padding-top: 20px;
 }
-/**
-div#second-level-wrapper div#header-items {
-  position: absolute;
-}
-
-div#third-level-wrapper {
-  background: url(../images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
-  min-height: 170px;
-}
-
-div#third-level-wrapper a {
-  color: white;
-}
-
-div#third-level-wrapper > div#third-level > div ol li {
-  color: white;
-  font-size: 12px;
-}
-
-div#third-level-wrapper > div#third-level {
-  padding-top: 10px;
-}
-
-div#second-level div#main-menu {
-  width: 960px;
-  margin-right: 140px;
-}
-
-div#second-level div#main-menu div > nav > div.dropdown > ul > li > a {
-  color: #036 !important;
-  font-size: 1.1333333333rem !important;
-  line-height: 1.1333333333rem !important;
-  text-transform: initial !important;
-  font-weight: bold !important;
-  font-size: 17px !important;
-  line-height: 17px !important;
-}
-
-div#first-level .dropdown-menu > li > a {
-  color: #003366;
-}
-
-div#second-level div#main-menu {
-  background-color: inherit;
-#  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
-}
-
-div#second-level div#main-menu div > nav > div.dropdown > ul > li > a {
-  border-left: 1px solid white;
-  color: white;
-}
-
-div#second-level-wrapper {
-#  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
-  background: white;
-}
-**/
-
-
 
 /*********************** responsive adaptions*********************************/
 
@@ -352,6 +221,7 @@ div#first-level {
   padding-right: 0px;
 }
 }
+
 /*****************fau logo ******************/
 @media (max-width: 768px){
 div#second-level div#gnm-logo img {
@@ -415,32 +285,29 @@ div#header-items section.site-branding div.site-branding__text{
 }
 }
 
-
 /*******************sammlungsobjektansicht********************************/
-   
-   
-   
-/**   
-@media (min-width: 1100px){
-div.header-level {
-  width: 1300px;
-  }
-}
 
-@media (min-width: 1100px) {
-div#second-level div#main-menu div > nav > div.dropdown > ul > li {
-  padding-bottom: 5px;
-}
-}
-**/
+/****readmore in main content*******/   
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region div.layout 
+div.layout__region--second div.field-readmore{
+  padding-bottom: 10px;
+} 
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region div.layout
+div.layout__region--second div.field-readmore div.field--items {
+    list-style-type: none;
+    # padding-left: 15px;
+    margin-bottom: 15px;   
+}   
 
 /***fau logo ***/
+/**
 @media (max-width: 768px){
 div#second-level div#gnm-logo img {
   right: 0px;
 }
 }
-/**
+
 @media only screen and (max-width: 1099px){
 h1.page-header {
   font-size: 20px;
@@ -452,7 +319,7 @@ h1.page-header {
   color: #036;
 }
 }
-**/
+
 
 @media (max-width: 1099px){
 div#second-level div#main-menu div > nav > div > button {
@@ -490,7 +357,7 @@ div#main-wrapper div#main {
   padding-left: 10px;
 }
 }
-
+**/
 @media (max-width: 1099px){
 div#main-wrapper main#content{
   z-index: 0 !important;
@@ -541,6 +408,19 @@ div.region-sidebar-second{
   border: white;
   font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }
+
+div#sidebar-second aside.section div.region section.block-views
+div.field-readmore{
+  padding-bottom: 10px;
+}
+
+/***readmore***/
+div#sidebar-second aside.section div.region section.block-views div.field div.field--items{
+  list-style-type: none;
+ # padding-left: 15px;
+  margin-bottom: 15px;
+}
+
 
 /**************sidebar first******/
 div#sidebar-first aside.section div.region section.block {
@@ -636,9 +516,6 @@ div#sidebar-first {
 
 /****************main content ********************/
 
-
-
-
 /***geofield map (region firstbelow) for palaeo and ufg layout***/
 div.field--type-geofield {
   display: contents;
@@ -698,6 +575,11 @@ div.layout div.layout__region--firstbelow {
   display: block !important;
 }
 
+div.layout div.layout__region--combined div.layout__region--firstbelow div.field--type-entity-reference
+div.field--item{
+  display: block;
+}
+
 div.layout div.layout__region--combined div.layout__region--second
 div.layout__region--secondbelow{
   border-top: 2px solid #e5e5e5;
@@ -723,14 +605,33 @@ div.layout--twocol  div.layout__region--bottom {
 }
 }
 
-/***********ufg specific changes************/ 
-
 div.field--type-text-long div.field--item {
   padding-bottom: 5px;
 }
 
 div.field--label {
   font-weight: bold !important;
+}
+
+div.field--type-text-long {
+  display: block;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+div.layout div.layout__region--center div.field{
+  display: block;
+  line-height: unset;
+}
+
+div.layout div.layout__region--bottom div.field{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+div.field--type-text-long div.field--item {
+  padding-bottom: 5px;
 }
 
 div.field--type-text-long {
@@ -1012,7 +913,6 @@ div#metadaten img{
   max-width: 90px;
 }
 
-
 /******footer responsive***********/
 @media only screen and (max-width: 999px){
 
@@ -1023,7 +923,6 @@ footer div.layout-container div#footer-left div#footer-left-bottom div#footer-li
   clear: both;
 }
 }
-
 
 @media only screen and (max-width: 1099px){
 footer div.layout-container {
@@ -1101,7 +1000,6 @@ footer div.layout-container div#footer-left img{
   max-width: 170px;
 }
 }
-
 
 
 /******elements adaptions**********/
@@ -1294,33 +1192,6 @@ section#block-sliderblock{
  width: 75%;
  margin: auto;
 }
-/**
-section#block-sammlung{
- max-width: 100%;
- #text-align: justify;
- margin: 20px;
-}
-
-.dotties {
-  display: block;
-  width: 200px;
-  #width: 100px;
-  padding-top: 8px;
-  margin-right: auto;
-  margin-left: auto;
-  z-index: 10;
-  position: relative;
-  top: 0px;
-}
-
-@media only screen and (max-width: 989px) {
-section#block-sammlung{
-  max-width: 100%;
-  order: 2;
-  margin: auto;
-  }
-}
-**/
 
 @media only screen and (max-width: 989px){
 div.slideshow-container{
@@ -1337,7 +1208,6 @@ section#block-sliderblock{
   margin-top: 50px;
 }
 }
-
 
 div.field--label-hidden > div.field__item {
   grid-column-start: 1;
@@ -1358,8 +1228,6 @@ div.layout div.layout__region--combined div.layout__region--first > div.field--t
 div.field--item{
   padding-bottom: 5px;
 }
-
-
 
 
 /**********views***************************************/
@@ -1451,8 +1319,6 @@ div#main main#content div.view-b5e6bba5bc2f780f78be070b34ab2f5b div.view-header 
   margin-top: 0px;
   margin-right: 10px;
 }
-
-
 
 
 /* adaptions away from gnm2018 */
@@ -1548,6 +1414,10 @@ div.layout__region.layout__region--center
 div.field.field--name-body.field--type-text-with-summary.field--label-hidden.field--item p {
   margin: 0 0 5px;
 
+}
+
+div.field--items div.layout__region.layout__region--center{
+  line-height: unset;
 }
 
 div.field-content p {
