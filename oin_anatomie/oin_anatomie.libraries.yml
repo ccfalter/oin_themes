@@ -1,0 +1,18 @@
+anatomie_adaptions:
+  version: VERSION
+  css:
+    theme:
+      css/adaptions.css: {}
+      css/slider.css: {}
+    layout:
+      css/twocol_bricks.css: {}
+
+
+
+
+
+
+
+
+
+

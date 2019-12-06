@@ -1,0 +1,54 @@
+/*
+ * 
+ * Provides the layout styles for layout_twocol_1100px_nosidebar_bricks:
+ * regions:
+ * title
+ * top
+ * combined = first, second
+ * first = firstabove, firstbelow
+ * second = secondabove, secondbelow
+ * bottom
+ * Borderline between firstabove and firstbelow, firstbelow
+ * and bottom
+ *
+ */
+
+/***1100px--nosidebar****/
+.layout--twocol--1100px--nosidebar--bricks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layout--twocol--1100px--nosidebar--bricks > .layout__region {
+  flex: 0 1 100%;
+}
+
+/***from twocol bricks layout drupal ***/
+@media screen and (min-width: 40em) {
+  .layout--twocol--1100px--nosidebar--bricks > .layout__region--combined > .layout__region--first > .layout__region--firstabove,
+  .layout--twocol--1100px--nosidebar--bricks > .layout__region--combined > .layout__region--second > .layout__region--secondabove,
+  .layout--twocol--1100px--nosidebar--bricks > .layout__region--combined > .layout__region--first > .layout__region--firstbelow,
+  .layout--twocol--1100px--nosidebar--bricks > .layout__region--combined > .layout__region--second  > .layout__region--secondbelow {
+    flex: 0 1 50%;
+  }  
+}
+/*****1300px--onesidebar**************/
+
+.layout--twocol--1300px--onesidebar--bricks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layout--twocol--1300px--onesidebar--bricks > .layout__region {
+  flex: 0 1 100%;
+}
+/***from twocol bricks layout drupal ***/
+@media screen and (min-width: 40em) {
+  .layout--twocol--1300px--onesidebar--bricks > .layout__region--combined > .layout__region--first > .layout__region--first
+  .layout--twocol--1300px--onesidebar--bricks > .layout__region--combined > .layout__region--second > .layout__region--seco
+  .layout--twocol--1300px--onesidebar--bricks > .layout__region--combined > .layout__region--first > .layout__region--first
+  .layout--twocol--1300px--onesidebar--bricks > .layout__region--combined > .layout__region--second  > .layout__region--sec
+    flex: 0 1 50%;
+  }
+}
+
