@@ -11,15 +11,6 @@ main#content div.view-content {
 }
 }
 
-/**change order of main and sidebar****/
-/**
-@media (max-width: 1329px){
-main#content {
-  order: 2;
-}
-}
-**/
-
 /********************page title and header region **************************************/
 
 /****white title in third-level********/
@@ -69,6 +60,45 @@ section.site-branding div.site-branding__text {
 
 nav.tabs {
   margin-top: 100px;
+  z-index: 10;
+}
+
+/*** beta-version ***/
+section#block-version {
+  transform: rotate(20deg);
+  font-weight: bold;
+  color: red;
+  font-size: 18px;
+  margin-top: -35px;
+  margin-right: 50px;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  padding: 5px;
+  border: 3px solid red;
+  z-index: 2000;
+  max-width: 65px;
+  float: right;
+}
+
+/*** beta-version for mobile***/
+@media only screen and (max-width: 1099px){
+section#block-version {
+  transform: rotate(20deg);
+  font-weight: bold;
+  color: red;
+  font-size: 13px;
+  margin-top: -30px;
+  margin-left: 100px;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  padding: 5px;
+  border: 3px solid red;
+  z-index: 2000;
+  max-width: 65px;
+  float: left;
+}
 }
 
 /****************header-level****************/
@@ -254,6 +284,19 @@ div.field.field--type-string-long.field--label-above{
   padding-bottom: 5px;
 }
 
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference
+div.field--item{
+  display: block;
+}
+
+
+div.field-readmore.field--type-string a {
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 69;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 
 /* gallery for too many img (region:secondabove):
  * first img ->under Manage display in Sammlungsobjekt:
@@ -262,35 +305,35 @@ div.field.field--type-string-long.field--label-above{
  */
 
 div.layout__region--secondabove div.field--name-f9f6ec483af5d17f193e5b999dc0843e div.field--item{
- display: inline-block;
+  display: inline-block;
 }
 
 div.layout__region--secondabove div.field--name-f9f6ec483af5d17f193e5b999dc0843e div.field--item:first-child{
- padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 div.layout div.layout__region--combined div.layout__region--second{
- justify-content: left;
+  justify-content: left;
 }
 
 div.layout div.layout__region--bottom div.field.field--label-above div.field--label{
- padding-right: 10px;
+  padding-right: 10px;
 }
 
 div.layout--990px--one div.layout__region--bottom div.field.field--label-above div.field--label{
- padding-right: 10px !important;
- width: 170px;
+  padding-right: 10px !important;
+  width: 170px;
 }
 
 div.layout__region--first > div.field--type-string.field--label-above >
 div.field--label{
- width: 170px;
+  width: 170px;
 }
 
 div.layout--990px--one  div.layout__region--center div.field.field--label-above >
 div.field--label{
-    padding-right: 10px !important;
-    width: 170px;
+  padding-right: 10px !important;
+  width: 170px;
 }
 
 /*********sidebar styling**************/
@@ -453,14 +496,14 @@ div#sidebar-second aside.section div.well.region.region-sidebar-second {
 div.layout div.layout__region--combined div.layout__region--first > div.field--type-string.field--label-above >div.field--item{
   display: block;
   grid-column-start: 2;
-  grid-column-end: 99;
+  grid-column-end: 69;
   #grid-column-end:6;
 }
 
 div.layout div.layout__region--combined div.layout__region--first >div.field--type-text-long{
   display: contents;
   grid-column-start: 1;
-  grid-column-end: 6;
+  grid-column-end: 69;
 }
 
 div.field--type-text-long.field--label-above div.field--label {
@@ -472,9 +515,8 @@ div.field--type-text-long.field--label-above div.field--label {
 div.field--type-text-long.field--label-above div.field--item {
   display: block;
   grid-column-start: 2;
-  grid-column-end: 6;
+  grid-column-end: 69;
 }
-
 
 div.view-suche div.view-content div.views-field div.layout div.layout__region--bottom{
   display: none;
@@ -550,6 +592,15 @@ div.field--items{
   grid-column-end: 69;
 }
 
+/**
+div.layout div.layout__region--combined div.layout__region--first >
+div.field--type-string{
+    display: contents;
+    grid-column-start: 1;
+    grid-column-end: 69;
+}
+**/
+
 div.layout div.layout__region--firstbelow {
   clear: both;
   border-top: 2px solid #e5e5e5;
@@ -562,13 +613,11 @@ div.layout div.layout__region--firstabove{
   padding-bottom: 20px;
 }
 
-/**med suche padding-right: 0px -> 10px**/
 div.layout div.layout__region--combined div.layout__region--first {
   padding-right: 10px;
   flex-basis: 47%; 
 }
 
-/**med suche display: grid -> inline-block; padding-top: 0px -> 10px**/
 div.layout div.layout__region--combined div.layout__region--second {
   display: block;
   flex-basis: 30%;
@@ -592,14 +641,14 @@ div.layout div.layout__region--bottom div.field--type-entity-reference.field--la
 div.layout div.layout__region--combined div.layout__region--first > div.field--type-text-long.field--label-above > div.field--item {
   display: block;
   grid-column-start: 2;
-  grid-column-end: 6;
+  grid-column-end: 69;
   margin-bottom: 10px;
 }
 
 div.layout div.layout__region--combined div.layout__region--first > div.field--type-text-long.field--label-above > div.field--items {
   display: block;
   grid-column-start: 2;
-  grid-column-end:6;
+  grid-column-end:69;
   margin-bottom: 10px;
 }
 
@@ -612,15 +661,15 @@ div.layout div.layout__region--combined div.layout__region--first div.field--typ
 }
 
 div.field--type-text-long.field--label-above {
-  display: grid;
+  display: block;
   grid-column-start: 1;
-  grid-column-end: 6;
+  grid-column-end: 69;
 }
 
 div.field--type-text-long.field--label-above div.field--item {
   display: block;
   grid-column-start: 2;
-  grid-column-end: 6;
+  grid-column-end: 69;
   margin-bottom: 10px;
 }
 
@@ -639,7 +688,7 @@ div.layout__region--secondbelow div.field--type-text-long.field--label-above div
 div.field--type-text-long.field--label-above div.field--items {
   display: block;
   grid-column-start: 2;
-  grid-column-end: 6;
+  grid-column-end: 69;
   margin-bottom: 10px;
 }
 
@@ -701,7 +750,7 @@ form.views-exposed-form > div.form--inline > div.form-group{
 }
 }
 
-/* Old Version before popup*/
+/* view suche*/
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
 > div.views-element-container > div.view-suche div.view-content span.views-field
 span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e
@@ -718,7 +767,7 @@ div:first-child img {
   padding-right: 10px;
   padding-top: 0px;
   padding-bottom: 0px;
-  height: 300px;
+  #height: 300px;
   object-fit: cover;
 }
 
@@ -762,6 +811,14 @@ span.field-content div.layout div.layout__region--title{
   margin-top: 15px;
 }
 
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region 
+> div.views-element-container > div.view-suche div.view-content span.views-field 
+span.field-content div.layout__region--title > div.field {
+    font-size: 1.8rem !important;
+    font-weight: normal;
+    padding-bottom: 15px;
+}
+
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
 > div.views-element-container > div.view-suche div.view-content span.views-field
 span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e
@@ -769,7 +826,6 @@ div {
   display: none;
 }
 
-/** hide fields layout__region--first for objekt_vorschau**/
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
 > div.views-element-container > div.view-suche div.view-content span.views-field
 span.field-content div.layout__region--first {
@@ -946,7 +1002,7 @@ div#sidebar-second aside.section div.region section.block-views div.field div.fi
   margin-bottom: 15px;
 }
 
-/***no text indent at  line break***/
+/***no text indent at line break***/
 div#sidebar-second ul{
   text-indent: 0px;
 }
@@ -1022,8 +1078,6 @@ div#sidebar-first {
   order: 3;
 }
 }
-
-
 
 /****************main content ********************/
 div#main-wrapper main#content {
@@ -1258,6 +1312,7 @@ div.region-content {
 div.bef-link-active a {
   color: black !important;
 }
+
 /***personen**/
 
 .bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_person > div {
@@ -1273,6 +1328,7 @@ div.bef-link-active a {
 .bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_person {
   float: none;
 }
+
 /**koerperschaften****/
 
 .bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_organisation > div {
@@ -1308,6 +1364,7 @@ div#block-halfpastthreegrain-breadcrumbs {
 .bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_geogr_ort{
   float: none;
 }
+
 /****schularten****/
 
 .bef-exposed-form .form--inline div.form-item-wisski_path_sammlungsspezifika__bezeichnung_schulart > div {
@@ -1325,7 +1382,7 @@ div#block-halfpastthreegrain-breadcrumbs {
 }
 
 
-/**********Korrekturlisten*************/
+/**********sgs-specific view-tables Korrekturlisten*************/
 
 table {
   width: 100%;
@@ -1395,7 +1452,6 @@ div.view-id-zeugnisse div.field--type-text-long.field--label-above div.field--it
   margin-bottom: 5px;
 }
 
-
 main#content > section.section > div.region > div.views-element-container div.view-id-objekte_aus_dem_schulalltag_von_schulern_hergestellt{
   font-size: 12px;
   left: -150px;
@@ -1429,14 +1485,12 @@ div.view-id-lehrer_dokumente_und_quellen div.field--type-text-long.field--label-
   display: block;
   grid-column-start: unset;
   grid-column-end: unset;
-
 }
 
 div.view-id-lehrer_dokumente_und_quellen div.field--type-text-long.field--label-above div.field--item{
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
 
 main#content > section.section > div.region > div.views-element-container
 div.view-id-dokumente_zur_schulorganisation{
@@ -1452,7 +1506,6 @@ div.view-id-dokumente_zur_schulorganisation div.field--type-text-long.field--lab
   display: block;
   grid-column-start: unset;
   grid-column-end: unset;
-
 }
 
 div.view-id-dokumente_zur_schulorganisation div.field--type-text-long.field--label-above div.field--item{
@@ -1480,7 +1533,6 @@ div.view-id-graphische_darstellungen_zur_schule div.field--type-text-long.field-
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
 
 main#content > section.section > div.region > div.views-element-container
 div.view-id-unterrichtsmittel{
@@ -1643,7 +1695,7 @@ div.field--name-fcd9c8af4f943070510633f1e1dedace > div.field__item {
 
 div.field--label-hidden > div.field__item {
   grid-column-start: 1;
-  grid-column-end: 6;
+  grid-column-end: 69;
 }
 
 .dotties {
@@ -1676,6 +1728,7 @@ div#main main#content div.view-b1ce4bdc2e5683f5fdabab02e6627121 div.view-content
 
 div#main main#content div.view-b1ce4bdc2e5683f5fdabab02e6627121 div.view-filters div.form-item {
   width: 100%;
+  margin-top: 10px;
 }
 
 div#main main#content div.view-b1ce4bdc2e5683f5fdabab02e6627121 button {
@@ -1686,7 +1739,7 @@ div#main main#content div.view-b1ce4bdc2e5683f5fdabab02e6627121 div.view-header 
   float: right;
   position: absolute;
   top: -20px;
-  margin-top: 0px;
+  margin-top: 5px;
   margin-right: 10px;
 }
 
@@ -1734,6 +1787,7 @@ div#main main#content div.view-b6bbebe296631e440003692eac4390dc div.view-content
 
 div#main main#content div.view-b6bbebe296631e440003692eac4390dc div.view-filters div.form-item {
   width: 100%;
+  margin-top: 10px;
 }
 
 div#main main#content div.view-b6bbebe296631e440003692eac4390dc button {
@@ -1748,8 +1802,9 @@ div#main main#content div.view-b6bbebe296631e440003692eac4390dc div.view-header 
   margin-right: 10px;
 }
 
+
 @media (max-width: 768px){
-div#main main#content div.view-bd9c096f185635434163360c45fc645d div.view-content
+div#main main#content div.view-b6bbebe296631e440003692eac4390dc div.view-content
 div.views-col{
   width: 50% !important;
 }
@@ -1765,6 +1820,8 @@ div#main main#content div.view-b0f194dacfca4d5e420585bedf5d0390 div.view-content
 
 div#main main#content div.view-b0f194dacfca4d5e420585bedf5d0390 div.view-filters div.form-item {
   width: 100%;
+  margin-top: 10px;
+
 }
 
 div#main main#content div.view-b0f194dacfca4d5e420585bedf5d0390 button {
