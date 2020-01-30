@@ -10,13 +10,7 @@ main#content div.view-content {
   min-width: 1000px;
 }
 }
-/**change order of main and sidebar****/
-/**@media (max-width: 1329px){
-main#content {
-  order: 2;
-}
-}
-**/
+
 /********************page title and header region **************************************/
 
 /****white title in third-level********/
@@ -66,6 +60,45 @@ section.site-branding div.site-branding__text {
 
 nav.tabs {
   margin-top: 100px;
+  z-index: 10;
+}
+
+/*** beta-version ***/
+section#block-version {
+  transform: rotate(20deg);
+  font-weight: bold;
+  color: red;
+  font-size: 18px;
+  margin-top: -35px;
+  margin-right: 50px;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  padding: 5px;
+  border: 3px solid red;
+  z-index: 2000;
+  max-width: 65px;
+  float: right;
+}
+
+/*** beta-version for mobile***/
+@media only screen and (max-width: 1099px){
+section#block-version {
+  transform: rotate(20deg);
+  font-weight: bold;
+  color: red;
+  font-size: 13px;
+  margin-top: -30px;
+  margin-left: 100px;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  padding: 5px;
+  border: 3px solid red;
+  z-index: 2000;
+  max-width: 65px;
+  float: left;
+}
 }
 
 /****************header-level****************/
@@ -211,6 +244,14 @@ div#second-level div#main-menu ul.dropdown-menu {
 }
 
 @media (max-width: 1099px){
+div#second-level div#main-menu div > nav > .dropdown {
+    margin-top: 5px;
+    display: block !important;
+}
+}
+
+
+@media (max-width: 1099px){
 div#second-level div#main-menu div > nav > div > button {
   font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -247,11 +288,46 @@ div#header-items section.site-branding div.site-branding__text{
 }
 }
 
+@media (max-width: 1299px){
+div#third-level-wrapper > div#third-level{
+  padding-top: 10px;
+  padding-left: 10px;
+}
+}
+@media (max-width: 1299px){
+div#header-items section.site-branding div.site-branding__text{
+  top: -1.4em;
+  padding-left: 10px;
+}
+}
+
 /*******************sammlungsobjektansicht********************************/
+div.field--item span.file-link a {
+  display: inherit !important;
+}
+
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference div.field--item{
+  display: block;
+}
+
+div.field div.field--item{
+  padding-bottom: 5px;
+}
+
+div.field div.field--items{
+  padding-bottom: 5px;
+  margin-bottom: 0px !important;
+}
+
 div.field.field--type-string-long.field--label-above{
   padding-bottom: 5px;
 }
 
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference 
+div.layout--onecol div.layout__region div.field--type-string.field--label-above
+div.field--item{
+  padding-bottom: 5px;
+}
 
 /* gallery for too many img (region:secondabove):
  * first img ->under Manage display in Sammlungsobjekt:
@@ -260,35 +336,277 @@ div.field.field--type-string-long.field--label-above{
  */
 
 div.layout__region--secondabove div.field--name-f9f6ec483af5d17f193e5b999dc0843e div.field--item{
- display: inline-block;
+  display: inline-block;
 }
 
 div.layout__region--secondabove div.field--name-f9f6ec483af5d17f193e5b999dc0843e div.field--item:first-child{
- padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 div.layout div.layout__region--combined div.layout__region--second{
- justify-content: left;
+  justify-content: left;
 }
 
 div.layout div.layout__region--bottom div.field.field--label-above div.field--label{
- padding-right: 10px;
+  padding-right: 10px;
 }
 
 div.layout--990px--one div.layout__region--bottom div.field.field--label-above div.field--label{
- padding-right: 10px !important;
- width: 170px;
+  padding-right: 10px !important;
+  width: 170px;
 }
 
 div.layout__region--first > div.field--type-string.field--label-above >
 div.field--label{
- width: 170px;
+  width: 170px;
 }
 
 div.layout--990px--one  div.layout__region--center div.field.field--label-above >
 div.field--label{
-    padding-right: 10px !important;
-    width: 170px;
+  padding-right: 10px !important;
+  width: 170px;
+}
+
+
+div.layout div.layout__region--combined div.layout__region--first > div.field--type-string.field--label-above >div.field--item{
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 99;
+  #grid-column-end:6;
+}
+
+div.layout div.layout__region--combined div.layout__region--first >div.field--type-text-long{
+  display: contents;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+div.field--type-text-long.field--label-above div.field--label {
+  display: block;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+div.field--type-text-long.field--label-above div.field--item {
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 6;
+}
+
+/**med: bottom display grid -> none**/
+div.view-suche div.view-content div.views-field div.layout div.layout__region--bottom{
+  display: none;
+}
+
+/*align grid columns, if you have different regions. Why I`m doing this? It´s friday and i want to go home.*/
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference.field--label-above > div.field--items{
+  display: block;
+  grid-column-start: 2;
+  #grid-column-end: 6;
+  grid-column-end:10;
+
+}
+
+div.layout div.layout__region--bottom div.field.field--label-above div.field--items{
+  display: block;
+  grid-column-start: 2;
+  #grid-column-end: 6;
+  grid-column-end: 60;
+  padding-right: 15px;
+
+}
+
+div.layout--twocol div.layout__region--bottom div.field.field--label-above div.field--items{
+  display: block;
+  grid-column-start: unset;
+  grid-column-end: unset;
+}
+
+div.layout div.layout__region--combined div.layout__region--first
+div.layout__region--firstabove div.field--type-entity-reference.field--label-above > div.layout--onecol div.layout__region div.field--type-string.field--label-above div.field--items {
+  display: block;
+  grid-column-start: 2;
+ # grid-column-end: 6;
+  grid-column-end: 60;
+}
+
+div.layout div.layout__region--combined div.layout__region--first
+div.layout__region--firstbelow div.field--type-entity-reference.field--label-above > div.layout--onecol div.layout__region div.field--type-string.field--label-above div.field--items {
+  display: block;
+  grid-column-start: 2;
+ # grid-column-end: 6;
+  grid-column-end: 60;
+}
+
+div.layout__region div.layout__region--combined div.layout__region--second div.layout__region--secondbelow div.field--type-entity-reference
+div.field--items  div.field--item{
+  display: block;
+}
+
+div.layout--twocol div.layout__region--bottom{
+  clear: both;
+  padding-top: 20px;
+}
+
+div.layout div.layout__region--combined div.layout__region--first
+div.layout__region--firstabove div.field--type-entity-reference div.field--items  div.field--item
+div.field--type-string.field--label-above{
+  padding-bottom: 5px;
+}
+
+div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstbelow div.field--type-entity-reference div.field--items  div.field--item
+div.field--type-string.field--label-above{
+  padding-bottom: 5px;
+}
+
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference div.layout--onecol div.layout__region div.field--type-string.field--label-above
+div.field--label{
+  padding-top: 5px;
+}
+
+div#main-wrapper main#content section.section region.region div.layout--twocol--1100px--nosidebar--bricks div.layout__region--combined div.layout__region--second div.field--type-entity-reference div.field--items  div.field--item{
+  display: block;
+}
+
+div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstbelow  div.field--type-entity-reference.field--label-above > div.field--label{
+  width: 170px;
+}
+
+div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstabove  div.field--type-entity-reference.field--label-above > div.field--label{
+  width: 170px;
+}
+
+div.layout div.layout__region--combined div.layout__region--first > div.field--type-string.field--label-above >
+div.field--items{
+  display: block;
+  grid-column-start: 2;
+ # grid-column-end: 6;
+  grid-column-end: 60;
+}
+
+div.layout div.layout__region--firstbelow {
+  clear: both;
+  border-top: 2px solid #e5e5e5;
+  padding-top: 20px;
+  margin-right: 30px;
+}
+
+
+div.layout div.layout__region--firstabove{
+  clear: both;
+  padding-bottom: 20px;
+}
+
+/**med suche padding-right: 0px -> 10px**/
+div.layout div.layout__region--combined div.layout__region--first {
+  padding-right: 10px;
+  flex-basis: 47%;
+}
+
+/**med suche display: grid -> inline-block; padding-top: 0px -> 10px**/
+div.layout div.layout__region--combined div.layout__region--second {
+  display: block;
+  flex-basis: 30%;
+  justify-content: end;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+div.layout div.layout__region--bottom div.field.field--label-above div.field--label{
+  padding-right: 0px;
+}
+
+div.layout div.layout__region--bottom div.field--type-entity-reference.field--label-above > div.field--label {
+  display: grid;
+  grid-column-start: 1;
+# max-width: min-content;
+  grid-column-end: 2;
+  grid-template-columns: 100px 100px;
+}
+
+div.layout div.layout__region--combined div.layout__region--first > div.field--type-text-long.field--label-above > div.field--item {
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  margin-bottom: 10px;
+}
+
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference.field--label-above > div.field--label {
+  display: grid;
+  grid-column-start: 1;
+ # max-width: min-content;
+  grid-column-end: 2;
+  grid-template-columns: 100px 100px;
+}
+
+div.field--type-text-long.field--label-above {
+  display: block;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+div.layout__region--firstabove div.field.field--type-list-string.field--label-above  div.field--item {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  #margin-bottom: 10px;
+}
+
+div.layout__region--firstabove div.field.field--type-list-string.field--label-above
+div.field--label {
+  display: block;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding-right: 15px;
+}
+
+div.layout__region--firstabove div.field.field--type-list-string.field--label-above
+div.field--items{
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 99;
+  #grid-column-end: 6;
+}
+
+div.field--type-text-long.field--label-above div.field--items{
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  margin-bottom: 10px;
+}
+
+div.layout div.layout__region--firstabove div.field--type-string
+div.field--items div.field--item{
+  display: block;
+}
+
+div.layout__region--secondbelow div.field--type-text-long.field--label-above div.field--item {
+  display: inline-grid;
+  grid-column-start: unset;
+  grid-column-end: unset;
+  margin-bottom: 10px;
+}
+
+div.field--type-text-long.field--label-above div.field--items {
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  margin-bottom: 10px;
+}
+
+div.field--type-text-long div.field--items {
+  padding-bottom: 10px;
+}
+
+div.field--label {
+  font-weight: bold !important;
+}
+
+div.layout__region--firstabove div.field.field--type-list-string.field--label-above{
+  display: contents;
+  grid-column-start: 1;
+  grid-column-end: 6;
+
 }
 
 /*********sidebar styling**************/
@@ -300,10 +618,11 @@ section.block-facets h3 {
 }
 
 /***sidebar second view blocks***/
-/**div#sidebar-second aside.section div.region section.block-views {
+
+div#sidebar-second aside.section div.region section.block-views
+div.field-readmore{
   padding-bottom: 10px;
 }
-**/
 
 /***readmore***/
 div#sidebar-second aside.section div.region section.block-views div.field div.field--items{
@@ -333,30 +652,31 @@ div#sidebar-second {
   z-index: 0;
 }
 }
+
 @media (max-width: 826px){
 div#sidebar-second {
-    margin-left: 10px;
-    border-top: solid;
-    border-bottom: solid;
-    border-width: 2px;
-    border-color: transparent;
-    margin-top: 15px;
-    padding-bottom: 5px;
-    padding-top: 5px;
+  margin-left: 10px;
+  border-top: solid;
+  border-bottom: solid;
+  border-width: 2px;
+  border-color: transparent;
+  margin-top: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 }
 
 @media only screen and (max-width: 1720px){
 div#sidebar-first {
-    margin-left: 10px;
-    border-top: solid;
-    border-bottom: transparent;
-    border-width: 2px;
-    border-color: transparent;
-    margin-top: 15px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    order: 3;
+  margin-left: 10px;
+  border-top: solid;
+  border-bottom: transparent;
+  border-width: 2px;
+  border-color: transparent;
+  margin-top: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  order: 3;
 }
 }
 
@@ -377,20 +697,20 @@ div:first-child img {
 }
 }
 **/
+
 @media only screen and (max-width: 768px){
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container >
 div.view-suche div.view-content div.views-view-grid div.views-row div.views-col{
   width: 100% !important;
 }
 }
+
 @media only screen and (max-width: 768px){
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container >
 div.view-suche div.view-content span.views-field span.field-content div.layout__region--first{
   display: none !important;
 }
 }
-
-
 
 div#sidebar-second aside.section div.well.region.region-sidebar-second {
   background-color: white;
@@ -435,7 +755,7 @@ div.layout div.layout__region--combined div.layout__region--first div.field--typ
   display: block;
   grid-column-start: 2;
   #grid-column-end: 6;
-  grid-column-end:69;
+  grid-column-end: 10;
 
 }
 
@@ -443,7 +763,7 @@ div.layout div.layout__region--bottom div.field.field--label-above div.field--it
   display: block;
   grid-column-start: 2;
   #grid-column-end: 6;
- grid-column-end:69;
+  grid-column-end: 60;
   padding-right: 15px;
 
 }
@@ -454,11 +774,19 @@ div.layout--twocol div.layout__region--bottom div.field.field--label-above div.f
 }
 
 div.layout div.layout__region--combined div.layout__region--first
+div.layout__region--firstabove div.field--type-entity-reference.field--label-above > div.layout--onecol div.layout__region div.field--type-string.field--label-above div.field--items {
+  display: block;
+  grid-column-start: 2;
+ # grid-column-end: 6;
+  grid-column-end: 60;
+}
+
+div.layout div.layout__region--combined div.layout__region--first
 div.layout__region--firstbelow div.field--type-entity-reference.field--label-above > div.layout--onecol div.layout__region div.field--type-string.field--label-above div.field--items {
   display: block;
   grid-column-start: 2;
  # grid-column-end: 6;
-  grid-column-end:69;
+  grid-column-end: 60;
 }
 
 div.layout__region div.layout__region--combined div.layout__region--second div.layout__region--secondbelow div.field--type-entity-reference
@@ -471,6 +799,12 @@ div.layout--twocol div.layout__region--bottom{
   padding-top: 20px;
 }
 
+div.layout div.layout__region--combined div.layout__region--first
+div.layout__region--firstabove div.field--type-entity-reference div.field--items  div.field--item
+div.field--type-string.field--label-above{
+  padding-bottom: 5px;
+}
+
 div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstbelow div.field--type-entity-reference div.field--items  div.field--item
 div.field--type-string.field--label-above{
   padding-bottom: 5px;
@@ -478,7 +812,7 @@ div.field--type-string.field--label-above{
 
 div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference div.layout--onecol div.layout__region div.field--type-string.field--label-above
 div.field--label{
- padding-top: 5px;
+  padding-top: 5px;
 }
 
 div#main-wrapper main#content section.section region.region div.layout--twocol--1100px--nosidebar--bricks div.layout__region--combined div.layout__region--second div.field--type-entity-reference div.field--items  div.field--item{
@@ -486,11 +820,11 @@ div#main-wrapper main#content section.section region.region div.layout--twocol--
 }
 
 div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstbelow  div.field--type-entity-reference.field--label-above > div.field--label{
- width: 170px;
+  width: 170px;
 }
 
 div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstabove  div.field--type-entity-reference.field--label-above > div.field--label{
- width: 170px;
+  width: 170px;
 }
 
 div.layout div.layout__region--combined div.layout__region--first > div.field--type-string.field--label-above >
@@ -498,7 +832,7 @@ div.field--items{
   display: block;
   grid-column-start: 2;
  # grid-column-end: 6;
-  grid-column-end: 69;
+  grid-column-end: 60;
 }
 
 div.layout div.layout__region--firstbelow {
@@ -513,13 +847,11 @@ div.layout div.layout__region--firstabove{
   padding-bottom: 20px;
 }
 
-/**med suche padding-right: 0px -> 10px**/
 div.layout div.layout__region--combined div.layout__region--first {
   padding-right: 10px;
   flex-basis: 47%; 
 }
 
-/**med suche display: grid -> inline-block; padding-top: 0px -> 10px**/
 div.layout div.layout__region--combined div.layout__region--second {
   display: block;
   flex-basis: 30%;
@@ -550,7 +882,7 @@ div.layout div.layout__region--combined div.layout__region--first > div.field--t
 div.layout div.layout__region--combined div.layout__region--first > div.field--type-text-long.field--label-above > div.field--items {
   display: block;
   grid-column-start: 2;
-  grid-column-end:6;
+  grid-column-end:10;
   margin-bottom: 10px;
 }
 
@@ -563,7 +895,7 @@ div.layout div.layout__region--combined div.layout__region--first div.field--typ
 }
 
 div.field--type-text-long.field--label-above {
-  display: grid;
+  display: block;
   grid-column-start: 1;
   grid-column-end: 6;
 }
@@ -621,6 +953,7 @@ div.layout div.layout__region--second div.field--type-entity-reference div.field
 }
 
 /***********************view-suche without overlay/popup**************************/
+
 /****filter Volltextsuche*****/
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
 div.region > div.views-element-container > div.view-suche > div.view-filters
@@ -632,7 +965,11 @@ body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#co
 div.region > div.views-element-container > div.view-suche > div.view-filters
 form.views-exposed-form  div.form--inline  div.form-item
 label.control-label{
- display: block;
+  display: block;
+}
+
+div.layout div.layout__region--bottom div.field.field--label-above div.field--item {
+  padding-bottom: 5px;
 }
 
 @media (min-width: 768px){
@@ -640,7 +977,7 @@ body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#co
 div.region > div.views-element-container > div.view-suche > div.view-filters
 form.views-exposed-form > div.form--inline > div.form-item
 div.select-wrapper select{
-    min-width: 140px;
+  in-width: 140px;
 }
 }
 
@@ -648,16 +985,16 @@ div.select-wrapper select{
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
 div.region > div.views-element-container > div.view-suche > div.view-filters
 form.views-exposed-form > div.form--inline > div.form-group{
-vertical-align: unset;
+  vertical-align: unset;
 }
 }
 
-/* Old Version before popup*/
+/****view-suche**********/
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
 > div.views-element-container > div.view-suche div.view-content span.views-field
 span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e
 div:first-child {
- display: block !important;
+  display: block !important;
 }
 
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
@@ -676,24 +1013,24 @@ div:first-child img {
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
 > div.views-element-container > div.view-suche div.view-content span.views-field
 span.field-content div.layout  {
-   display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -moz-box-align: start;
-    -ms-flex-align: start;
-    -webkit-align-items: flex-start;
-    align-items: flex-start;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
 }
 
-/**change order of layout__regions: order:**/
+/**change order of layout__regions**/
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
 > div.views-element-container > div.view-suche div.view-content span.views-field
 span.field-content div.layout div.layout__region--second {
@@ -708,23 +1045,32 @@ span.field-content div.layout div.layout__region--second {
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
 > div.views-element-container > div.view-suche  div.view-content  div.views-field
 span.field-content div.layout div.layout__region--title{
- padding-right: 15px;
- padding-bottom: 5px;
- margin-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  margin-top: 15px;
+}
+
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
+> div.views-element-container > div.view-suche  div.view-content  div.views-field
+span.field-content div.layout div.layout__region--title div.field--item {
+  font-size: 1.9rem !important;
+  font-weight: normal;
+  padding-top: 15px;
+  #line-height: 2.2rem;
 }
 
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
 > div.views-element-container > div.view-suche div.view-content span.views-field
 span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e
 div {
- display: none;
+  display: none;
 }
 
 /** hide fields layout__region--first for objekt_vorschau**/
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
 > div.views-element-container > div.view-suche div.view-content span.views-field
 span.field-content div.layout__region--first {
- display: none;
+  display: none;
 }
 
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
@@ -767,25 +1113,19 @@ span.field-content div.layout__region--title {
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
 > div.views-element-container > div.view-suche div.view-content span.views-field
 span.field-content div.layout__region--title > div.field {
-  font-size: 1.2em !important;
+  font-size: 1.8em !important;
   padding-bottom: 0px;
+  font-weight: normal;
+  
 }
-/**
-@media only screen and (min-width: 1850px) {
-div#sidebar-second {
 
-  left: 80px;
-  z-index: 0;
-}
-}
-**/
 /*********************responsive view-suche************************/
 
 /****optional: img with height-constraints*******/
 @media only screen and (max-width: 768px){
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
- div.region > div.views-element-container > div.view-suche div.view-content span.views-field
- span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e div:first-child img {
+div.region > div.views-element-container > div.view-suche div.view-content span.views-field
+span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e div:first-child img {
   max-height: 200px;
 }
 }
@@ -793,14 +1133,14 @@ body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#co
 /********reduce object per row********/
 @media only screen and (max-width: 768px){
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
- div.region > div.views-element-container > div.view-suche div.view-content div.views-view-grid div.views-row div.views-col{
+div.region > div.views-element-container > div.view-suche div.view-content div.views-view-grid div.views-row div.views-col{
   width: 50% !important;
 }
 }
 
 @media only screen and (max-width: 480px){
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
- div.region > div.views-element-container > div.view-suche div.view-content div.views-view-grid div.views-row div.views-col{
+div.region > div.views-element-container > div.view-suche div.view-content div.views-view-grid div.views-row div.views-col{
   width: 100% !important;
 }
 }
@@ -869,8 +1209,8 @@ header#header div.region-secondary-menu nav div.dropdown ul li a[href="/suche"]:
 }
 
 header#header div.region-secondary-menu nav div.dropdown ul li a[href="/suche"] {
-}
 
+}
 
 /*********************sidebar styling*********************/
 
@@ -882,11 +1222,6 @@ section.block-facets h3 {
 }
 
 /*********sidebar second ***********/
-/**
-div#sidebar-second aside.section div.region section.block-views {
-  padding-bottom: 10px;
-}
-**/
 
 /***readmore***/
 div#sidebar-second aside.section div.region section.block-views div.field div.field--items{
@@ -895,7 +1230,7 @@ div#sidebar-second aside.section div.region section.block-views div.field div.fi
   margin-bottom: 15px;
 }
 
-/***no text indent at  line break***/
+/***no text indent at line break***/
 div#sidebar-second ul{
   text-indent: 0px;
 }
@@ -932,25 +1267,6 @@ div#sidebar-second {
 }
 }
 
-/***location of sidebar: before main#content****/
-/**@media only screen and (max-width: 1329px) {
-div#sidebar-second {
-  order: 1;
-  margin-right: 50px;
-  margin-left: 5px;
-  z-index: 2;
-  left: 0px;
-}
-}
-@media only screen and (max-width: 1329px) {
-div#sidebar-second aside.section div.region-sidebar-second {
-  display: flex;
-  flex-basis: 30%;
-
-}
-}**/
-/**end of changes: before main#content**/
-
 @media only screen and (max-width: 1399px){
 div#sidebar-first {
   margin-left: 10px;
@@ -968,8 +1284,6 @@ div#sidebar-first {
   order: 3;
 }
 }
-
-
 
 /****************main content ********************/
 div#main-wrapper main#content {
@@ -1015,6 +1329,7 @@ footer div.layout-container {
   max-width: 1300px;
   margin-right: 100px;
 }
+
 footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen{
   display: flex;
   justify-content: unset;
@@ -1026,7 +1341,6 @@ footer div.layout-container div#footer-left div#footer-left-bottom div#footer-li
   padding-right: 10px;
   border-right: 0.5px solid #023d77;
 }
-
 
 footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen
 div#metadaten {
@@ -1058,7 +1372,6 @@ footer div.layout-container div#footer-left div#footer-left-bottom div#footer-li
 }
 }
 
-
 @media only screen and (max-width: 1099px){
 footer div.layout-container {
   margin-right: 0px;
@@ -1086,7 +1399,6 @@ footer div.layout-container div#footer-left div#footer-left-top div#footer-conta
 div#footer-left {
   min-width: unset;
   margin-left: 0px;
-
 }
 }
 
@@ -1137,22 +1449,6 @@ footer div.layout-container div#footer-left img{
 }
 }
 
-/**
-div#second-level-wrapper div#header-items {
-  position: absolute;  
-}
-
-@media (min-width: 1100px) {
-div#second-level div#main-menu div > nav > div.dropdown > ul > li {
-  padding-bottom: 5px;
-}
-}
-
-div#third-level-wrapper {
-  background: url(../images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
-  min-height: 170px;
-}
-**/
 div#main-wrapper div[class*="wisski_bundle_b"] div.layout__region--title {
   color: white;
 }
@@ -1163,87 +1459,9 @@ div.layout__region--title div.field {
   line-height: 1.7733333333rem !important;
 }
 
-/**
-div#third-level-wrapper a {
-  color: white;
-}
-
-
-div#third-level-wrapper > div#third-level > div ol li {
-  color: white;
-  font-size: 12px;
-}
-
-div#third-level-wrapper > div#third-level {
-  padding-top: 10px;
-}
-**/
-/**med changes
-div#second-level-wrapper div#header-items div.region {
-  padding-top: 10px;
-}
-**/
-/**med changes for Site-branding and slogan:
-       margin-right: 140px;
-       width: 960px;
-
-div#second-level div#main-menu {
-  width: 960px;
-  margin-right: 140px;
-}
-
-div#first-level-wrapper {
-    background-color: #e9edf2;
-}
-
-div#gnm-logo img {
-  padding: 0px !important;
-  margin: 0px !important;
-  right: 140px;
-}
-
-div#gnm-logo {
-  margin: 0px !important;
-}
-**/
-/*med changes for site branding and slogan*/
-/**section.site-branding div.site-branding__text {
-  position: absolute !important;
-  font-size: 16px !important;
-  color: #036 !important;
-  font-weight: bold;
-  display: flex;
-  overflow: hidden;
-  width: auto;
-  top: -1.4em;
-  padding-bottom: 0px;
-  background-color: transparent;
-  z-index: -1000;
-  white-space: nowrap;
-}
-**/
-/**
-div#second-level div#main-menu > div.region {
-  padding-top: 10px;
-}
-**/
 a {
   font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }
-/**
-div#second-level div#main-menu div > nav > div.dropdown > ul > li > a {
-  color: #036 !important;
-  font-size: 1.1333333333rem !important;
-  line-height: 1.1333333333rem !important;
-  text-transform: initial !important;
-  font-weight: bold !important;
-  font-size: 17px !important;
-  line-height: 17px !important;
-}
-
-**/
-
-
 
 html {
   font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
@@ -1255,30 +1473,6 @@ html body {
   font-kerning: none !important;
 }
 
-/**
-div#gnm-logo img {
-  padding-top: 30px;
-  padding-bottom: 8px;
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-div#second-level div#main-menu {
-  background-color: inherit;
-#  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
-}
-
-div#second-level div#main-menu div > nav > div.dropdown > ul > li > a {
-  border-left: 1px solid white;
-  color: white;
-}
-
-
-div#second-level-wrapper {
-#  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
-  background: white;
-}
-**/
 footer {
 #  background: url(images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
   background-color: #e9edf2;
@@ -1288,47 +1482,10 @@ footer {
   height: 0px;
 }
 
-/**
-
-div#first-level .dropdown-menu > li > a {
-  color: #003366;
-}
-**/
 body a {
   color: #003366;
 }
-/**
-@keyframes kenburns {
-    0% {
-      opacity: 0;
-    }
-    5% {
-      opacity: 1;
-    }
-    95% {
-        transform: scale3d(1.5, 1.5, 1.5) translate3d(-190px, -120px, 0px);
-        animation-timing-function: ease-in;
-        opacity: 1;
-    }
-    100% {
-        transform: scale3d(2, 2, 2) translate3d(-170px, -100px, 0px);
-        opacity: 0;
-    }
-}
-**/
-/**
-div.region-content div.views-element-container div.view-filterkriterien div.view-filters div.form-group {
-  display: block;
-}
 
-div.region-content div.views-element-container div.view-filterkriterien div.view-filters div.bef-links {
-  display: block;
-}
-
-div.region-content div.views-element-container div.view-filterkriterien div.view-filters div.form-item {
-  padding-bottom: 15px;
-}
-**/
 div.select-wrapper:after {
   color: #003366;
 }
@@ -1339,46 +1496,6 @@ div.select-wrapper:after {
   clear: initial;
 }
 
-/**
-div.region-content div.views-element-container div.view-filterkriterien div.views-view-grid {
-  width: 850px;
-}
-
-div.region-content div.views-element-container div.view-filterkriterien img {
-  max-width: 100%;
-  height: auto;
-}
-
-div.region-content div.views-element-container div.view-filterkriterien
-div.view-header {
-  padding-bottom: 10px;
-}
-
-div.region-content div.views-element-container div.view-filterkriterien div.view-filters {
-  float: right;
-  display: inline-block;
-  max-width: 250px;
-  height: 1100px;
-  padding-left: 10px;
-  padding-top: 40px;
-}
-
-**/
-
-/**table objekte med**/
-/**
-div.region-content div.views-element-container div.view-filterkriterien div.table-responsive {
-  margin-top: -35px;
-}
-
-div.region-content div.views-element-container div.view-filterkriterien div.view-filters select.form-select {
-  width: 250px;
-}
-
-div.region-content div.views-element-container div.view-filterkriterien div.view-filters .form--inline .form-item {
-  float:none;
-}
-**/
 body.path-wisski div.region-content div#block-halfpastthreegrain-page-title {
   display: none;
   position: absolute;
@@ -1445,7 +1562,6 @@ div#block-halfpastthreegrain-breadcrumbs {
 .bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_geogr_ort{
   float: none;
 }
-
 
 /******************* Startseite *************/
 
@@ -1533,24 +1649,24 @@ div.mySlides div.views-row div.views-col div.views-field-title {
 }
 
 div.mySlides div.views-row div.views-col div.views-field-title a:hover, div.mySlides div.views-row div.views-col div.views-field-title a:focus {
-    color: #464646;
-    text-decoration: underline;
+  color: #464646;
+  text-decoration: underline;
 }
 
 div.mySlides div.view-header h2 {
-    position: absolute;
-    z-index: 1;
-    background-color: white;
-#    border: 2px  red;
-    width: 800px;
-    display: flex;
-    transform: rotate(25deg);
-    font-size: xx-large;
-    justify-content: center;
-    top: 45%;
-    left: 28%;
-    opacity: 0.6;
-    text-transform: uppercase;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+#  border: 2px  red;
+  width: 800px;
+  display: flex;
+  transform: rotate(25deg);
+  font-size: xx-large;
+  justify-content: center;
+  top: 45%;
+  left: 28%;
+  opacity: 0.6;
+  text-transform: uppercase;
 }
 
 div.slideshow-container {
@@ -1569,15 +1685,14 @@ div.field--label-hidden > div.field__item {
 }
 
 .dotties {
-    display: block;
-    width: 200px;
-    padding-top: 8px;
-    margin-right: auto;
-    margin-left: auto;
-    z-index: 10;
-    position: relative;
-    top: 0px;
-
+  display: block;
+  width: 200px;
+  padding-top: 8px;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: 10;
+  position: relative;
+  top: 0px;
 }
 
 
@@ -1618,6 +1733,7 @@ div.views-col{
   width: 50% !important;
 }
 }
+
 /** Personen **/
 div#main main#content div.view-bd9c096f185635434163360c45fc645d div.view-content div.views-col {
   text-align: center;
@@ -1639,6 +1755,7 @@ div#main main#content div.view-bd9c096f185635434163360c45fc645d div.view-header 
   margin-top: 0px;
   margin-right: 10px;
 }
+
 @media (max-width: 768px){
 div#main main#content div.view-bd9c096f185635434163360c45fc645d div.view-content
 div.views-col{
@@ -1677,12 +1794,11 @@ div.views-col{
 
 
 /* adaptions away from gnm2018 */
-/**med suche padding-right: 0px -> 10px**/
 div.layout__region--combined div.layout__region--first {
   padding-right: 10px;
   flex-basis: 66%;
 }
-/**med suche display: grid -> inline-block; padding-top: 0px -> 10px**/
+
 div.layout div.layout__region--combined div.layout__region--second {
   display: inline-block;
   flex-basis: 30%;
@@ -1696,19 +1812,18 @@ button.btn-danger {
   background-color: #036;
   border-color: #036; 
 }
-/**med: hide operator-label**/
+
 @media (min-width: 768px)
 .form-inline .control-label {
  display: none;
 }
 
 @media (max-width: 1099px) {
-  div.layout__region--combined div.layout__region--second {
-    justify-content: center;
-    padding-right: 0px;
-  }
+div.layout__region--combined div.layout__region--second {
+  justify-content: center;
+  padding-right: 0px;
 }
-
+}
 
 div.layout__region--combined div.layout__region--second div.field--item {
   margin-bottom: 5px;
@@ -1719,19 +1834,6 @@ div.layout__region--combined div.layout__region--second div.field--item {
 div.layout__region--combined div.layout__region--second div.field--item img {
   width: 100%;
   padding-bottom: 5px;
-}
-
-/* personen und institutionen */
-/* sachstandsbericht: padding top */
-div.field--name-f8509d98a943379b0ca61e18d1636394 {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-/* personen bio */
-div.field--name-f76763a7adb8f4964ac0e00558359510 {
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 div.layout div.layout__region--bottom {
@@ -1755,36 +1857,35 @@ main#content > section.section > div.region > div.views-element-container > div.
   clear: both;
 }
 
-/**med: margin-top 0 -> -10px**/
 @media (min-width: 1100px) {
-  main#content > section.section > div.region > div.views-element-container div.view-id-suche {
-    width: 1000px;
-    margin-top: -10px;
-  }
+main#content > section.section > div.region > div.views-element-container div.view-id-suche {
+  width: 1000px;
+  margin-top: -10px;
 }
-@media (min-width: 1100px) {
-  main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-header {
-    width: 1000px;
-  }
 }
-@media (min-width: 1100px) {
 
-  main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-content {
-    min-width: 800px;
-  }
+@media (min-width: 1100px) {
+main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-header {
+  width: 1000px;
+}
+}
+@media (min-width: 1100px) {
+main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-content {
+  min-width: 800px;
+}
 }
 
 header#header div.region-secondary-menu nav div.dropdown ul li a[href="/suche"]:before {
-    content: "\e003";
-    position: absolute;
-    top: 0px;
-    left: -10px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-size: 18px;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
+  content: "\e003";
+  position: absolute;
+  top: 0px;
+  left: -10px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 
 header#header div.region-secondary-menu nav div.dropdown ul li a[href="/suche"] {
@@ -1807,10 +1908,10 @@ span.solr-high {
 div.layout__region.layout__region--center
 div.field.field--name-body.field--type-text-with-summary.field--label-hidden.field--item
 p {
-margin: 0 0 5px;
+  margin: 0 0 5px;
 }
 
 div.field-content p {
-margin: 0 0 8px;
+  margin: 0 0 8px;
 }
 
