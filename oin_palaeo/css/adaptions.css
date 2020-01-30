@@ -5,18 +5,12 @@ main#content > section.section > div.region > div.views-element-container {
   max-width: 1000px;
 }
 
-@media (min-width: 1100px){
+@media (min-width: 1100px) {
 main#content div.view-content {
   min-width: 1000px;
 }
 }
-/**change order of main and sidebar****/
-/**@media (max-width: 1329px){
-main#content {
-  order: 2;
-}
-}
-**/
+
 /********************page title and header region **************************************/
 
 /****white title in third-level********/
@@ -66,6 +60,67 @@ section.site-branding div.site-branding__text {
 
 nav.tabs {
   margin-top: 100px;
+  z-index: 10;
+}
+
+/*** beta-version ***/
+section#block-version {
+  transform: rotate(20deg);
+  font-weight: bold;
+  color: red;
+  font-size: 18px;
+  margin-top: -35px;
+  margin-right: 50px;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  padding: 5px;
+  border: 3px solid red;
+  z-index: 2000;
+  max-width: 65px;
+  float: right;
+}
+
+/********palaeo specific***********/
+section#block-version div.layout--1300px--none div.layout__region--bottom {
+ padding: 0px;
+ margin: 0px;
+}
+
+section#block-version div.layout--1300px--none div.layout__region--title {
+ padding: 0px;
+ margin: 0px;
+}
+
+section#block-version div.layout--1300px--none div.layout__region--center {
+ padding: 0px;
+ margin: 0px;
+}
+
+section#block-version div.layout--1300px--none div.layout__region--top {
+ padding: 0px;
+ margin: 0px;
+}
+
+
+/*** beta-version for mobile***/
+@media only screen and (max-width: 1099px) {
+section#block-version {
+  transform: rotate(20deg);
+  font-weight: bold;
+  color: red;
+  font-size: 13px;
+  margin-top: -30px;
+  margin-left: 100px;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  padding: 5px;
+  border: 3px solid red;
+  z-index: 2000;
+  max-width: 65px;
+  float: left;
+}
 }
 
 /****************header-level****************/
@@ -151,65 +206,73 @@ div#gnm-logo img {
 }
 
 /*********************** responsive adaptions*********************************/
-@media (min-width: 1100px){
+@media (min-width: 1100px) {
 div.header-level {
   width: 1300px;
 }
 }
 
-@media only screen and (max-width: 1599px){
-div#main-wrapper div#main{
+@media only screen and (max-width: 1599px) {
+div#main-wrapper div#main {
   justify-content: flex-start;
   padding-left: 10px;
 }
 }
 
-@media only screen and (max-width: 1599px){
-section#block-oin-palaeo-branding{
+@media only screen and (max-width: 1599px) {
+section#block-oin-palaeo-branding {
   padding-left: 10px;
 }
 }
 
 /****************login*********************************/
-@media (max-width: 1099px){
+@media (max-width: 1099px) {
 div#first-level {
   padding-right: 5px;
 }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
 div#first-level {
   padding-right: 0px;
 }
 }
 
 /*****************fau logo ******************/
-@media (max-width: 768px){
+@media (max-width: 768px) {
 div#second-level div#gnm-logo img {
   right: 0px;
 }
 }
 
 /**align menu and page title***/
-@media (max-width: 1599px){
+@media (max-width: 1599px) {
 div#second-level div#main-menu div > nav > div {
   padding-left: 10px;
 }
 }
 
-@media (max-width: 1099px){
-div#second-level div#main-menu div > nav > div .btn{
+@media (max-width: 1099px) {
+div#second-level div#main-menu div > nav > div .btn {
   padding-left: 5px;
 }
 }
 
-@media (max-width: 1099px){
+@media (max-width: 1099px) {
 div#second-level div#main-menu ul.dropdown-menu {
   background-color: white;
 }
 }
 
 @media (max-width: 1099px){
+div#second-level div#main-menu div > nav > .dropdown {
+    margin-top: 5px;
+    display: block !important;
+}
+}
+
+
+@media (max-width: 1099px) {
 div#second-level div#main-menu div > nav > div > button {
   font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -221,7 +284,7 @@ div#second-level div#main-menu div > nav > div.dropdown > ul > li {
 }
 }
 
-@media (max-width: 1099px){
+@media (max-width: 1099px) {
 h1.page-header {
   font-size: 20px;
   margin-bottom: 20px;
@@ -234,19 +297,28 @@ h1.page-header {
 }
 
 /**overlay dropdown menu above main-content(page title or header)**/
-@media (max-width: 1099px){
-div#main-wrapper main#content{
+@media (max-width: 1099px) {
+div#main-wrapper main#content {
   z-index: 0 !important;
 }
 }
 
-@media (max-width: 1099px){
-div#header-items section.site-branding div.site-branding__text{
+@media (max-width: 1099px) {
+div#header-items section.site-branding div.site-branding__text {
   top: -1.4em;
 }
 }
 
+@media (max-width: 1299px){
+div#third-level-wrapper > div#third-level {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+}
 /*******************sammlungsobjektansicht********************************/
+div.field--item span.file-link a {
+  display: inherit !important;
+}
 
 /* gallery for too many img (region:secondabove):
  * first img ->under Manage display in Sammlungsobjekt:
@@ -254,86 +326,103 @@ div#header-items section.site-branding div.site-branding__text{
  * small image styles
  */
 
-div.layout__region--secondabove div.field--name-f9f6ec483af5d17f193e5b999dc0843e div.field--item{
+div.layout__region--secondabove div.field--name-f9f6ec483af5d17f193e5b999dc0843e div.field--item {
   display: inline-block;
 }
 
-div.layout__region--secondabove div.field--name-f9f6ec483af5d17f193e5b999dc0843e div.field--item:first-child{
+div.layout__region--secondabove div.field--name-f9f6ec483af5d17f193e5b999dc0843e div.field--item:first-child {
   padding-bottom: 10px;
 }
 
-div.layout div.layout__region--combined div.layout__region--second{
+div.layout div.layout__region--combined div.layout__region--second {
   justify-content: left;
 }
 
 /*********** generel layout changes for bricks****************/
 
-/****************borderlines**********************/
-
-div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstabove{
-  padding-bottom: 15px;
-}
-
-div.layout div.layout__region--bottom{
+/****************borderlines********************************/
+/****region--bottom*******/
+div.layout div.layout__region--bottom {
   clear: both;
   padding-top: 20px;
  #border-top: 2px solid #e5e5e5;
 }
 
-/*******no borderline for layout--twocol**************/
-div.layout--twocol div.layout__region--bottom{
+/*****no borderline for region--bottom layout--twocol****/
+div.layout--twocol div.layout__region--bottom {
   clear: both;
   padding-top: 20px;
   border-top: unset;
 }
 
-div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstbelow{
+/****borderline between firstabove and firstbelow******/
+div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstabove {
+  padding-bottom: 15px;
+}
+
+div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstbelow {
   clear: both;
   border-top: 2px solid #e5e5e5;
   padding-top: 20px;
 }
 
+/****borderline between secondabove and secondbelow*****/
+/**
+div.layout div.layout__region--combined div.layout__region--first
+div.layout__region--secondabove{
+  padding-bottom: 15px;
+}
 div.layout div.layout__region--combined div.layout__region--second div.layout__region--secondbelow{
   border-top: 2px solid #e5e5e5;
   padding-top: 10px;
 }
+**/
 
-/******no border line with entity reference (Schachtelung in Objektansicht)************/
+/******no borderline with entity reference (Schachtelung in Objektansicht)************/
 div.layout--twocol--1300px--one--bricks div.layout__region--combined div.layout__region--first
-div.layout__region--firstbelow div.layout--twocol div.layout__region--bottom{
+div.layout__region--firstbelow div.layout--twocol div.layout__region--bottom {
   border-top: transparent;
   padding-top: 0px;
 }
 
 div.layout--twocol--1100px--none--bricks div.layout__region--combined div.layout__region--first
-div.layout__region--firstbelow div.layout--twocol div.layout__region--bottom{
+div.layout__region--firstbelow div.layout--twocol div.layout__region--bottom {
   border-top: transparent;
   padding-top: 0px;
 }
 
-@media screen and (min-width: 40em){
+@media screen and (min-width: 40em) {
 div.layout--twocol  div.layout__region--bottom {
   padding-top: 20px;
   border-top: unset;
 }
 }
 
+div.field div.field--item {
+  padding-bottom: 5px;
+}
+
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference div.field--item {
+  display: block;
+}
+
 /**************palaeo specific changes **********************************/
 
-/***geofield map (region firstbelow) for palaeo and ufg layout***/
+/**************geofield map**********************/
 div.field--type-geofield {
-  display: contents;
+  #display: contents;
   max-width: 480px !important;
   min-width: 250px !important;
 }
 
-div.field--type-geofield div.geofield-google-map{
+/***noch noetig? leaflet umstellung*****/
+div.field--type-geofield div.geofield-google-map {
   max-width: 480px !important;
   min-width: 250px !important;
 }
 
-@media only screen and (max-width: 480px){
-div.field--type-geofield{
+@media only screen and (max-width: 480px) {
+div.field--type-geofield {
   display: contents;
   min-width: unset;
   max-width: 100%;
@@ -341,8 +430,8 @@ div.field--type-geofield{
 }
 }
 
-@media screen and (min-width: 40em){
-div.layout--twocol > div.layout__region--first{
+@media screen and (min-width: 40em) {
+div.layout--twocol > div.layout__region--first {
   flex: 44%;
 }
 }
@@ -379,63 +468,75 @@ div.layout__region--combined div.layout__region--second div.layout__region--seco
   margin-right: 15px;
 }
 
-div.layout div.layout__region--combined div.layout__region--first > div.field--type-string.field--label-above > div.field--item{
+div.layout div.layout__region--combined div.layout__region--first > div.field--type-string.field--label-above > div.field--item {
   padding-bottom: 5px;
 }
 
-div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstbelow div.field--type-entity-reference div.field--item {
+div.layout div.layout__region--combined div.layout__region--first 
+div.layout__region--firstbelow div.field--type-entity-reference div.field--item {
   display: block !important;
 }
 
-div.layout__region div.layout__region--combined div.layout__region--second div.layout__region--secondbelow div.field--type-entity-reference div.field--items  div.field--item{
+div.layout__region div.layout__region--combined div.layout__region--second 
+div.layout__region--secondbelow div.field--type-entity-reference div.field--items div.field--item {
   display: block;
 }
 
-div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstbelow  div.field--type-entity-reference.field--label-above > div.field--label{
+div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstbelow  
+div.field--type-entity-reference.field--label-above > div.field--label {
   min-width: 170px;
 }
 
-div.layout div.layout__region--bottom div.field.field--label-above div.field--label{
+div.layout div.layout__region--bottom div.field.field--label-above div.field--label {
   padding-right: 10px;
 }
 
-div.layout div.layout__region--center div.field{
+div.layout div.layout__region--center div.field {
   display: block;
 }
 
 /***schachtelung***/
 
-div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference div.layout--onecol div.layout__region{
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference 
+div.layout--onecol div.layout__region {
   display: block;
 }
 
-div.layout div.layout__region--combined div.layout__region--first div.layout__reagion--firstbelow div.field--type-entity-reference div.layout--onecol div.layout__region{
+div.layout div.layout__region--combined div.layout__region--first div.layout__reagion--firstbelow 
+div.field--type-entity-reference div.layout--onecol div.layout__region {
   display: grid;
 }
 
-div.layout div.layout__region--combined div.layout__region--second div.layout__region--secondbelow div.field--type-entity-reference div.layout--onecol div.layout__region div.field--type-entity-reference div.layout__region--first{
+div.layout div.layout__region--combined div.layout__region--second div.layout__region--secondbelow 
+div.field--type-entity-reference div.layout--onecol div.layout__region 
+div.field--type-entity-reference div.layout__region--first {
   display: block;
   justify-content: left;
 }
 
-div.layout--twocol--1100px--nosidebar--bricks div.layout__region--combined div.layout__region--second div.field--type-entity-reference div.field--items  div.field--item{
+div.layout--twocol--1100px--nosidebar--bricks div.layout__region--combined div.layout__region--second 
+div.field--type-entity-reference div.field--items  div.field--item {
   display: block;
 }
 
-div.layout--twocol--1100px--none--bricks div.layout__region--combined div.layout__region--first div.layout__region--firstbelow div.layout--twocol div.layout__region--second{
+div.layout--twocol--1100px--none--bricks div.layout__region--combined div.layout__region--first 
+div.layout__region--firstbelow div.layout--twocol div.layout__region--second {
   padding-left: 0px;
 }
 
-div.layout--twocol--1300px--onesidebar--bricks div.layout__region--combined div.layout__region--second div.field--type-entity-reference div.field--items  div.field--item{
+div.layout--twocol--1300px--onesidebar--bricks div.layout__region--combined div.layout__region--second 
+div.field--type-entity-reference div.field--items  div.field--item {
   display: block;
 }
 
-div.layout--twocol--1300px--one--bricks div.layout__region--combined div.layout__region--first div.layout__region--firstbelow div.layout--twocol div.layout__region--second{
+div.layout--twocol--1300px--one--bricks div.layout__region--combined div.layout__region--first 
+div.layout__region--firstbelow div.layout--twocol div.layout__region--second {
   padding-left: 0px;
 }
 
-/***********************view-suche without overlay/popup**************************/
-/****filter Volltextsuche*****/
+/***********************view-suche**************************/
+
+/****Filter Volltextsuche*****/
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > 
 div.region > div.views-element-container > div.view-suche > div.view-filters
 form.views-exposed-form > div.form--inline > div.form-item {
@@ -445,37 +546,39 @@ form.views-exposed-form > div.form--inline > div.form-item {
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
 div.region > div.views-element-container > div.view-suche > div.view-filters
 form.views-exposed-form  div.form--inline  div.form-item
-label.control-label{
+label.control-label {
  display: block;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
 div.region > div.views-element-container > div.view-suche > div.view-filters
 form.views-exposed-form > div.form--inline > div.form-item
-div.select-wrapper select{
-    min-width: 140px;
+div.select-wrapper select {
+  min-width: 140px;
 }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
 div.region > div.views-element-container > div.view-suche > div.view-filters
-form.views-exposed-form > div.form--inline > div.form-group{
-vertical-align: unset;
+form.views-exposed-form > div.form--inline > div.form-group {
+  vertical-align: unset;
 }
 }
 
 /****image*********/
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container > div.view-suche div.view-content span.views-field 
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section 
+> div.region > div.views-element-container > div.view-suche div.view-content span.views-field 
 span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e div:first-child {
   display: block !important;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container > div.view-suche div.view-content span.views-field 
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section 
+> div.region > div.views-element-container > div.view-suche div.view-content span.views-field 
 span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e div:first-child img {
-  //width: 200px;
+  #width: 200px;
   padding-left: 0px;
   padding-right: 20px;
   padding-top: 0px;
@@ -484,19 +587,12 @@ span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e d
   object-fit: cover;
 }
 
-div.view-suche div.view-content div.views-view-grid div.views-col{
+div.view-suche div.view-content div.views-view-grid div.views-col {
   padding-right: 15px;
 }
 
-div.views-element-container div.view-suche div.view-header{
-  text-align: start;
-  font-weight: bold;
-  padding-bottom: 10px;
-  font-size: 0.9em;
-}
-
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > 
-div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout{
+div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -532,27 +628,29 @@ div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e div {
   display: none;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region 
-> div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--first {
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > 
+div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--first {
   display: none !important;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region
- > div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--combined
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > 
+div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--combined
   div.layout__region--second div.field--item {
   margin-bottom: 0px;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region >
- div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--second {
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > 
+div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--second {
   display: flex !important;
   flex-basis: 100% !important;
   justify-content: center !important;
   float: none !important;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region >
- div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--title > div.field--name-name > a {
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > 
+div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--title > 
+div.field--name-name > a {
+
 }
 
 /******change order: show title second**************/
@@ -572,7 +670,8 @@ div.region > div.views-element-container > div.view-suche div.view-content span.
   padding-top: 0px !important;
 }
 
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--title > div.field {
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div.views-element-container 
+> div.view-suche div.view-content span.views-field span.field-content div.layout__region--title > div.field {
   font-size: 1.8rem !important;
   font-weight: normal;
   padding-bottom: 15px;  
@@ -581,50 +680,50 @@ body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#co
 /*********************responsive view-suche************************/
 
 /****optional: img with height-constraints*******/
-@media only screen and (max-width: 768px){
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
- div.region > div.views-element-container > div.view-suche div.view-content span.views-field 
- span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e div:first-child img {
+@media only screen and (max-width: 768px) {
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > 
+div.region > div.views-element-container > div.view-suche div.view-content span.views-field 
+span.field-content div.layout div.field--name-f9f6ec483af5d17f193e5b999dc0843e div:first-child img {
   max-height: 200px;
 }
 }
 
 /********reduce object per row********/
-@media only screen and (max-width: 768px){
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
- div.region > div.views-element-container > div.view-suche div.view-content div.views-view-grid div.views-row div.views-col{
+@media only screen and (max-width: 768px) {
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > 
+div.region > div.views-element-container > div.view-suche div.view-content div.views-view-grid div.views-row div.views-col {
   width: 50% !important;
 }
 }
 
-@media only screen and (max-width: 480px){
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
- div.region > div.views-element-container > div.view-suche div.view-content div.views-view-grid div.views-row div.views-col{
+@media only screen and (max-width: 480px) {
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > 
+div.region > div.views-element-container > div.view-suche div.view-content div.views-view-grid div.views-row div.views-col {
   width: 100% !important;
 }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > 
-div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--first{
+div.views-element-container > div.view-suche div.view-content span.views-field span.field-content div.layout__region--first {
   display: none !important;
 }
 }
 
-@media (min-width: 1100px){
+@media (min-width: 1100px) {
 main#content > section.section > div.region > div.views-element-container div.view-id-suche {
   width: 1000px;
   margin-top: -10px;
 }
 }
 
-@media (min-width: 1100px){
+@media (min-width: 1100px) {
 main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-header {
   width: 1000px;
 }
 }
 
-@media (min-width: 1100px){
+@media (min-width: 1100px) {
 main#content > section.section > div.region > div.views-element-container div.view-id-suche div.view-content {
   min-width: 800px;
 }
@@ -686,14 +785,14 @@ div#sidebar-second aside.section div.region section.block-views {
 **/
 
 /***readmore***/
-div#sidebar-second aside.section div.region section.block-views div.field div.field--items{
+div#sidebar-second aside.section div.region section.block-views div.field div.field--items {
   list-style-type: none;
   padding-left: 15px;
   margin-bottom: 15px;
 }
 
-/***no text indent at  line break***/
-div#sidebar-second ul{
+/***no text indent at line break***/
+div#sidebar-second ul {
   text-indent: 0px; 
 }
 
@@ -746,7 +845,7 @@ div#sidebar-second aside.section div.region-sidebar-second {
 }**/
 /**end of changes: before main#content**/
 
-@media only screen and (max-width: 1399px){
+@media only screen and (max-width: 1399px) { 
 div#sidebar-first {
   margin-left: 10px;
   border-top: solid;
@@ -808,7 +907,7 @@ footer div.layout-container {
   margin-right: 100px;
 }
 
-footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen{
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen {
   display: flex;
   justify-content: unset;
   padding-top: 10px;
@@ -820,21 +919,18 @@ footer div.layout-container div#footer-left div#footer-left-bottom div#footer-li
   border-right: 0.5px solid #023d77;
 }
 
-
-footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen
-div#metadaten {
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen div#metadaten {
   padding-left: 10px;
 }
 
-footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen div#bilddaten img{
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen div#bilddaten img {
   height: auto;
   max-width: 90px;
   float: right;
   padding-left: 10px;
 }
 
-footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen
-div#metadaten img{
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen div#metadaten img {
   height: auto;
   padding-left: 10px;
   float: right;
@@ -842,9 +938,8 @@ div#metadaten img{
 }
 
 /****responsive footer *****/
-
-@media only screen and (max-width: 999px){
-footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen{
+@media only screen and (max-width: 999px) {
+footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen {
   display: flex;
   justify-content: center;
   padding-top: 10px;
@@ -852,22 +947,22 @@ footer div.layout-container div#footer-left div#footer-left-bottom div#footer-li
 }
 }
 
-@media only screen and (max-width: 1099px){
+@media only screen and (max-width: 1099px) {
 footer div.layout-container {
   margin-right: 0px;
 }
 }
 
-@media only screen and (max-width: 1499px){
-footer div.layout-container div#footer-left div#footer-left-top div#footer-gnm{
+@media only screen and (max-width: 1499px) {
+footer div.layout-container div#footer-left div#footer-left-top div#footer-gnm {
   width: unset;
   margin-right: 20px;
   max-width: 250px;
 }
 }
 
-@media only screen and (max-width: 1499px){
-footer div.layout-container div#footer-left div#footer-left-top div#footer-contactdata{
+@media only screen and (max-width: 1499px) {
+footer div.layout-container div#footer-left div#footer-left-top div#footer-contactdata {
   width: unset;
   margin-right: 10px;
   max-width: 250px;
@@ -875,22 +970,21 @@ footer div.layout-container div#footer-left div#footer-left-top div#footer-conta
 }
 }
 
-@media only screen and (max-width: 1499px){
+@media only screen and (max-width: 1499px) {
 div#footer-left {
   min-width: unset;
-  margin-left: 0px;
-  
+  margin-left: 0px;  
 }
 }
 
-@media only screen and (max-width: 1199px){
+@media only screen and (max-width: 1199px) {
 div#footer-left {
   min-width: unset;
   max-width: 45%;
 }
 }
 
-@media only screen and (max-width: 950px){
+@media only screen and (max-width: 950px) {
 div#footer-left {
   min-width: unset;
   max-width: 100%;
@@ -898,19 +992,19 @@ div#footer-left {
 }
 }
 
-@media only screen and (max-width: 1199px){
-footer div.layout-container div#footer-right div#footer-right-gnm{
+@media only screen and (max-width: 1199px) {
+footer div.layout-container div#footer-right div#footer-right-gnm {
   max-width: 200px;
 }
 }
 
-@media only screen and (max-width: 1199px){
-footer div.layout-container div#footer-right div#footer-right-wisski{
+@media only screen and (max-width: 1199px) {
+footer div.layout-container div#footer-right div#footer-right-wisski {
   max-width: 200px;
 }
 }
 
-@media only screen and (max-width: 1099px){
+@media only screen and (max-width: 1099px) {
 footer div.layout-container{
   font-size: 14px;
   justify-content: start;
@@ -918,14 +1012,14 @@ footer div.layout-container{
 }
 }
 
-@media only screen and (max-width: 1599px){
-footer div.layout-container div#footer-right img{
+@media only screen and (max-width: 1599px) {
+footer div.layout-container div#footer-right img {
   max-width: 150px;
 }
 }
 
-@media only screen and (max-width: 1499px){
-footer div.layout-container div#footer-left img{
+@media only screen and (max-width: 1499px) {
+footer div.layout-container div#footer-left img {
   max-width: 170px;
 }
 }
@@ -969,27 +1063,34 @@ div.region-content {
 /**************************views adaptions*************************/
 
 /****Global str Period*******/
-div.views-element-container div.view-b9f3fbb7ba8642cd7e24e91ecc11cffc div.view-header{
+div.views-element-container div.view-b9f3fbb7ba8642cd7e24e91ecc11cffc div.view-header {
   text-align: start;
   font-weight: bold;
   padding-bottom: 30px;
   font-size: 0.9em;
 }
 
-div.views-element-container div.view-b9f3fbb7ba8642cd7e24e91ecc11cffc div.view-content div.views-view-grid div.views-row{
+div.views-element-container div.view-b9f3fbb7ba8642cd7e24e91ecc11cffc div.view-content div.views-view-grid div.views-row {
   text-align: center;
   padding: 20px; 
 }
 
-/**Local str Period****/
-div.views-element-container div.view-bc7dc1be3a269399f471b315eabde2e6 div.view-header{
+@media (max-width: 767px){
+div#main main#content div.view-b9f3fbb7ba8642cd7e24e91ecc11cffc div.view-content
+div.views-col{
+  width: 50% !important;
+}
+}
+
+/*****Local str Period******/
+div.views-element-container div.view-bc7dc1be3a269399f471b315eabde2e6 div.view-header {
   text-align: start;
   font-weight: bold;
   padding-bottom: 30px;
   font-size: 0.9em;
 }
 
-div.views-element-container div.view-bc7dc1be3a269399f471b315eabde2e6 div.view-content div.views-view-grid div.views-row{
+div.views-element-container div.view-bc7dc1be3a269399f471b315eabde2e6 div.view-content div.views-view-grid div.views-row {
   text-align: center;
   padding: 20px;
 }
@@ -997,6 +1098,14 @@ div.views-element-container div.view-bc7dc1be3a269399f471b315eabde2e6 div.view-c
 div#block-halfpastthreegrain-breadcrumbs {
   z-index: 10;
 }
+
+@media (max-width: 767px){
+div#main main#content div.view-bc7dc1be3a269399f471b315eabde2e6 div.view-content
+div.views-col{
+  width: 50% !important;
+}
+}
+
 
 /**************bef for ABC-Views**********************/
 
@@ -1022,7 +1131,7 @@ div.views-element-container div.view-filters.form-group .views-exposed-form.bef-
   float: none;
 }
 
-/*****************koerperschaften**************/
+/*****************Koerperschaften**************/
 
 .bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_organisation > div {
   width: 100%;
@@ -1038,7 +1147,7 @@ div.views-element-container div.view-filters.form-group .views-exposed-form.bef-
   float: none;
 }
 
-/***geographischer ort***/
+/***Geographischer Ort***/
 .bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_geogr_ort > div {
   width: 100%;
   display: flex;
@@ -1049,11 +1158,11 @@ div.views-element-container div.view-filters.form-group .views-exposed-form.bef-
   display: inline-block;
 }
 
-.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_geogr_ort{
+.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_geogr_ort {
   float: none;
 }
 
-/***fundorte***/
+/***Fundorte***/
 .bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_standort > div {
   width: 100%;
   display: flex;
@@ -1064,14 +1173,15 @@ div.views-element-container div.view-filters.form-group .views-exposed-form.bef-
   display: inline-block;
 }
 
-.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_standort{
+.bef-exposed-form .form--inline div.form-item-wisski_path_gemeinsame_masken__name_standort { 
   float: none;
 }
+
 
 /******************* Startseite Fachsysteme****************************************/
 
 /***intro-text sammlung***/
-section#block-sammlung{
+section#block-sammlung {
   display: inline-grid;
   flex: 20%;
   max-width: 45%;
@@ -1080,7 +1190,7 @@ section#block-sammlung{
   margin-left: 5px;
 }
 
-section#block-sammlung div.layout div.layout__region--title{
+section#block-sammlung div.layout div.layout__region--title {
   display: none;
 }
 
@@ -1092,9 +1202,10 @@ section#block-sammlung{
 }
 }
 
-/***slideshow adaptions for 10 img
-* html-code and script: structure > block layout > sliderblock 
-***/
+/**slideshow adaptions for 10 img
+ * html-code and script: structure > block layout > sliderblock 
+ **/
+ 
 div.fade {
   opacity: initial;
   -webkit-transition: initial;
@@ -1122,7 +1233,7 @@ div.slideshow-container {
   margin-left: 0px;
 }
 
-section#block-sliderblock{
+section#block-sliderblock {
   display: inline-flex;
   flex: 50%;
   max-width: 50%;
@@ -1132,14 +1243,14 @@ section#block-sliderblock{
   top: -10px;
 }
 
-@media only screen and (max-width: 1099px){
-div.slideshow-container{
+@media only screen and (max-width: 1099px) {
+div.slideshow-container {
   max-width: 80%;
 }
 }
 
-@media only screen and (max-width: 1099px){
-section#block-sliderblock{
+@media only screen and (max-width: 1099px) {
+section#block-sliderblock {
   max-width: 80%;
   margin: 20px;
 }
@@ -1150,13 +1261,11 @@ div.field--label-hidden > div.field__item {
   grid-column-end: 6;
 }
 
-
 /* copyright: https://www.w3schools.com/howto/howto_js_slideshow.asp 05/2018 */
-/***startseite slideshow***/
+/***startseite slideshow******/
 * {box-sizing:border-box}
 
-
-/* Slideshow container */
+/* slideshow container */
 .slideshow-container {
   max-width: ;
   position: relative;
@@ -1206,13 +1315,14 @@ div.field--label-hidden > div.field__item {
 
 /* Number text (1/3 etc) - ausgeblendet */
 .numbertext {
-    display:none;
+  display: none;
   color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
 }
+
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -1249,9 +1359,6 @@ div.field--label-hidden > div.field__item {
   to {opacity: 1}
 
 }
-
-
-
 
 
 /**********views***************************************/
@@ -1322,6 +1429,13 @@ div#main main#content div.view-b6bbebe296631e440003692eac4390dc div.view-header 
   margin-right: 10px;
 }
 
+@media (max-width: 767px){
+div#main main#content div.view-b6bbebe296631e440003692eac4390dc div.view-content
+div.views-col{
+  width: 50% !important;
+}
+}
+
 /**Fundorte**/
 div#main main#content div.view-b5e6bba5bc2f780f78be070b34ab2f5b div.view-content div.views-col {
   text-align: center;
@@ -1346,7 +1460,7 @@ div#main main#content div.view-b5e6bba5bc2f780f78be070b34ab2f5b div.view-header 
 
 /* adaptions away from gnm2018 */
 
-div.layout div.layout__region--combined div.layout__region--second{
+div.layout div.layout__region--combined div.layout__region--second {
   display: grid;
   flex-basis: 47%;
   justify-content: left;

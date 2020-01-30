@@ -14,13 +14,14 @@ main#content div.view-content {
 /********************page title and header region **************************************/
 
 /**ufg specific**/
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region div.layout--1300px--none
-div.layout__region--title {
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content >
+ section.section > div.region div.layout--1300px--none div.layout__region--title {
  display: none;
 }
 
 /****white title in third-level********/
-body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region > div[class*="wisski_bundle_b"] > div.la {
+body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > 
+section.section > div.region > div[class*="wisski_bundle_b"] > div.la {
   margin-top: -80px;
 }
 
@@ -66,6 +67,45 @@ section.site-branding div.site-branding__text {
 
 nav.tabs {
   margin-top: 100px;
+  z-index: 10;
+}
+
+/*** beta-version ***/
+section#block-version {
+  transform: rotate(20deg);
+  font-weight: bold;
+  color: red;
+  font-size: 18px;
+  margin-top: -35px;
+  margin-right: 50px;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  padding: 5px;
+  border: 3px solid red;
+  z-index: 2000;
+  max-width: 65px;
+  float: right;
+}
+
+/*** beta-version for mobile***/
+@media only screen and (max-width: 1099px){
+section#block-version {
+  transform: rotate(20deg);
+  font-weight: bold;
+  color: red;
+  font-size: 13px;
+  margin-top: -30px;
+  margin-left: 100px;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  padding: 5px;
+  border: 3px solid red;
+  z-index: 2000;
+  max-width: 65px;
+  float: left;
+}
 }
 
 /****************header-level****************/
@@ -149,24 +189,6 @@ div#gnm-logo img {
   padding-left: 0px;
   right: 240px;
 }
-/**
-div#third-level-wrapper a {
-  color: white;
-}
-
-div#third-level-wrapper > div#third-level > div ol li {
-  color: white;
-  font-size: 12px;
-}
-
-div#third-level-wrapper > div#third-level {
-  padding-top: 10px;
-}
-
-div#third-level-wrapper {
-  background: url(../images/siegel-zuv-schnitt.png) no-repeat 95% bottom,radial-gradient(ellipse at center, #0059b3 0%, #036 100%);
-  min-height: 170px;
-}**/
 
 div#main-wrapper main#content {
   position: relative;
@@ -249,6 +271,14 @@ div#second-level div#main-menu ul.dropdown-menu {
 }
 
 @media (max-width: 1099px){
+div#second-level div#main-menu div > nav > .dropdown {
+    margin-top: 5px;
+    display: block !important;
+}
+}
+
+
+@media (max-width: 1099px){
 div#second-level div#main-menu div > nav > div > button {
   font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -286,6 +316,9 @@ div#header-items section.site-branding div.site-branding__text{
 }
 
 /*******************sammlungsobjektansicht********************************/
+div.field--item span.file-link a {
+  display: inherit !important;
+}
 
 /****readmore in main content*******/   
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section > div.region div.layout 
@@ -300,64 +333,6 @@ div.layout__region--second div.field-readmore div.field--items {
     margin-bottom: 15px;   
 }   
 
-/***fau logo ***/
-/**
-@media (max-width: 768px){
-div#second-level div#gnm-logo img {
-  right: 0px;
-}
-}
-
-@media only screen and (max-width: 1099px){
-h1.page-header {
-  font-size: 20px;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  margin-left: 0px;
-  border-bottom:  1px solid #eee;
-  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-  color: #036;
-}
-}
-
-
-@media (max-width: 1099px){
-div#second-level div#main-menu div > nav > div > button {
-  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-}
-
-@media only screen and (max-width: 768px){
-div#first-level {
-  padding-right: 0px;
-}
-}
-
-@media (max-width: 1099px){
-div#second-level div#main-menu ul.dropdown-menu {
-  background-color: whitesmoke;
-}
-}
-
-@media (max-width: 1099px){
-div#header-items section.site-branding div.site-branding__text{
-  top: -1.4em;
-}
-}
-
-@media (min-width: 1100px){
-main#content div.view-content {
-  min-width: 1000px;
-  }
-}
-
-@media only screen and (max-width: 1318px){
-div#main-wrapper div#main {
-  justify-content: flex-start;
-  padding-left: 10px;
-}
-}
-**/
 @media (max-width: 1099px){
 div#main-wrapper main#content{
   z-index: 0 !important;
@@ -365,20 +340,21 @@ div#main-wrapper main#content{
 }
 
 /*****************sidebar styling************************/
+/**field messergebnisse**/
+
+div.field.field--name-fb2d647c24c331e0bfeea1f1212c0d2f.field--type-entity-reference.field--label-above
+div.field--items div.field--item{
+  display: block;
+}
 
 /********facets***************/
 section.block-facets h3 {
-    padding-bottom: 5px;
-    margin-bottom: 0px;
-    font-size: 1.8rem;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+  font-size: 1.8rem;
 }
 
 /***sidebar second view blocks***/
-/**
-div#sidebar-second aside.section div.region section.block-views {
-    padding-bottom: 10px;
-}
-**/
 
 /***readmore***/
 div#sidebar-second aside.section div.region section.block-views div.field div.field--items{
@@ -387,7 +363,7 @@ div#sidebar-second aside.section div.region section.block-views div.field div.fi
   margin-bottom: 15px;
 }
 
-/***no text indent at  line break***/
+/***no text indent at line break***/
 div#sidebar-second ul{
   text-indent: 0px;
 }
@@ -401,7 +377,7 @@ div#sidebar-second aside.section div.well.region.region-sidebar-second {
   font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-/**ufg specific: color sidebar**/
+/**ufg specific: sidebar**/
 body > div > div#page-wrapper > div#page >div#main-wrapper main#content div#sidebar-second > section.section
 div.region-sidebar-second{
   background-color: white;
@@ -421,7 +397,6 @@ div#sidebar-second aside.section div.region section.block-views div.field div.fi
   margin-bottom: 15px;
 }
 
-
 /**************sidebar first******/
 div#sidebar-first aside.section div.region section.block {
   padding-bottom: 10px;
@@ -432,29 +407,6 @@ div#sidebar-first h2.block-title {
   font-weight: bold !important;
 }
 
-/***sidebar for views***/
-/**
-div#sidebar-second aside.section div.well.region.region-sidebar-second {
-  background-color: white;
-  border: white;
-  -webkit-box-shadow: unset;
-  box-shadow: unset;
-  font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-**/
-
-/**different div structure for facets?**/
-/**
-body > div > div#page-wrapper > div#page >div#main-wrapper main#content div#sidebar-second > section.section
-div.region-sidebar-second{
- background-color: white;
- border: white;
- font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
-}
-**/
-
-/*********responsive adaptions*****************/
-
 /**location of slidebar: right**/
 
 @media only screen and (min-width: 1100px) {
@@ -464,37 +416,6 @@ div#sidebar-second {
   z-index: 2;
 }
 }
-
-/***location of sidebar: before main#content****/
-/**@media only screen and (max-width: 1329px) {
-div#sidebar-second {
-  order: 1;
-  margin-right: 50px;
-  margin-left: 5px;
-  z-index: 2;
-  left: 0px;
-}
-}
-@media only screen and (max-width: 1329px) {
-div#sidebar-second aside.section div.region-sidebar-second {
-  display: flex;
-  flex-basis: 30%;
-
-}
-}**/
-/**end of changes: before main#content**/
-
-
-
-
-/******sidebar mobile adaptions*************/
-/**@media only screen and (min-width: 1450px) {
-div#sidebar-second {
-  left: 40px;
-  z-index: 0;
-}
-}
-**/
 
 @media only screen and (max-width: 1399px){
 div#sidebar-first {
@@ -552,10 +473,6 @@ div.layout div.layout__region--combined div.layout__region--second{
 /****** generel layout changes for bricks*******/
 
 /***borderlines***/
-div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstabove{
-  padding-bottom: 15px;
-}
-
 div.layout div.layout__region--bottom{
   clear: both;
   padding-top: 20px;
@@ -575,13 +492,16 @@ div.layout div.layout__region--firstbelow {
   display: block !important;
 }
 
+div.layout div.layout__region--combined div.layout__region--first div.layout__region--firstabove{
+  padding-bottom: 15px;
+}
+
 div.layout div.layout__region--combined div.layout__region--firstbelow div.field--type-entity-reference
 div.field--item{
   display: block;
 }
 
-div.layout div.layout__region--combined div.layout__region--second
-div.layout__region--secondbelow{
+div.layout div.layout__region--combined div.layout__region--second div.layout__region--secondbelow{
   border-top: 2px solid #e5e5e5;
   padding-top: 10px;
 }
@@ -617,6 +537,13 @@ div.field--type-text-long {
   display: block;
   grid-column-start: 1;
   grid-column-end: 6;
+  min-width: 150px;
+  #grid-template-columns: 100px 100px;
+
+}
+
+div.layout div.layout__region--bottom div.field.field--label-above div.field--label{
+  min-width: 150px;
 }
 
 div.layout div.layout__region--center div.field{
@@ -627,7 +554,12 @@ div.layout div.layout__region--center div.field{
 div.layout div.layout__region--bottom div.field{
   margin-top: 0px;
   margin-bottom: 0px;
-  padding-bottom: 0px;
+  padding-bottom: 5px;
+}
+
+div.layout div.layout__region--bottom div.field.field--label-above
+div.field--label{
+  margin-right: 10px;
 }
 
 div.field--type-text-long div.field--item {
@@ -638,17 +570,13 @@ div.field--type-text-long {
   display: block;
   grid-column-start: 1;
   grid-column-end: 6;
+  min-width: 150px;
+  #grid-template-columns: 100px 100px;
 }
 
 div.layout div.layout__region--center div.field{
   display: block;
   line-height: unset;
-}
-
-div.layout div.layout__region--bottom div.field{
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
 }
 
 div.layout div.layout__region--combined div.layout__region--secondabove div.field--type-entity-reference div.field--item{
@@ -660,11 +588,14 @@ div.layout__region{
   display: block;
 }
 
-div.layout div.layout__region--firstbelow div.field--type-string.field--label-above div.field--label{
+div.layout  div.layout__region--combined div.layout__region--first  div.layout__region--firstbelow 
+div.field--type-string.field--label-above div.field--label{
   display: block;
   grid-column-start: 1;
   grid-column-end: 2;
   padding-right: 15px;
+  min-width: 150px;
+  #grid-template-columns: 100px 100px;
 }
 
 div.layout div.layout__region--firstbelow div.field--type-entity-reference.field--label-above div.field--label{
@@ -690,10 +621,13 @@ div.layout div.layout__region--combined div.layout__region--second div.layout__r
   grid-column-start: 1;
   grid-column-end: 2;
   padding-right: 15px;
+  min-width: 150px;
+  #grid-template-columns: 100px 100px;
 }
 
 
-/***********************view-suche without overlay/popup**************************/
+/***********************view-suche**************************/
+
 /****filter Volltextsuche*****/
 body > div > div#page-wrapper > div#page > div#main-wrapper > div#main > main#content > section.section >
 div.region > div.views-element-container > div.view-suche > div.view-filters
@@ -892,7 +826,6 @@ footer div.layout-container div#footer-left div#footer-left-bottom div#footer-li
   border-right: 0.5px solid #023d77;
 }
 
-
 footer div.layout-container div#footer-left div#footer-left-bottom div#footer-lizenzen
 div#metadaten {
   padding-left: 10px;
@@ -1000,7 +933,6 @@ footer div.layout-container div#footer-left img{
   max-width: 170px;
 }
 }
-
 
 /******elements adaptions**********/
 div#main-wrapper div[class*="wisski_bundle_b"] div.layout__region--title {
@@ -1212,6 +1144,9 @@ section#block-sliderblock{
 div.field--label-hidden > div.field__item {
   grid-column-start: 1;
   grid-column-end: 6;
+  min-width: 150px;
+# grid-template-columns: 100px 100px;
+
 }
 
 

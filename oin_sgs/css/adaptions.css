@@ -243,6 +243,14 @@ div#second-level div#main-menu ul.dropdown-menu {
 }
 
 @media (max-width: 1099px){
+div#second-level div#main-menu div > nav > .dropdown {
+    margin-top: 5px;
+    display: block !important;
+}
+}
+
+
+@media (max-width: 1099px){
 div#second-level div#main-menu div > nav > div > button {
   font-family: "roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -280,6 +288,13 @@ div#header-items section.site-branding div.site-branding__text{
 }
 
 /*******************sammlungsobjektansicht********************************/
+div.field--item span.file-link a {
+  display: inherit !important;
+}
+div.layout div.layout__region--combined div.layout__region--first div.field--type-entity-reference div.layout--onecol div.layout__region div.field--type-string.field--label-above div.field--item {
+    padding-bottom: 5px;
+}
+
 div.field.field--type-string-long.field--label-above{
   padding-bottom: 5px;
 }
@@ -294,8 +309,8 @@ div.field-readmore.field--type-string a {
   display: block;
   grid-column-start: 2;
   grid-column-end: 69;
-  padding-top: 5px;
-  padding-bottom: 5px;
+#  padding-top: 5px;
+#  padding-bottom: 5px;
 }
 
 /* gallery for too many img (region:secondabove):
@@ -1384,6 +1399,16 @@ div#block-halfpastthreegrain-breadcrumbs {
 
 /**********sgs-specific view-tables Korrekturlisten*************/
 
+div.table-responsive {
+  overflow-x: inherit;
+}
+
+@media (max-width: 1099px){
+div.table-responsive {
+  overflow-x: auto;
+}
+}
+
 table {
   width: 100%;
   border: 2px solid #f2f2f2;
@@ -1411,7 +1436,7 @@ table tr th {
 }
 
 main#content > section.section > div.region > div.views-element-container div.view-id-fotos_und_dias{
-  left: -150px;
+  #left: -150px;
   font-size: 12px;
 }
 
@@ -1434,7 +1459,7 @@ div.view-id-fotos_und_dias div.field--type-text-long.field--label-above div.fiel
 
 main#content > section.section > div.region > div.views-element-container div.view-id-zeugnisse{
   font-size: 12px;
-  left: -150px;
+  #left: -150px;
 }
 
 div.view-id-zeugnisse div.field--type-text-long.field--label-above{
@@ -1454,7 +1479,7 @@ div.view-id-zeugnisse div.field--type-text-long.field--label-above div.field--it
 
 main#content > section.section > div.region > div.views-element-container div.view-id-objekte_aus_dem_schulalltag_von_schulern_hergestellt{
   font-size: 12px;
-  left: -150px;
+  #left: -150px;
 }
 
 div.view-id-objekte_aus_dem_schulalltag_von_schulern_hergestellt div.field--type-text-long.field--label-above{
@@ -1474,7 +1499,7 @@ div.view-id-objekte_aus_dem_schulalltag_von_schulern_hergestellt div.field--type
 
 main#content > section.section > div.region > div.views-element-container div.view-id-lehrer_dokumente_und_quellen{
   font-size: 12px;
-  left: -150px;
+  #left: -150px;
 }
 
 div.view-id-lehrer_dokumente_und_quellen div.field--type-text-long.field--label-above div.field--label{
@@ -1495,7 +1520,7 @@ div.view-id-lehrer_dokumente_und_quellen div.field--type-text-long.field--label-
 main#content > section.section > div.region > div.views-element-container
 div.view-id-dokumente_zur_schulorganisation{
   font-size: 12px;
-  left: -150px;
+  #left: -150px;
 }
 
 div.view-id-dokumente_zur_schulorganisation div.field--type-text-long.field--label-above div.field--label{
@@ -1516,7 +1541,7 @@ div.view-id-dokumente_zur_schulorganisation div.field--type-text-long.field--lab
 main#content > section.section > div.region > div.views-element-container
 div.view-id-graphische_darstellungen_zur_schule{
   font-size: 12px;
-  left: -150px;
+  #left: -150px;
 }
 
 div.view-id-graphische_darstellungen_zur_schule div.field--type-text-long.field--label-above{
@@ -1537,7 +1562,7 @@ div.view-id-graphische_darstellungen_zur_schule div.field--type-text-long.field-
 main#content > section.section > div.region > div.views-element-container
 div.view-id-unterrichtsmittel{
   font-size: 12px;
-  left: -150px;
+  #left: -150px;
 }
 
 div.view-id-unterrichtsmittel div.field--type-text-long.field--label-above div.field--label{
@@ -1558,7 +1583,7 @@ div.view-id-unterrichtsmittel div.field--type-text-long.field--label-above div.f
 main#content > section.section > div.region > div.views-element-container
 div.view-id-schulhefte_prufungsaufgaben{
   font-size: 12px; 
-  left: -150px;
+  #left: -150px;
 }
 
 div.view-id-schulhefte_prufungsaufgaben div.field--type-text-long.field--label-above div.field--label{
@@ -1572,6 +1597,128 @@ div.view-id-schulhefte_prufungsaufgaben div.field--type-text-long.field--label-a
 }
 
 div.view-id-schulhefte_prufungsaufgaben div.field--type-text-long.field--label-above div.field--item{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/********ausstellungstabellen ****************/
+main#content > section.section > div.region > div.views-element-container
+/div.view-id-ausstellung_umgang_ns_themenbereich_medien{
+  font-size: 12px;
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_medien div.field--type-text-long.field--label-above{
+  display: block;
+  grid-column-start: unset;
+  grid-column-end: unset;
+
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_medien div.field--type-text-long.field--label-above div.field--label{
+  display: none;
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_medien div.field--type-text-long.field--label-above div.field--item{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+main#content > section.section > div.region > div.views-element-container div.view-id-ausstellung_umgang_ns_themenbereich_schule_und_bildung{
+  font-size: 12px;
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_schule_und_bildung div.field--type-text-long.field--label-above{
+  display: block;
+  grid-column-start: unset;
+  grid-column-end: unset;
+
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_schule_und_bildung div.field--type-text-long.field--label-above div.field--label{
+  display: none;
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_schule_und_bildung div.field--type-text-long.field--label-above div.field--item{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+main#content > section.section > div.region > div.views-element-container div.view-id-ausstellung_umgang_ns_themenbereich_militar{
+  font-size: 12px;
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_militar div.field--type-text-long.field--label-above{
+  display: block;
+  grid-column-start: unset;
+  grid-column-end: unset;
+
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_militar div.field--type-text-long.field--label-above div.field--label{
+  display: none;
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_militar div.field--type-text-long.field--label-above div.field--item{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+main#content > section.section > div.region > div.views-element-container div.view-id-ausstellung_umgang_ns_themenbereich_familie{
+  font-size: 12px;
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_familie div.field--type-text-long.field--label-above{
+  display: block;
+  grid-column-start: unset;
+  grid-column-end: unset;
+
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_familie div.field--type-text-long.field--label-above div.field--label{
+  display: none;
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_familie div.field--type-text-long.field--label-above div.field--item{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+main#content > section.section > div.region > div.views-element-container div.view-id-ausstellung_umgang_ns_themenbereich_justiz{
+  font-size: 12px;
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_justiz div.field--type-text-long.field--label-above{
+  display: block;
+  grid-column-start: unset;
+  grid-column-end: unset;
+
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_justiz div.field--type-text-long.field--label-above div.field--label{
+  display: none;
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_justiz div.field--type-text-long.field--label-above div.field--item{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+main#content > section.section > div.region > div.views-element-container div.view-id-ausstellung_umgang_ns_themenbereich_institutionen{
+  font-size: 12px;
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_institutionen div.field--type-text-long.field--label-above{
+  display: block;
+  grid-column-start: unset;
+  grid-column-end: unset;
+
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_institutionen div.field--type-text-long.field--label-above div.field--label{
+  display: none;
+}
+
+div.view-id-ausstellung_umgang_ns_themenbereich_institutionen div.field--type-text-long.field--label-above div.field--item{
   margin-top: 5px;
   margin-bottom: 5px;
 }
